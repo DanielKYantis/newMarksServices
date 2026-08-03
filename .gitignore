@@ -1,1 +1,11 @@
-.DS_Store
+**/.env
+**/.log
+**/.bak
+**/.gitignore
+/.nova/
+/logs/
+/cache/
+/tmp/
+**/Thumbs.db
+**/.DS_Store
+**/Icon
