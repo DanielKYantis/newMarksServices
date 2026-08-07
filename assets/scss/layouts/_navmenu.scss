@@ -3,7 +3,7 @@
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .navmenu {
     padding: 0;
 
@@ -22,8 +22,8 @@
     a,
     a:focus {
       color: var(--nav-color);
-      padding: 18px 15px;
-      font-size: 14px;
+      padding: 12px 12px;
+      font-size: 16px;
       font-family: var(--nav-font);
       font-weight: 500;
       display: flex;
@@ -67,7 +67,7 @@
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 
         li {
-          min-width: 200px;
+          min-width: 180px;
         }
 
         a {
