@@ -58,7 +58,17 @@ jobs:
             -o IdentitiesOnly=yes \
             "$IONOS_SSH_USER@$IONOS_SSH_HOST" \
             'REMOTE_PATH="$(printf "%s" "$1" | base64 -d)"
-             test -d "$REMOTE_PATH" || { echo "Configured remote path does not exist."; exit 1; }
+             case "$REMOTE_PATH" in
+               *$'"'"'\r'"'"'*|*$'"'"'\n'"'"'*) echo "Configured remote path contains a hidden line break."; exit 1 ;;
+             esac
+             if ! test -d "$REMOTE_PATH"; then
+               if test -d "$HOME/SunCityHomeRepair/new"; then
+                 echo "SSH-home path exists, but IONOS_REMOTE_PATH does not match it exactly. Re-enter the secret without quotes or whitespace."
+                 exit 1
+               fi
+               echo "Neither IONOS_REMOTE_PATH nor the expected SSH-home-relative path exists for this account."
+               exit 1
+             fi
              test -r "$REMOTE_PATH" || { echo "Configured remote path is not readable."; exit 1; }
              PROBE="$(mktemp "$REMOTE_PATH/.codex-ionos-write-test.XXXXXX")" || { echo "Configured remote path is not writable."; exit 1; }
              rm -f -- "$PROBE"
