@@ -61,16 +61,14 @@ jobs:
              case "$REMOTE_PATH" in
                *$'"'"'\r'"'"'*|*$'"'"'\n'"'"'*) echo "Configured remote path contains a hidden line break."; exit 1 ;;
              esac
-             if ! test -d "$REMOTE_PATH"; then
-               if test -d "$HOME/SunCityHomeRepair/new"; then
-                 echo "SSH-home path exists, but IONOS_REMOTE_PATH does not match it exactly. Re-enter the secret without quotes or whitespace."
-                 exit 1
-               fi
-               echo "Neither IONOS_REMOTE_PATH nor the expected SSH-home-relative path exists for this account."
-               exit 1
-             fi
-             test -r "$REMOTE_PATH" || { echo "Configured remote path is not readable."; exit 1; }
-             PROBE="$(mktemp "$REMOTE_PATH/.codex-ionos-write-test.XXXXXX")" || { echo "Configured remote path is not writable."; exit 1; }
+             case "$REMOTE_PATH" in
+               /*) RESOLVED_PATH="$REMOTE_PATH" ;;
+               "~/"*) RESOLVED_PATH="$HOME/${REMOTE_PATH#\~/}" ;;
+               *) RESOLVED_PATH="$HOME/$REMOTE_PATH" ;;
+             esac
+             test -d "$RESOLVED_PATH" || { echo "Configured remote path does not exist after SSH-home resolution."; exit 1; }
+             test -r "$RESOLVED_PATH" || { echo "Configured remote path is not readable."; exit 1; }
+             PROBE="$(mktemp "$RESOLVED_PATH/.codex-ionos-write-test.XXXXXX")" || { echo "Configured remote path is not writable."; exit 1; }
              rm -f -- "$PROBE"
              echo "SSH authentication and remote path validation passed."' \
             sh "$REMOTE_PATH_B64"

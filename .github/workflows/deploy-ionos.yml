@@ -86,14 +86,21 @@ jobs:
           : "${IONOS_REMOTE_PATH:?Missing IONOS_REMOTE_PATH}"
 
           PORT="${IONOS_SSH_PORT:-22}"
-          IONOS_REMOTE_PATH_ESCAPED="$(printf '%q' "$IONOS_REMOTE_PATH")"
           SSH_CMD=(ssh -i ~/.ssh/ionos_deploy_key -p "$PORT" -o IdentitiesOnly=yes)
+          REMOTE_HOME="$("${SSH_CMD[@]}" "$IONOS_SSH_USER@$IONOS_SSH_HOST" 'printf %s "$HOME"')"
 
-          "${SSH_CMD[@]}" "$IONOS_SSH_USER@$IONOS_SSH_HOST" "mkdir -p $IONOS_REMOTE_PATH_ESCAPED"
+          case "$IONOS_REMOTE_PATH" in
+            /*) DEPLOY_PATH="$IONOS_REMOTE_PATH" ;;
+            "~/"*) DEPLOY_PATH="$REMOTE_HOME/${IONOS_REMOTE_PATH#\~/}" ;;
+            *) DEPLOY_PATH="$REMOTE_HOME/$IONOS_REMOTE_PATH" ;;
+          esac
+          DEPLOY_PATH_ESCAPED="$(printf '%q' "$DEPLOY_PATH")"
+
+          "${SSH_CMD[@]}" "$IONOS_SSH_USER@$IONOS_SSH_HOST" "mkdir -p $DEPLOY_PATH_ESCAPED"
 
           rsync -az --delete \
             -e "ssh -i ~/.ssh/ionos_deploy_key -p $PORT -o IdentitiesOnly=yes" \
-            deploy/ "$IONOS_SSH_USER@$IONOS_SSH_HOST:$IONOS_REMOTE_PATH/"
+            deploy/ "$IONOS_SSH_USER@$IONOS_SSH_HOST:$DEPLOY_PATH/"
 
       - name: Store deploy backup and rotate
         env:
@@ -110,12 +117,18 @@ jobs:
 
           PORT="${IONOS_SSH_PORT:-22}"
           KEEP="${DEPLOY_BACKUP_KEEP:-10}"
-          REMOTE_BASE="${IONOS_REMOTE_PATH%/}"
+          SSH_CMD=(ssh -i ~/.ssh/ionos_deploy_key -p "$PORT" -o IdentitiesOnly=yes)
+          REMOTE_HOME="$("${SSH_CMD[@]}" "$IONOS_SSH_USER@$IONOS_SSH_HOST" 'printf %s "$HOME"')"
+
+          case "$IONOS_REMOTE_PATH" in
+            /*) REMOTE_BASE="${IONOS_REMOTE_PATH%/}" ;;
+            "~/"*) REMOTE_BASE="${REMOTE_HOME}/${IONOS_REMOTE_PATH#\~/}" ;;
+            *) REMOTE_BASE="${REMOTE_HOME}/${IONOS_REMOTE_PATH%/}" ;;
+          esac
           REMOTE_PARENT="$(dirname "$REMOTE_BASE")"
           IONOS_BACKUP_PATH="$REMOTE_PARENT/.newmarksservices-deploy-backups"
           IONOS_BACKUP_PATH_ESCAPED="$(printf '%q' "$IONOS_BACKUP_PATH")"
 
-          SSH_CMD=(ssh -i ~/.ssh/ionos_deploy_key -p "$PORT" -o IdentitiesOnly=yes)
           RSYNC_SSH="ssh -i ~/.ssh/ionos_deploy_key -p $PORT -o IdentitiesOnly=yes"
 
           "${SSH_CMD[@]}" "$IONOS_SSH_USER@$IONOS_SSH_HOST" "mkdir -p $IONOS_BACKUP_PATH_ESCAPED"
