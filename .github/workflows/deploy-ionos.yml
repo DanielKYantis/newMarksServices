@@ -100,6 +100,7 @@ jobs:
 
           rsync -az --delete \
             -e "ssh -i ~/.ssh/ionos_deploy_key -p $PORT -o IdentitiesOnly=yes" \
+            --filter='protect /assets/***' \
             deploy/ "$IONOS_SSH_USER@$IONOS_SSH_HOST:$DEPLOY_PATH/"
 
       - name: Store deploy backup and rotate

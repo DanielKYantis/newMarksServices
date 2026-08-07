@@ -16,11 +16,12 @@ function usage(): never
     $script = basename(__FILE__);
     fwrite(STDERR, <<<TEXT
 Usage:
-  php scripts/{$script} --source=/path/to/export --output=/path/to/php-site [--layout=index.html] [--force]
+  php scripts/{$script} --source=/path/to/export --output=/path/to/php-site [--assets-from=/path/to/existing/assets] [--layout=index.html] [--force]
 
 Options:
   --source   BootstrapMade export directory containing HTML pages.
   --output   New directory for the converted PHP site. It must differ from source.
+  --assets-from  Existing assets directory to preserve before exported assets are layered over it.
   --layout   Page used as the shared header/nav/footer template (default: index.html).
   --force    Replace a prior output created by this converter.
 
@@ -84,7 +85,11 @@ function copyExportAssets(string $source, string $output): void
 
     foreach ($iterator as $item) {
         $relative = substr($item->getPathname(), strlen($source) + 1);
-        if ($item->getFilename() === '.DS_Store' || preg_match('/\.html?$/i', $relative)) {
+        if (
+            $item->getFilename() === '.DS_Store'
+            || strcasecmp($item->getFilename(), 'Readme.txt') === 0
+            || preg_match('/\.html?$/i', $relative)
+        ) {
             continue;
         }
 
@@ -102,6 +107,41 @@ function copyExportAssets(string $source, string $output): void
         }
         if (!copy($item->getPathname(), $destination)) {
             fail("Unable to copy: {$relative}");
+        }
+    }
+}
+
+function copyPreservedAssets(string $source, string $destination): void
+{
+    if (!is_dir($destination) && !mkdir($destination, 0775, true) && !is_dir($destination)) {
+        fail("Unable to create preserved assets directory: {$destination}");
+    }
+
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($source, FilesystemIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+
+    foreach ($iterator as $item) {
+        if ($item->getFilename() === '.DS_Store') {
+            continue;
+        }
+
+        $relative = substr($item->getPathname(), strlen($source) + 1);
+        $target = $destination . DIRECTORY_SEPARATOR . $relative;
+        if ($item->isDir()) {
+            if (!is_dir($target) && !mkdir($target, 0775, true) && !is_dir($target)) {
+                fail("Unable to create preserved asset directory: {$target}");
+            }
+            continue;
+        }
+
+        $parent = dirname($target);
+        if (!is_dir($parent) && !mkdir($parent, 0775, true) && !is_dir($parent)) {
+            fail("Unable to create preserved asset directory: {$parent}");
+        }
+        if (!copy($item->getPathname(), $target)) {
+            fail("Unable to preserve asset: {$relative}");
         }
     }
 }
@@ -197,6 +237,74 @@ function phpLiteral(string $value): string
     return var_export($value, true);
 }
 
+function defaultConfigContents(): string
+{
+    return <<<'PHP'
+<?php
+declare(strict_types=1);
+
+const SITE_NAME = "Mark's Services";
+const BUSINESS_NAME = "Mark's Services";
+const BUSINESS_EMAIL = "office@marksservices.com";
+const BUSINESS_PHONE_DISPLAY = "(512) 549-0322";
+const BUSINESS_PHONE_TEL = "+15125490322";
+const BUSINESS_CITY = "Georgetown";
+const BUSINESS_STATE = "TX";
+const BUSINESS_ZIP = "78633";
+const BUSINESS_AREA = "Sun City & Berry Creek, Georgetown, Texas";
+const BUSINESS_AREA_DETAIL =
+    "Sun City, Georgetown, Williamson County 78633; Berry Creek, Georgetown, Williamson County 78628; and Georgetown 78626 and 78627";
+const BUSINESS_ADDRESS_DISPLAY =
+    "Client-location service in " . BUSINESS_AREA_DETAIL;
+const BUSINESS_SERVICE_NOTE =
+    "Client-location service in Sun City, Georgetown 78633 and Berry Creek, Georgetown 78628, Williamson County.";
+const ELECTRICAL_LICENSE = "TECL 20547";
+const ELECTRICAL_LICENSE_HOLDER = "Larry Kizer";
+const PLUMBING_LICENSE = "M-38601";
+const PLUMBING_LICENSE_HOLDER = "James Pote (Jim) Bradford";
+const HANDYMAN_EXPERT = "Mark Walbert";
+const HANDYMAN_EXPERIENCE = "25+ years";
+const HANDYMAN_PRIOR_TRADE_EXPERIENCE =
+    "20 years previously licensed in electrical and plumbing; those licenses are expired";
+
+function e(string $value): string
+{
+    return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8");
+}
+
+function url_for(string $path): string
+{
+    return $path;
+}
+
+function is_active(string $current, array|string $targets): string
+{
+    return in_array($current, (array) $targets, true) ? "active" : "";
+}
+
+function site_base_url(): string
+{
+    $host = $_SERVER["HTTP_HOST"] ?? "www.marksservices.com";
+    $https = $_SERVER["HTTPS"] ?? "";
+    $scheme = $https !== "" && $https !== "off" ? "https" : "http";
+    $script = $_SERVER["SCRIPT_NAME"] ?? "/index.php";
+    $basePath = rtrim(str_replace("\\", "/", dirname($script)), "/");
+    return $scheme . "://" . $host . ($basePath === "." ? "" : $basePath);
+}
+
+function absolute_url(string $path = ""): string
+{
+    $path = ltrim($path, "/");
+    return rtrim(site_base_url(), "/") . ($path === "" ? "/" : "/" . $path);
+}
+
+function page_url(string $pageKey): string
+{
+    return absolute_url($pageKey === "index.php" ? "" : $pageKey);
+}
+PHP;
+}
+
 function nowdocAssignment(string $target, string $value, string $prefix): string
 {
     if ($value === '') {
@@ -209,19 +317,13 @@ function nowdocAssignment(string $target, string $value, string $prefix): string
     return "{$target} = <<<'{$marker}'\n{$value}\n{$marker};\n";
 }
 
-function renderPage(array $page): string
+function renderPage(string $pageKey, string $main): string
 {
     $definition = "<?php\n\n";
     $definition .= "declare(strict_types=1);\n\n";
-    $definition .= "\$page = [\n";
-    foreach (['slug', 'title', 'description', 'keywords', 'body_class'] as $key) {
-        $definition .= "    " . phpLiteral($key) . ' => ' . phpLiteral($page[$key]) . ",\n";
-    }
-    $definition .= "];\n";
-    $definition .= nowdocAssignment("\$page['head_extra']", $page['head_extra'], 'head_extra');
-    $definition .= nowdocAssignment("\$page['body_extra']", $page['body_extra'], 'body_extra');
-    $definition .= "\nrequire __DIR__ . '/includes/header.php';\n?>\n\n";
-    $definition .= trim($page['main']) . "\n\n";
+    $definition .= "\$pageKey = " . phpLiteral($pageKey) . ";\n";
+    $definition .= "require __DIR__ . '/includes/header.php';\n?>\n\n";
+    $definition .= trim($main) . "\n\n";
     $definition .= "<?php require __DIR__ . '/includes/footer.php'; ?>\n";
     return $definition;
 }
@@ -239,12 +341,12 @@ function injectActiveNav(string $nav): string
             if (preg_match("~class=([\"'])(.*?)\\1~is", $attributes) === 1) {
                 $attributes = preg_replace(
                     "~class=([\"'])(.*?)\\1~is",
-                    'class=$1$2<?= nav_active(' . phpLiteral($target) . ') ?>$1',
+                    'class=$1$2 <?= is_active($pageKey, ' . phpLiteral($target) . ') ?>$1',
                     $attributes,
                     1
                 ) ?? $attributes;
             } else {
-                $attributes .= ' class="<?= trim(nav_active(' . phpLiteral($target) . ')) ?>"';
+                $attributes .= ' class="<?= is_active($pageKey, ' . phpLiteral($target) . ') ?>"';
             }
             return '<a' . $attributes . '>';
         },
@@ -252,18 +354,22 @@ function injectActiveNav(string $nav): string
     ) ?? $nav;
 }
 
-$options = getopt('', ['source:', 'output:', 'layout::', 'force', 'help']);
+$options = getopt('', ['source:', 'output:', 'assets-from:', 'layout::', 'force', 'help']);
 if (isset($options['help']) || !isset($options['source'], $options['output'])) {
     usage();
 }
 
 $source = canonicalPath((string) $options['source']);
 $output = rtrim((string) $options['output'], DIRECTORY_SEPARATOR);
+$assetsFrom = isset($options['assets-from']) ? canonicalPath((string) $options['assets-from']) : null;
 $layoutName = (string) ($options['layout'] ?? 'index.html');
 $force = array_key_exists('force', $options);
 
 if (!is_dir($source)) {
     fail("Source directory not found: {$source}");
+}
+if ($assetsFrom !== null && !is_dir($assetsFrom)) {
+    fail("Preserved assets directory not found: {$assetsFrom}");
 }
 
 $pages = glob($source . DIRECTORY_SEPARATOR . '*.html') ?: [];
@@ -280,6 +386,15 @@ if (!is_file($layoutPath)) {
 $layoutHtml = file_get_contents($layoutPath);
 if ($layoutHtml === false) {
     fail("Unable to read layout page: {$layoutPath}");
+}
+
+$exportNote = '';
+$readmePath = $source . DIRECTORY_SEPARATOR . 'Readme.txt';
+if (is_file($readmePath)) {
+    $readme = file_get_contents($readmePath);
+    if ($readme !== false) {
+        $exportNote = trim(preg_replace('/\s+/', ' ', $readme) ?? $readme);
+    }
 }
 
 $layoutHead = innerTag($layoutHtml, 'head');
@@ -314,47 +429,52 @@ $sharedHead = preg_replace("~\\s*<meta\\b(?=[^>]*\\bname=([\"'])(?:description|k
 $sharedHead = withoutCustomBlock($sharedHead, 'Head');
 
 prepareOutput($source, $output, $force);
+if ($assetsFrom !== null) {
+    copyPreservedAssets($assetsFrom, $output . DIRECTORY_SEPARATOR . 'assets');
+}
 copyExportAssets($source, $output);
 
 $includes = $output . DIRECTORY_SEPARATOR . 'includes';
 mkdir($includes, 0775, true);
 
-$siteName = 'Website';
-if (preg_match("~<[^>]+class=([\"'])[^\"']*\\bsitename\\b[^\"']*\\1[^>]*>(.*?)</[^>]+>~is", $layoutHeader, $siteMatch) === 1) {
-    $siteName = trim(strip_tags($siteMatch[2]));
+$repositoryConfig = dirname(__DIR__) . '/includes/config.php';
+$outputConfig = $includes . '/config.php';
+if (is_file($repositoryConfig)) {
+    if (!copy($repositoryConfig, $outputConfig)) {
+        fail("Unable to preserve repository config: {$repositoryConfig}");
+    }
+} else {
+    file_put_contents($outputConfig, defaultConfigContents() . "\n");
 }
 
-$config = "<?php\n\ndeclare(strict_types=1);\n\n";
-$config .= "\$site = [\n    'name' => " . phpLiteral($siteName) . ",\n    'base_url' => '',\n];\n\n";
-$config .= <<<'PHP'
-function e(string $value): string
-{
-    return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+$repositoryPages = dirname(__DIR__) . '/includes/pages.php';
+$outputPages = $includes . '/pages.php';
+$preserveRepositoryPages = is_file($repositoryPages);
+if ($preserveRepositoryPages && !copy($repositoryPages, $outputPages)) {
+    fail("Unable to preserve repository page registry: {$repositoryPages}");
 }
-
-function nav_active(string $target): string
-{
-    global $page;
-    $current = $page['slug'] ?? basename($_SERVER['SCRIPT_NAME'] ?? '');
-    return basename($current) === basename($target) ? ' active' : '';
-}
-PHP;
-$config .= "\n";
-file_put_contents($includes . '/config.php', $config);
 
 $nav = replaceHtmlLinks($layoutNav);
 $nav = injectActiveNav($nav);
 file_put_contents($includes . '/nav.php', "<?php\n\ndeclare(strict_types=1);\n?>\n" . trim($nav) . "\n");
 
 $headerTemplate = "<?php\n\ndeclare(strict_types=1);\nrequire_once __DIR__ . '/config.php';\n\n";
-$headerTemplate .= "\$page = array_merge([\n    'slug' => basename(\$_SERVER['SCRIPT_NAME'] ?? 'index.php'),\n    'title' => \$site['name'],\n    'description' => '',\n    'keywords' => '',\n    'body_class' => '',\n    'head_extra' => '',\n    'body_extra' => '',\n], \$page ?? []);\n?>\n";
+$headerTemplate .= "\$pages = require __DIR__ . '/pages.php';\n\$pageKey = \$pageKey ?? 'index.php';\n\$page = \$pages[\$pageKey] ?? \$pages['index.php'] ?? [\n    'title' => SITE_NAME,\n    'description' => '',\n    'keywords' => '',\n    'body_class' => '',\n    'label' => SITE_NAME,\n];\n?>\n";
 $headerTemplate .= "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n";
 $headerTemplate .= "  <meta charset=\"utf-8\">\n  <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">\n";
 $headerTemplate .= "  <title><?= e(\$page['title']) ?></title>\n";
-$headerTemplate .= "  <?php if (\$page['description'] !== ''): ?><meta name=\"description\" content=\"<?= e(\$page['description']) ?>\"><?php endif; ?>\n";
-$headerTemplate .= "  <?php if (\$page['keywords'] !== ''): ?><meta name=\"keywords\" content=\"<?= e(\$page['keywords']) ?>\"><?php endif; ?>\n";
+$headerTemplate .= "  <meta name=\"description\" content=\"<?= e(\$page['description']) ?>\">\n";
+$headerTemplate .= "  <meta name=\"keywords\" content=\"<?= e(\$page['keywords']) ?>\">\n";
+$headerTemplate .= "  <link rel=\"canonical\" href=\"<?= e(page_url(\$pageKey)) ?>\">\n";
+$headerTemplate .= "  <meta property=\"og:site_name\" content=\"<?= e(SITE_NAME) ?>\">\n";
+$headerTemplate .= "  <meta property=\"og:title\" content=\"<?= e(\$page['title']) ?>\">\n";
+$headerTemplate .= "  <meta property=\"og:description\" content=\"<?= e(\$page['description']) ?>\">\n";
+$headerTemplate .= "  <meta property=\"og:type\" content=\"website\">\n";
+$headerTemplate .= "  <meta property=\"og:url\" content=\"<?= e(page_url(\$pageKey)) ?>\">\n";
+$headerTemplate .= "  <meta name=\"twitter:card\" content=\"summary_large_image\">\n";
+$headerTemplate .= "  <?php if (function_exists('structured_data_for_page')): ?>\n  <script type=\"application/ld+json\">\n<?= json_encode(structured_data_for_page(\$pageKey, \$page), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>\n  </script>\n  <?php endif; ?>\n";
 $headerTemplate .= trim(replaceHtmlLinks($sharedHead)) . "\n";
-$headerTemplate .= "  <?= \$page['head_extra'] ?>\n</head>\n\n<body class=\"<?= e(\$page['body_class']) ?>\">\n\n";
+$headerTemplate .= "</head>\n\n<body class=\"<?= e(\$page['body_class']) ?>\">\n\n";
 $headerTemplate .= trim(replaceHtmlLinks($headerBeforeNav)) . "\n";
 $headerTemplate .= "<?php require __DIR__ . '/nav.php'; ?>\n";
 $headerTemplate .= trim(replaceHtmlLinks($headerAfterNav)) . "\n";
@@ -363,10 +483,11 @@ file_put_contents($includes . '/header.php', $headerTemplate);
 $footerTemplate = "<?php\n\ndeclare(strict_types=1);\n?>\n";
 $footerTemplate .= trim(replaceHtmlLinks($layoutFooter)) . "\n";
 $footerTemplate .= trim(replaceHtmlLinks($sharedTail)) . "\n";
-$footerTemplate .= "<?= \$page['body_extra'] ?>\n\n</body>\n</html>\n";
+$footerTemplate .= "</body>\n</html>\n";
 file_put_contents($includes . '/footer.php', $footerTemplate);
 
 $warnings = [];
+$generatedPageRegistry = [];
 foreach ($pages as $pagePath) {
     $html = file_get_contents($pagePath);
     if ($html === false) {
@@ -387,34 +508,34 @@ foreach ($pages as $pagePath) {
         $warnings[] = "{$name}: footer differs from {$layoutName}; shared layout uses {$layoutName}.";
     }
 
-    $pageFooterPosition = strpos($html, $footer);
-    if ($pageFooterPosition === false) {
-        fail("Unable to locate footer position in {$name}.");
-    }
-    $pageTailStart = $pageFooterPosition + strlen($footer);
-    $pageBodyEnd = stripos($html, '</body>', $pageTailStart);
-    if ($pageBodyEnd === false) {
-        fail("Unable to find closing </body> in {$name}.");
-    }
-    $pageTail = substr($html, $pageTailStart, $pageBodyEnd - $pageTailStart);
-
     $phpName = preg_replace('/\\.html$/i', '.php', $name) ?? $name . '.php';
-    $page = [
-        'slug' => $phpName,
+    $label = $phpName === '404.php'
+        ? '404'
+        : ucwords(str_replace(['-', '_'], ' ', pathinfo($phpName, PATHINFO_FILENAME)));
+    $generatedPageRegistry[$phpName] = [
         'title' => titleContent($head),
         'description' => metaContent($head, 'description'),
         'keywords' => metaContent($head, 'keywords'),
         'body_class' => attributeValue($bodyAttributes, 'class'),
-        'head_extra' => replaceHtmlLinks(customBlock($head, 'Head')),
-        'body_extra' => replaceHtmlLinks(customBlock($pageTail, 'Body')),
-        'main' => replaceHtmlLinks($main),
+        'label' => $label,
     ];
 
-    file_put_contents($output . DIRECTORY_SEPARATOR . $phpName, renderPage($page));
+    file_put_contents(
+        $output . DIRECTORY_SEPARATOR . $phpName,
+        renderPage($phpName, replaceHtmlLinks($main))
+    );
+}
+
+if (!$preserveRepositoryPages) {
+    $pagesFile = "<?php\n\ndeclare(strict_types=1);\n\nreturn " . var_export($generatedPageRegistry, true) . ";\n";
+    file_put_contents($outputPages, $pagesFile);
 }
 
 echo 'Converted ' . count($pages) . " pages to {$output}\n";
-echo "Shared includes: includes/config.php, header.php, nav.php, footer.php\n";
+echo "Shared includes: includes/config.php, pages.php, header.php, nav.php, footer.php\n";
+if ($exportNote !== '') {
+    echo "Suggested commit note: {$exportNote}\n";
+}
 if ($warnings !== []) {
     fwrite(STDERR, "Warnings:\n- " . implode("\n- ", $warnings) . "\n");
 }

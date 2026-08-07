@@ -8,7 +8,17 @@ OUTPUT="${2:-/private/tmp/mark-medicare-php-test}"
 php "$ROOT/scripts/convert-bootstrapmade-export.php" \
   --source="$SOURCE" \
   --output="$OUTPUT" \
+  --assets-from="$ROOT/assets" \
   --force
+
+if [[ -f "$ROOT/includes/config.php" ]] && ! cmp -s "$ROOT/includes/config.php" "$OUTPUT/includes/config.php"; then
+  echo "Generated config does not exactly match the repository config." >&2
+  exit 1
+fi
+if [[ -f "$ROOT/includes/pages.php" ]] && ! cmp -s "$ROOT/includes/pages.php" "$OUTPUT/includes/pages.php"; then
+  echo "Generated page registry does not exactly match the repository page registry." >&2
+  exit 1
+fi
 
 while IFS= read -r -d '' file; do
   php -l "$file" >/dev/null
@@ -39,6 +49,23 @@ while IFS= read -r -d '' page; do
         fwrite(STDERR, basename($path) . ": expected {$expected} occurrence(s) of {$needle}; found {$actual}.\n");
         exit(1);
       }
+    }
+
+    $registry = require dirname($path) . "/includes/pages.php";
+    $pageKey = basename($path);
+    $pageConfig = $registry[$pageKey] ?? null;
+    if (!is_array($pageConfig)) {
+      fwrite(STDERR, "{$pageKey}: missing from includes/pages.php.\n");
+      exit(1);
+    }
+    $expectedTitle = "<title>" . htmlspecialchars($pageConfig["title"], ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8") . "</title>";
+    if (!str_contains($html, $expectedTitle)) {
+      fwrite(STDERR, "{$pageKey}: rendered title does not match includes/pages.php.\n");
+      exit(1);
+    }
+    if (substr_count($html, "<script type=\"application/ld+json\">") > 1) {
+      fwrite(STDERR, "{$pageKey}: rendered more than one structured-data block.\n");
+      exit(1);
     }
 
     if (preg_match("~href=[\"\x27][^\"\x27]*\\.html(?:[?#][^\"\x27]*)?[\"\x27]~i", $html) === 1) {
@@ -73,6 +100,11 @@ done < <(find "$OUTPUT" -maxdepth 1 -name '*.php' -print0)
 
 if [[ "$page_count" -eq 0 ]]; then
   echo "No generated root PHP pages found." >&2
+  exit 1
+fi
+
+if find "$OUTPUT" -iname 'Readme.txt' -print -quit | grep -q .; then
+  echo "Readme.txt must not be present in converted output." >&2
   exit 1
 fi
 
