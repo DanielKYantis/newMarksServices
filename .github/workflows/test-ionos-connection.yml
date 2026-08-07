@@ -1,0 +1,66 @@
+name: Test IONOS connection
+
+on:
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  test-connection:
+    name: Validate SSH key and remote path
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Validate required secrets
+        env:
+          IONOS_SSH_PRIVATE_KEY: ${{ secrets.IONOS_SSH_PRIVATE_KEY }}
+          IONOS_SSH_HOST: ${{ secrets.IONOS_SSH_HOST }}
+          IONOS_SSH_USER: ${{ secrets.IONOS_SSH_USER }}
+          IONOS_REMOTE_PATH: ${{ secrets.IONOS_REMOTE_PATH }}
+        run: |
+          : "${IONOS_SSH_PRIVATE_KEY:?Missing IONOS_SSH_PRIVATE_KEY}"
+          : "${IONOS_SSH_HOST:?Missing IONOS_SSH_HOST}"
+          : "${IONOS_SSH_USER:?Missing IONOS_SSH_USER}"
+          : "${IONOS_REMOTE_PATH:?Missing IONOS_REMOTE_PATH}"
+
+      - name: Configure and validate SSH key
+        env:
+          IONOS_SSH_PRIVATE_KEY: ${{ secrets.IONOS_SSH_PRIVATE_KEY }}
+          IONOS_SSH_HOST: ${{ secrets.IONOS_SSH_HOST }}
+          IONOS_SSH_PORT: ${{ secrets.IONOS_SSH_PORT }}
+        run: |
+          PORT="${IONOS_SSH_PORT:-22}"
+
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$IONOS_SSH_PRIVATE_KEY" > ~/.ssh/ionos_test_key
+          chmod 600 ~/.ssh/ionos_test_key
+
+          ssh-keygen -y -f ~/.ssh/ionos_test_key >/dev/null
+          ssh-keyscan -p "$PORT" -H "$IONOS_SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Test authentication and remote path
+        env:
+          IONOS_SSH_HOST: ${{ secrets.IONOS_SSH_HOST }}
+          IONOS_SSH_PORT: ${{ secrets.IONOS_SSH_PORT }}
+          IONOS_SSH_USER: ${{ secrets.IONOS_SSH_USER }}
+          IONOS_REMOTE_PATH: ${{ secrets.IONOS_REMOTE_PATH }}
+        run: |
+          PORT="${IONOS_SSH_PORT:-22}"
+          REMOTE_PATH_B64="$(printf '%s' "$IONOS_REMOTE_PATH" | base64 -w 0)"
+
+          ssh \
+            -i ~/.ssh/ionos_test_key \
+            -p "$PORT" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            "$IONOS_SSH_USER@$IONOS_SSH_HOST" \
+            'REMOTE_PATH="$(printf "%s" "$1" | base64 -d)"
+             test -d "$REMOTE_PATH" || { echo "Configured remote path does not exist."; exit 1; }
+             test -r "$REMOTE_PATH" || { echo "Configured remote path is not readable."; exit 1; }
+             PROBE="$(mktemp "$REMOTE_PATH/.codex-ionos-write-test.XXXXXX")" || { echo "Configured remote path is not writable."; exit 1; }
+             rm -f -- "$PROBE"
+             echo "SSH authentication and remote path validation passed."' \
+            sh "$REMOTE_PATH_B64"
