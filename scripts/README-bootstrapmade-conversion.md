@@ -52,3 +52,17 @@ php scripts/convert-bootstrapmade-export.php \
 6. Run `scripts/lint-php.sh` and review the site locally with `scripts/serve-local.sh`.
 
 The converter never modifies the source export and intentionally refuses in-place conversion.
+
+## Run the automated smoke test
+
+The smoke test regenerates a disposable output, lints every PHP file, renders every root page, verifies one shared header/nav/main/footer document structure, rejects remaining internal `.html` links, and reports referenced local assets missing from the Builder export:
+
+```bash
+./scripts/test-bootstrapmade-conversion.sh
+```
+
+Optional source and output arguments:
+
+```bash
+./scripts/test-bootstrapmade-conversion.sh /path/to/export /private/tmp/php-test
+```
