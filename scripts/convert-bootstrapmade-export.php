@@ -454,6 +454,12 @@ if ($preserveRepositoryPages && !copy($repositoryPages, $outputPages)) {
     fail("Unable to preserve repository page registry: {$repositoryPages}");
 }
 
+$repositoryServices = dirname(__DIR__) . '/includes/services.php';
+$outputServices = $includes . '/services.php';
+if (is_file($repositoryServices) && !copy($repositoryServices, $outputServices)) {
+    fail("Unable to preserve repository service registry: {$repositoryServices}");
+}
+
 $nav = replaceHtmlLinks($layoutNav);
 $nav = injectActiveNav($nav);
 file_put_contents($includes . '/nav.php', "<?php\n\ndeclare(strict_types=1);\n?>\n" . trim($nav) . "\n");
@@ -532,7 +538,7 @@ if (!$preserveRepositoryPages) {
 }
 
 echo 'Converted ' . count($pages) . " pages to {$output}\n";
-echo "Shared includes: includes/config.php, pages.php, header.php, nav.php, footer.php\n";
+echo "Shared includes: includes/config.php, pages.php, services.php, header.php, nav.php, footer.php\n";
 if ($exportNote !== '') {
     echo "Suggested commit note: {$exportNote}\n";
 }

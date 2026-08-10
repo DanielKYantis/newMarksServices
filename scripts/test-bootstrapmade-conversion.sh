@@ -19,6 +19,43 @@ if [[ -f "$ROOT/includes/pages.php" ]] && ! cmp -s "$ROOT/includes/pages.php" "$
   echo "Generated page registry does not exactly match the repository page registry." >&2
   exit 1
 fi
+if [[ -f "$ROOT/includes/services.php" ]] && ! cmp -s "$ROOT/includes/services.php" "$OUTPUT/includes/services.php"; then
+  echo "Generated service registry does not exactly match the repository service registry." >&2
+  exit 1
+fi
+
+php -r '
+  $config = require $argv[1];
+  $services = $config["services"] ?? [];
+  if (count($services) !== 15) {
+      fwrite(STDERR, "Expected 15 service records; found " . count($services) . ".\n");
+      exit(1);
+  }
+  foreach ($services as $slug => $service) {
+      if (($service["slug"] ?? null) !== $slug) {
+          fwrite(STDERR, "Service key and slug differ for {$slug}.\n");
+          exit(1);
+      }
+      if (($service["tasks"] ?? []) === []) {
+          fwrite(STDERR, "Service {$slug} has no approved task list.\n");
+          exit(1);
+      }
+      foreach (($service["related"] ?? []) as $related) {
+          if (!isset($services[$related])) {
+              fwrite(STDERR, "Service {$slug} references missing related service {$related}.\n");
+              exit(1);
+          }
+      }
+  }
+  foreach (($config["categories"] ?? []) as $category => $data) {
+      foreach (($data["services"] ?? []) as $slug) {
+          if (!isset($services[$slug])) {
+              fwrite(STDERR, "Category {$category} references missing service {$slug}.\n");
+              exit(1);
+          }
+      }
+  }
+' "$ROOT/includes/services.php"
 
 while IFS= read -r -d '' file; do
   php -l "$file" >/dev/null
