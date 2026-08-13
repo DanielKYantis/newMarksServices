@@ -57,7 +57,7 @@ $page = $pages[$pageKey] ?? $pages['index.php'] ?? [
 
 <body class="<?= e($page['body_class']) ?>">
 
-<header id="header" class="header d-flex align-items-center position-relative" style="">
+<header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.php" class="logo d-flex align-items-center me-auto me-xl-0">

@@ -399,6 +399,12 @@ if (is_file($readmePath)) {
 
 $layoutHead = innerTag($layoutHtml, 'head');
 $layoutHeader = outerTag($layoutHtml, 'header');
+$layoutHeader = preg_replace(
+    '~(<header\b[^>]*\bclass=(["\'][^"\']*))\bposition-relative\b~i',
+    '$1fixed-top',
+    $layoutHeader,
+    1
+) ?? $layoutHeader;
 $layoutNav = outerTag($layoutHeader, 'nav', 'id="navmenu"');
 $layoutFooter = outerTag($layoutHtml, 'footer');
 
