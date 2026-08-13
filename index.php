@@ -1,117 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mark's Services | Sun City Home Repair Handyman</title>
-  <meta name="description" content="Mark's Services provides Sun City home repair and handyman services for plumbing, electrical, water systems, carpentry, security, and maintenance.">
-  <meta name="keywords" content="Marks Services, Sun City home repair, Sun City handyman, Berry Creek home repair, Georgetown home services, plumbing, electrical, water systems">
+declare(strict_types=1);
 
-  <!-- index.html Custom Head Code -->
-  <meta name="application-name" content="Sun City Home Repair" />
-  <meta name="category" content="Home services" />
-  <meta property="og:title" content="Handyman Services in Sun City Georgetown, TX" />
-  <meta property="og:description" content="Practical home repairs, maintenance, and small installations at your home." />
-  <meta property="og:url" content="https://suncityhome.repair/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sun City Home Repair" />
-  <meta name="twitter:description" content="Practical home repairs for Sun City, Berry Creek, and Georgetown homeowners." />
-  <meta name="twitter:image" content="https://suncityhome.repair/og.png" />
-  <link rel="canonical" href="https://suncityhome.repair/" />
+$pageKey = 'index.php';
+require __DIR__ . '/includes/header.php';
+?>
 
-  <!-- Favicons -->
-  <link href="assets/img/uploads/favicon-32x32-clarity.png" rel="icon">
-  <link href="assets/img/uploads/apple-touch-icon-180x180-2.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center position-relative" style="">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- <img src="assets/img/uploads/logo_enhanced.png" alt=""> -->
-        <i class="bi bi-house-gear"></i>
-        <h1 class="sitename">Mark's Services</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <!-- <li><a href="departments.html">Locations</a></li> -->
-          <li class="dropdown"><a href="#"><span>Locations</span>
-              <!-- <i class="bi bi-chevron-down toggle-dropdown"></i> -->
-            </a>
-            <ul>
-              <li><a href="#">Sun City Texas 78633</a></li>
-              <li><a href="#">Berry Creek Texas 78628</a></li>
-              <li><a href="#">Georgetown Texas 78626</a></li>
-              <li><a href="#">Williamson County 78627</a></li>
-            </ul>
-          </li>
-          <li><a href="services.html">Services</a></li>
-          <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul class="dropdown-active">
-              <!-- <li><a href="department-details.html">Service Area Details</a></li> -->
-              <!-- <li><a href="service-details.html">Service Details</a></li> -->
-              <li><a href="appointment.html">Appointments</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="faq.html">FAQs (Questions)</a></li>
-              <li><a href="doctors.html">Meat The Team</a></li>
-              <li><a href="gallery.html">Photo Gallery</a></li>
-              <li><a href="terms.html">Terms of Service</a></li>
-              <li><a href="privacy.html">Privacy Notice</a></li>
-              <!-- <li><a href="404.html">404</a></li> -->
-            </ul>
-          </li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-      <ul>
-        <li><a href="#">Dropdown 1</a></li>
-        <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Deep Dropdown 1</a></li>
-            <li><a href="#">Deep Dropdown 2</a></li>
-            <li><a href="#">Deep Dropdown 3</a></li>
-            <li><a href="#">Deep Dropdown 4</a></li>
-            <li><a href="#">Deep Dropdown 5</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Dropdown 2</a></li>
-        <li><a href="#">Dropdown 3</a></li>
-        <li><a href="#">Dropdown 4</a></li>
-      </ul>
-    </li> -->
-          <!-- <li><a href="contact.html">Contact</a></li> -->
-          <!-- <a class="btn-getstarted" href="appointment.html">Contact</a> -->
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="contact.html">Contact</a>
-
-    </div>
-  </header>
-
-  <main class="main">
+<main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
@@ -155,7 +50,7 @@
               <p class="hero-subtext">Mark's Remodeling and Facility Services provides practical Sun City Home Repair &amp; Handyman Services, including fixture repairs, water-system help, safety updates, and punch-list work for homeowners in Sun City and Berry Creek.<br></p>
 
               <div class="action-row">
-                <a href="appointment.html" class="btn btn-solid">Schedule a Visit</a>
+                <a href="appointment.php" class="btn btn-solid">Schedule a Visit</a>
                 <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-outline glightbox">
                   <i class="bi bi-play-circle"></i>
                   <span>View Our Services</span>
@@ -404,11 +299,11 @@
             </div><!-- End Capabilities Grid -->
 
             <div class="action-row">
-              <a href="about.html" class="btn-primary-shadcn">
+              <a href="about.php" class="btn-primary-shadcn">
                 Discover Our Services
                 <i class="bi bi-arrow-right"></i>
               </a>
-              <a href="contact.html" class="btn-ghost-shadcn">
+              <a href="contact.php" class="btn-ghost-shadcn">
                 <i class="bi bi-telephone"></i>
                 Request a Visit
               </a>
@@ -1105,7 +1000,7 @@
 
         <div class="directory-footer" data-aos="fade-up" data-aos-delay="250">
           <span class="footer-note">Six core service groups for Sun City and Berry Creek homeowners</span>
-          <a href="specialists.html" class="btn-link">
+          <a href="specialists.php" class="btn-link">
             View All Services
             <i class="bi bi-arrow-up-right"></i>
           </a>
@@ -1132,8 +1027,8 @@
                 <p class="lead-text">Mark's Remodeling and Facility Services helps homeowners plan practical repairs, fixture work, water-system service, electrical updates, small carpentry, security installations, and maintenance.</p>
 
                 <div class="button-row">
-                  <a href="appointment.html" class="btn-primary-shad">Request a Visit</a>
-                  <a href="services.html" class="btn-ghost-shad">
+                  <a href="appointment.php" class="btn-primary-shad">Request a Visit</a>
+                  <a href="services.php" class="btn-ghost-shad">
                     <span>Browse Services</span>
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -1287,7 +1182,7 @@
                 <i class="bi bi-telephone"></i>
                 <span>+1 (512) 549-0322</span>
               </a>
-              <a href="contact.html" class="btn-outline-shad">Plan a Visit</a>
+              <a href="contact.php" class="btn-outline-shad">Plan a Visit</a>
             </div>
           </div>
         </div><!-- End Alert Strip -->
@@ -1298,187 +1193,4 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative dark-background">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">Mark's Services</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>Mark's Remodeling and Facility Services</p>
-              <p>Sun City Home Repair &amp; Handyman Services</p>
-              <p class="mt-3"><strong>Home Service Hotline:</strong> <a href="tel:+15125490322"><span>+1 512 549 0322</span></a></p>
-              <p><strong>Our Email:</strong> <a href="mailto:office@MarksServices.com"><span>office@MarksServices.com</span></a></p>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4 class="h4 d-block align-content-center"><a href="index.html">Home Page</a></h4>
-            <ul>
-              <li class="d-block align-content-center"><a href="about.html">About Us</a></li>
-              <li class="d-block align-content-center"><a href="service-areas.html">Services Areas</a></li>
-              <li class="d-block align-content-center"><a href="services.html">Our Services</a></li>
-              <li class="d-block align-content-center"><a href="team.html">Service Planning</a></li>
-              <li class="d-block align-content-center"><a href="contact.html">Contact Mark's Services</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links text-center">
-            <h4 class="h4 d-block align-content-center"><a href="service-areas.html">Service Areas</a></h4>
-            <ul class="text-center">
-              <li class="d-block align-content-center"><a href="#">Sun City 78633</a></li>
-              <li class="d-block align-content-center"><a href="#">Berry Creek 78628</a></li>
-              <li class="d-block align-content-center"><a href="#">Georgetown 78627</a></li>
-              <li class="d-block align-content-center"><a href="#">Georgetown 78626</a></li>
-              <li class="d-block align-content-center"><a href="#">Williamson County</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links text-center">
-            <h4 class="h4 d-block align-content-center"><a href="services.html">Our Services</a></h4>
-            <ul class="text-center">
-              <li class="d-block align-content-center"><a href="#">Plumbing Repairs</a></li>
-              <li class="d-block align-content-center"><a href="#">Water Heaters &amp; Filters</a></li>
-              <li class="d-block align-content-center"><a href="#">Electrical &amp; Lighting</a></li>
-              <li class="d-block align-content-center"><a href="#">Home Security &amp; Locks</a></li>
-              <li class="d-block align-content-center"><a href="#">Handyman Services</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links text-center">
-            <h4 class="h4 d-block align-content-center"><a href="faqs.html">FAQs (Questions)</a></h4>
-            <ul>
-              <li class="d-block align-content-center"><a href="appointment.html">Request a Visit</a></li>
-              <li class="d-block align-content-center"><a href="testimonials.html">How We Work</a></li>
-              <li class="d-block align-content-center"><a href="gallery.html">Service Gallery</a></li>
-              <li class="d-block align-content-center"><a href="terms.html">Terms of Service</a></li>
-              <li class="d-block align-content-center"><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div>
-            © Copyright <strong><span>Mark's Services</span></strong>. All Rights Reserved
-          </div>
-
-        </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
-        </div>
-
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- index.html Custom Body Code -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": [
-        "LocalBusiness",
-        "HomeAndConstructionBusiness"
-      ],
-      "@id": "https://SunCityHome.Repair/#business",
-      "name": "Sun City Home Repair",
-      "alternateName": "Mark's Services",
-      "url": "https://SunCityHome.Repair",
-      "telephone": "512-549-0322",
-      "email": "office@marksservices.com",
-      "description": "Client-location home repairs, fixture installations, maintenance, and punch-list work; licensed trades coordinated when required.",
-      "areaServed": [{
-          "@type": "Place",
-          "name": "Sun City, Georgetown, TX 78633"
-        },
-        {
-          "@type": "Place",
-          "name": "Berry Creek, Georgetown, TX 78628"
-        },
-        {
-          "@type": "Place",
-          "name": "Georgetown, TX 78626"
-        },
-        {
-          "@type": "Place",
-          "name": "Georgetown, TX 78627"
-        }
-      ]
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-          "@type": "Question",
-          "name": "What areas does Sun City Home Repair serve?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The primary service area is Sun City, Georgetown, TX 78633, with service in Berry Creek 78628 and Georgetown ZIP codes 78626 and 78627."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I request several small repairs at once?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. A written list with photos, model numbers, and priorities helps group compatible repairs and identify any parts or licensed-trade needs before the visit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you coordinate licensed plumbing and electrical work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The scope is reviewed carefully, and appropriately licensed plumbing or electrical work is coordinated when required."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you have a public office or showroom?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Sun City Home Repair is a service-area business providing client-location work at the homeowner's property."
-          }
-        }
-      ]
-    }
-  </script>
-
-</body>
-
-</html>
+<?php require __DIR__ . '/includes/footer.php'; ?>

@@ -97,6 +97,24 @@ return [
         "body_class" => "privacy-page",
         "label" => "Privacy",
     ],
+    "service-area-details.php" => [
+        "title" => "Sun City 78633 Home Repair | Mark's Services",
+        "description" =>
+            "Sun City handyman services for practical repairs, fixture work, installations, maintenance, and punch-list projects in Georgetown 78633.",
+        "keywords" =>
+            "Sun City home repair, Sun City handyman, 78633 home services, plumbing fixtures, electrical fixtures, home maintenance",
+        "body_class" => "service-area-details-page",
+        "label" => "Sun City Service Area",
+    ],
+    "service-areas.php" => [
+        "title" => "Service Areas | Sun City & Berry Creek Home Repair",
+        "description" =>
+            "Home repair service-area information for Sun City 78633, Berry Creek 78628, and Georgetown 78626 and 78627.",
+        "keywords" =>
+            "Sun City 78633 home repair, Berry Creek 78628 handyman, Georgetown 78626, Georgetown 78627, Williamson County home services",
+        "body_class" => "service-areas-page",
+        "label" => "Service Areas",
+    ],
     "service-details.php" => [
         "title" => "Service Details | Sun City & Berry Creek Home Services",
         "description" =>

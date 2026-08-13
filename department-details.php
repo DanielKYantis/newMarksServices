@@ -1,95 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Department Details - Mark - Medicare</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+declare(strict_types=1);
 
-  <!-- Favicons -->
-  <link href="assets/img/uploads/favicon-32x32-clarity.png" rel="icon">
-  <link href="assets/img/uploads/apple-touch-icon-180x180-2.png" rel="apple-touch-icon">
+$pageKey = 'department-details.php';
+require __DIR__ . '/includes/header.php';
+?>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-</head>
-
-<body class="department-details-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- <img src="assets/img/uploads/logo_enhanced.png" alt=""> -->
-        <i class="bi bi-house-gear"></i>
-        <h1 class="sitename">Sun City Home Repair</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="departments.html">Departments</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="doctors.html">Doctors</a></li>
-          <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="department-details.html" class="active">Department Details</a></li>
-              <li><a href="service-details.html">Service Details</a></li>
-              <li><a href="appointment.html">Appointment</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="terms.html">Terms</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="404.html">404</a></li>
-            </ul>
-          </li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-      <ul>
-        <li><a href="#">Dropdown 1</a></li>
-        <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Deep Dropdown 1</a></li>
-            <li><a href="#">Deep Dropdown 2</a></li>
-            <li><a href="#">Deep Dropdown 3</a></li>
-            <li><a href="#">Deep Dropdown 4</a></li>
-            <li><a href="#">Deep Dropdown 5</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Dropdown 2</a></li>
-        <li><a href="#">Dropdown 3</a></li>
-        <li><a href="#">Dropdown 4</a></li>
-      </ul>
-    </li> -->
-          <!-- <li><a href="contact.html">Contact</a></li> -->
-          <!-- <a class="btn-getstarted" href="appointment.html">Contact</a> -->
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="appointment.html">Contact</a>
-
-    </div>
-  </header>
-
-  <main class="main">
+<main class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
@@ -129,7 +46,7 @@
             <h1 class="department-title">Advanced Cardiovascular Institute</h1>
             <p class="department-lead">Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
             <div class="header-actions">
-              <a href="appointment.html" class="btn-primary">
+              <a href="appointment.php" class="btn-primary">
                 <i class="bi bi-calendar-plus"></i>
                 <span>Schedule a Visit</span>
               </a>
@@ -306,25 +223,25 @@
                 </div>
                 <ul class="link-list">
                   <li>
-                    <a href="services.html">
+                    <a href="services.php">
                       <span>All Cardiology Services</span>
                       <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="doctors.html">
+                    <a href="doctors.php">
                       <span>Meet Our Specialists</span>
                       <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="insurance.html">
+                    <a href="insurance.php">
                       <span>Insurance Information</span>
                       <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="patient-portal.html">
+                    <a href="patient-portal.php">
                       <span>Patient Portal</span>
                       <i class="bi bi-arrow-up-right"></i>
                     </a>
@@ -344,109 +261,4 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">Sun City Home Repair</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
-            <ul>
-              <li><a href="#">Molestiae accusamus iure</a></li>
-              <li><a href="#">Excepturi dignissimos</a></li>
-              <li><a href="#">Suscipit distinctio</a></li>
-              <li><a href="#">Dilecta</a></li>
-              <li><a href="#">Sit quas consectetur</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nobis illum</h4>
-            <ul>
-              <li><a href="#">Ipsam</a></li>
-              <li><a href="#">Laudantium dolorum</a></li>
-              <li><a href="#">Dinera</a></li>
-              <li><a href="#">Trodelas</a></li>
-              <li><a href="#">Flexo</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div>
-            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
-          </div>
-
-        </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
-        </div>
-
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+<?php require __DIR__ . '/includes/footer.php'; ?>

@@ -435,7 +435,9 @@ if ($assetsFrom !== null) {
 copyExportAssets($source, $output);
 
 $includes = $output . DIRECTORY_SEPARATOR . 'includes';
-mkdir($includes, 0775, true);
+if (!is_dir($includes) && !mkdir($includes, 0775, true) && !is_dir($includes)) {
+    fail("Unable to create includes directory: {$includes}");
+}
 
 $repositoryConfig = dirname(__DIR__) . '/includes/config.php';
 $outputConfig = $includes . '/config.php';
