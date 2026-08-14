@@ -26,7 +26,7 @@ declare(strict_types=1);
               <li class="d-block align-content-center"><a href="about.php">About Us</a></li>
               <li class="d-block align-content-center"><a href="service-areas.php">Services Areas</a></li>
               <li class="d-block align-content-center"><a href="services.php">Our Services</a></li>
-              <li class="d-block align-content-center"><a href="team.php">Service Planning</a></li>
+              <li class="d-block align-content-center"><a href="service-planning.php">Service Planning</a></li>
               <li class="d-block align-content-center"><a href="contact.php">Contact Mark's Services</a></li>
             </ul>
           </div>
@@ -34,31 +34,31 @@ declare(strict_types=1);
           <div class="col-lg-2 col-md-3 footer-links text-center">
             <h4 class="h4 d-block align-content-center"><a href="service-areas.php">Service Areas</a></h4>
             <ul class="text-center">
-              <li class="d-block align-content-center"><a href="#">Sun City 78633</a></li>
-              <li class="d-block align-content-center"><a href="#">Berry Creek 78628</a></li>
-              <li class="d-block align-content-center"><a href="#">Georgetown 78627</a></li>
-              <li class="d-block align-content-center"><a href="#">Georgetown 78626</a></li>
-              <li class="d-block align-content-center"><a href="#">Williamson County</a></li>
+              <li class="d-block align-content-center"><a href="sun-city-texas-home-repair.php">Sun City 78633</a></li>
+              <li class="d-block align-content-center"><a href="berry-creek-texas-home-repair.php">Berry Creek 78628</a></li>
+              <li class="d-block align-content-center"><a href="williamson-county-home-repair.php">Georgetown 78627</a></li>
+              <li class="d-block align-content-center"><a href="georgetown-texas-home-repair.php">Georgetown 78626</a></li>
+              <li class="d-block align-content-center"><a href="williamson-county-home-repair.php">Williamson County</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links text-center">
             <h4 class="h4 d-block align-content-center"><a href="services.php">Our Services</a></h4>
             <ul class="text-center">
-              <li class="d-block align-content-center"><a href="#">Plumbing Repairs</a></li>
-              <li class="d-block align-content-center"><a href="#">Water Heaters &amp; Filters</a></li>
-              <li class="d-block align-content-center"><a href="#">Electrical &amp; Lighting</a></li>
-              <li class="d-block align-content-center"><a href="#">Home Security &amp; Locks</a></li>
-              <li class="d-block align-content-center"><a href="#">Handyman Services</a></li>
+              <li class="d-block align-content-center"><a href="services.php#plumbing-fixtures">Plumbing Repairs</a></li>
+              <li class="d-block align-content-center"><a href="services.php#water-systems">Water Heaters &amp; Filters</a></li>
+              <li class="d-block align-content-center"><a href="services.php#electrical-lighting">Electrical &amp; Lighting</a></li>
+              <li class="d-block align-content-center"><a href="services.php#security-smart-home">Home Security &amp; Locks</a></li>
+              <li class="d-block align-content-center"><a href="services.php#doors-carpentry">Handyman Services</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links text-center">
-            <h4 class="h4 d-block align-content-center"><a href="faqs.php">FAQs (Questions)</a></h4>
+            <h4 class="h4 d-block align-content-center"><a href="home-repair-faq.php">FAQs (Questions)</a></h4>
             <ul>
-              <li class="d-block align-content-center"><a href="appointment.php">Request a Visit</a></li>
-              <li class="d-block align-content-center"><a href="testimonials.php">How We Work</a></li>
-              <li class="d-block align-content-center"><a href="gallery.php">Service Gallery</a></li>
+              <li class="d-block align-content-center"><a href="request-a-visit.php">Request a Visit</a></li>
+              <li class="d-block align-content-center"><a href="how-we-work.php">How We Work</a></li>
+              <li class="d-block align-content-center"><a href="service-gallery.php">Service Gallery</a></li>
               <li class="d-block align-content-center"><a href="terms.php">Terms of Service</a></li>
               <li class="d-block align-content-center"><a href="privacy.php">Privacy Policy</a></li>
             </ul>

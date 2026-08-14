@@ -1,8 +1,8 @@
 // main: ../main.scss
 /*--------------------------------------------------------------
-# Doctors Section
+# Service Planning Section
 --------------------------------------------------------------*/
-.doctors {
+.service-planning {
   padding-top: 63px;
   --sh-border: color-mix(in srgb, var(--default-color) 12%, transparent);
   --sh-border-strong: color-mix(in srgb, var(--default-color) 20%, transparent);
@@ -232,8 +232,8 @@
     }
   }
 
-  /* ============== Doctor Directory ============== */
-  .doctor-directory {
+  /* ============== Service Directory ============== */
+  .service-directory {
     margin-top: 64px;
 
     .directory-header {
@@ -353,8 +353,8 @@
     }
   }
 
-  /* ============== Doctor Card ============== */
-  .sh-doctor-card {
+  /* ============== Service Plan Card ============== */
+  .service-plan-card {
     background: var(--surface-color);
     border: 1px solid var(--sh-border);
     border-radius: var(--sh-radius);

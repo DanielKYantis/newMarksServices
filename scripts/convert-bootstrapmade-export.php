@@ -220,11 +220,37 @@ function replaceHtmlLinks(string $html): string
 {
     $html = preg_replace_callback(
         "~(href\\s*=\\s*[\"'])([^\"'?#]+)\\.html((?:[?#][^\"']*)?)([\"'])~i",
-        static fn(array $m): string => $m[1] . $m[2] . '.php' . $m[3] . $m[4],
+        static function (array $m): string {
+            $sourceName = basename($m[2]) . '.html';
+            $directory = dirname($m[2]);
+            $route = outputPageName($sourceName);
+            $target = ($directory === '.' ? '' : $directory . '/') . ($route ?? 'index.php');
+            return $m[1] . $target . $m[3] . $m[4];
+        },
         $html
     ) ?? $html;
 
     return replaceStockImagePaths($html);
+}
+
+function outputPageName(string $htmlName): ?string
+{
+    $routes = [
+        'appointment.html' => 'request-a-visit.php',
+        'doctors.html' => 'service-planning.php',
+        'testimonials.html' => 'how-we-work.php',
+        'gallery.html' => 'service-gallery.php',
+        'faq.html' => 'home-repair-faq.php',
+        'service-area-details.html' => 'sun-city-texas-home-repair.php',
+        'service-details.html' => 'plumbing-fixture-repair.php',
+        'departments.html' => 'service-areas.php',
+        'department-details.html' => null,
+        'starter-page.html' => null,
+    ];
+
+    return array_key_exists(strtolower($htmlName), $routes)
+        ? $routes[strtolower($htmlName)]
+        : (preg_replace('/\\.html$/i', '.php', $htmlName) ?? $htmlName . '.php');
 }
 
 function replaceStockImagePaths(string $html): string
@@ -284,6 +310,36 @@ function replaceStockImagePaths(string $html): string
     ]);
 }
 
+function normalizeTemplateMarkup(string $html): string
+{
+    return strtr($html, [
+        'featured-departments' => 'featured-service-groups',
+        'departments-wrapper' => 'service-groups-wrapper',
+        'find-a-doctor' => 'service-directory',
+        'clinician-row' => 'service-row',
+        'department-details' => 'service-area-details',
+        'department-card' => 'service-area-card',
+        'department-title' => 'service-area-title',
+        'department-lead' => 'service-area-lead',
+        'id="departments"' => 'id="service-areas"',
+        'class="departments ' => 'class="service-areas ',
+        'dept-' => 'area-',
+        'id="doctors"' => 'id="service-planning"',
+        'class="doctors ' => 'class="service-planning ',
+        'doctor-directory' => 'service-directory',
+        'doctor-item' => 'service-item',
+        'sh-doctor-card' => 'service-plan-card',
+        'appointmnet' => 'request-a-visit',
+        'appointment-form' => 'service-request-form',
+        'service-details-2' => 'plumbing-service',
+        'id="testimonials"' => 'id="service-principles"',
+        'class="testimonials ' => 'class="service-principles ',
+        'bi-file-medical' => 'bi-clipboard-check',
+        'bi-hospital' => 'bi-house-gear',
+        'bi-heart-pulse' => 'bi-tools',
+    ]);
+}
+
 function normalSharedMarkup(string $html): string
 {
     $html = preg_replace("~\\s+class=([\"'])active\\1~i", '', $html) ?? $html;
@@ -303,6 +359,7 @@ function defaultConfigContents(): string
 declare(strict_types=1);
 
 const SITE_NAME = "Mark's Services";
+const SITE_URL = "https://suncityhome.repair";
 const BUSINESS_NAME = "Mark's Services";
 const BUSINESS_EMAIL = "office@marksservices.com";
 const BUSINESS_PHONE_DISPLAY = "(512) 549-0322";
@@ -310,13 +367,13 @@ const BUSINESS_PHONE_TEL = "+15125490322";
 const BUSINESS_CITY = "Georgetown";
 const BUSINESS_STATE = "TX";
 const BUSINESS_ZIP = "78633";
-const BUSINESS_AREA = "Sun City & Berry Creek, Georgetown, Texas";
+const BUSINESS_AREA = "Sun City Texas, Berry Creek, Georgetown, and Williamson County";
 const BUSINESS_AREA_DETAIL =
-    "Sun City, Georgetown, Williamson County 78633; Berry Creek, Georgetown, Williamson County 78628; and Georgetown 78626 and 78627";
+    "Sun City Texas 78633; Berry Creek, Texas 78628; Georgetown, Texas 78626; and Williamson County 78627";
 const BUSINESS_ADDRESS_DISPLAY =
     "Client-location service in " . BUSINESS_AREA_DETAIL;
 const BUSINESS_SERVICE_NOTE =
-    "Client-location service in Sun City, Georgetown 78633 and Berry Creek, Georgetown 78628, Williamson County.";
+    "Client-location service in Sun City Texas 78633, Berry Creek, Texas 78628, Georgetown, Texas 78626, and Williamson County 78627.";
 const ELECTRICAL_LICENSE = "TECL 20547";
 const ELECTRICAL_LICENSE_HOLDER = "Larry Kizer";
 const PLUMBING_LICENSE = "M-38601";
@@ -343,12 +400,7 @@ function is_active(string $current, array|string $targets): string
 
 function site_base_url(): string
 {
-    $host = $_SERVER["HTTP_HOST"] ?? "www.marksservices.com";
-    $https = $_SERVER["HTTPS"] ?? "";
-    $scheme = $https !== "" && $https !== "off" ? "https" : "http";
-    $script = $_SERVER["SCRIPT_NAME"] ?? "/index.php";
-    $basePath = rtrim(str_replace("\\", "/", dirname($script)), "/");
-    return $scheme . "://" . $host . ($basePath === "." ? "" : $basePath);
+    return SITE_URL;
 }
 
 function absolute_url(string $path = ""): string
@@ -453,6 +505,7 @@ if (is_file($readmePath)) {
     $readme = file_get_contents($readmePath);
     if ($readme !== false) {
         $exportNote = trim(preg_replace('/\s+/', ' ', $readme) ?? $readme);
+        $exportNote = str_ireplace(['Mark - Medicare', 'Medicare'], ["Mark's Services", "Mark's Services"], $exportNote);
     }
 }
 
@@ -559,6 +612,13 @@ $footerTemplate .= trim(replaceHtmlLinks($sharedTail)) . "\n";
 $footerTemplate .= "</body>\n</html>\n";
 file_put_contents($includes . '/footer.php', $footerTemplate);
 
+foreach (['header.php', 'nav.php', 'footer.php', 'service-area-detail.php'] as $sharedInclude) {
+    $repositoryInclude = dirname(__DIR__) . '/includes/' . $sharedInclude;
+    if (is_file($repositoryInclude) && !copy($repositoryInclude, $includes . '/' . $sharedInclude)) {
+        fail("Unable to preserve repository include: {$repositoryInclude}");
+    }
+}
+
 $warnings = [];
 $generatedPageRegistry = [];
 foreach ($pages as $pagePath) {
@@ -581,7 +641,10 @@ foreach ($pages as $pagePath) {
         $warnings[] = "{$name}: footer differs from {$layoutName}; shared layout uses {$layoutName}.";
     }
 
-    $phpName = preg_replace('/\\.html$/i', '.php', $name) ?? $name . '.php';
+    $phpName = outputPageName($name);
+    if ($phpName === null) {
+        continue;
+    }
     $label = $phpName === '404.php'
         ? '404'
         : ucwords(str_replace(['-', '_'], ' ', pathinfo($phpName, PATHINFO_FILENAME)));
@@ -595,8 +658,15 @@ foreach ($pages as $pagePath) {
 
     file_put_contents(
         $output . DIRECTORY_SEPARATOR . $phpName,
-        renderPage($phpName, replaceHtmlLinks($main))
+        renderPage($phpName, normalizeTemplateMarkup(replaceHtmlLinks($main)))
     );
+}
+
+foreach (['berry-creek-texas-home-repair.php', 'georgetown-texas-home-repair.php', 'williamson-county-home-repair.php'] as $supplementalPage) {
+    $repositoryPage = dirname(__DIR__) . '/' . $supplementalPage;
+    if (is_file($repositoryPage) && !copy($repositoryPage, $output . '/' . $supplementalPage)) {
+        fail("Unable to preserve service-area page: {$repositoryPage}");
+    }
 }
 
 if (!$preserveRepositoryPages) {
@@ -604,7 +674,7 @@ if (!$preserveRepositoryPages) {
     file_put_contents($outputPages, $pagesFile);
 }
 
-echo 'Converted ' . count($pages) . " pages to {$output}\n";
+echo 'Converted ' . count($generatedPageRegistry) . " pages to {$output}\n";
 echo "Shared includes: includes/config.php, pages.php, services.php, header.php, nav.php, footer.php\n";
 if ($exportNote !== '') {
     echo "Suggested commit note: {$exportNote}\n";

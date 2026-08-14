@@ -62,7 +62,7 @@ require __DIR__ . '/includes/header.php';
                   </ul>
                 </div>
                 <footer class="card-foot">
-                  <a href="service-details.php" class="btn-ghost">
+                  <a href="plumbing-fixture-repair.php" class="btn-ghost">
                     Request a Visit
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -89,7 +89,7 @@ require __DIR__ . '/includes/header.php';
                   </ul>
                 </div>
                 <footer class="card-foot">
-                  <a href="service-details.php" class="btn-primary">
+                  <a href="plumbing-fixture-repair.php" class="btn-primary">
                     Discuss Your Project
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -115,7 +115,7 @@ require __DIR__ . '/includes/header.php';
                   </ul>
                 </div>
                 <footer class="card-foot">
-                  <a href="service-details.php" class="btn-ghost">
+                  <a href="plumbing-fixture-repair.php" class="btn-ghost">
                     View Electrical Services
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -124,7 +124,7 @@ require __DIR__ . '/includes/header.php';
             </div><!-- End Service Card -->
 
             <div id="security-smart-home" class="col-lg-4 col-md-6 service-group-anchor" data-aos="fade-up" data-aos-delay="100">
-              <article class="service-card emergency">
+              <article class="service-card licensed-coordination">
                 <header class="card-head">
                   <div class="icon-wrap">
                     <i class="bi bi-shield-plus"></i>
@@ -142,7 +142,7 @@ require __DIR__ . '/includes/header.php';
                   </ul>
                 </div>
                 <footer class="card-foot">
-                  <a href="appointment.php" class="btn-danger">
+                  <a href="request-a-visit.php" class="btn-danger">
                     <i class="bi bi-calendar-check"></i>
                     Discuss Your Project
                   </a>
@@ -168,7 +168,7 @@ require __DIR__ . '/includes/header.php';
                   </ul>
                 </div>
                 <footer class="card-foot">
-                  <a href="service-details.php" class="btn-ghost">
+                  <a href="plumbing-fixture-repair.php" class="btn-ghost">
                     Learn More
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -194,7 +194,7 @@ require __DIR__ . '/includes/header.php';
                   </ul>
                 </div>
                 <footer class="card-foot">
-                  <a href="service-details.php" class="btn-ghost">
+                  <a href="plumbing-fixture-repair.php" class="btn-ghost">
                     Plan a Visit
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -248,7 +248,7 @@ require __DIR__ . '/includes/header.php';
           </div>
         </div><!-- End Stats -->
 
-        <div class="appointment-banner" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-request-banner" data-aos="fade-up" data-aos-delay="100">
           <div class="banner-grid">
             <div class="banner-meta">
               <span class="badge badge-outline"><i class="bi bi-calendar2-check"></i> Plan a Practical Visit</span>
@@ -256,14 +256,14 @@ require __DIR__ . '/includes/header.php';
               <p>Tell Mark's Services what needs attention and where the home is located so the project can be reviewed and scheduled appropriately.</p>
             </div>
             <div class="banner-actions">
-              <a href="appointment.php" class="btn-primary">Request a Visit</a>
-              <a href="tel:+15551234567" class="btn-secondary">
+              <a href="request-a-visit.php" class="btn-primary">Request a Visit</a>
+              <a href="tel:+15125490322" class="btn-secondary">
                 <i class="bi bi-telephone"></i>
                 +1 (512) 549-0322
               </a>
             </div>
           </div>
-        </div><!-- End Appointment Banner -->
+        </div><!-- End Service Request Banner -->
 
       </div>
 

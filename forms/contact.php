@@ -6,8 +6,8 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  require_once __DIR__ . '/../includes/config.php';
+  $receiving_email_address = BUSINESS_EMAIL;
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -21,7 +21,7 @@
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+  $contact->subject = "Mark's Services Contact: " . ($_POST['subject'] ?? 'Website message');
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*

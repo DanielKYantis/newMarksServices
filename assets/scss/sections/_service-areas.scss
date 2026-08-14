@@ -1,9 +1,9 @@
 // main: ../main.scss
 /*--------------------------------------------------------------
-# Departments Section
+# Service Areas Section
 --------------------------------------------------------------*/
-.departments {
-  .dept-card {
+.service-areas {
+  .area-card {
     background: var(--surface-color);
     border: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
     border-radius: 8px;
@@ -19,17 +19,17 @@
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
       transform: translateY(-2px);
 
-      .dept-card-media img {
+      .area-card-media img {
         transform: scale(1.04);
       }
 
-      .dept-icon-box {
+      .area-icon-box {
         background: var(--accent-color);
         color: var(--contrast-color);
         border-color: var(--accent-color);
       }
 
-      .dept-link-btn {
+      .area-link-btn {
         color: var(--accent-color);
 
         i {
@@ -39,7 +39,7 @@
     }
   }
 
-  .dept-card-media {
+  .area-card-media {
     position: relative;
     height: 180px;
     overflow: hidden;
@@ -53,7 +53,7 @@
     }
   }
 
-  .dept-tag {
+  .area-tag {
     position: absolute;
     top: 16px;
     left: 16px;
@@ -70,21 +70,21 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
-  .dept-card-body {
+  .area-card-body {
     padding: 24px;
     flex: 1;
     display: flex;
     flex-direction: column;
   }
 
-  .dept-card-head {
+  .area-card-head {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 16px;
   }
 
-  .dept-icon-box {
+  .area-icon-box {
     width: 40px;
     height: 40px;
     flex-shrink: 0;
@@ -102,7 +102,7 @@
     }
   }
 
-  .dept-card-title {
+  .area-card-title {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2;
@@ -111,7 +111,7 @@
     color: var(--heading-color);
   }
 
-  .dept-card-meta {
+  .area-card-meta {
     margin: 0;
     font-size: 12px;
     font-weight: 500;
@@ -120,14 +120,14 @@
     color: color-mix(in srgb, var(--default-color) 60%, transparent);
   }
 
-  .dept-card-desc {
+  .area-card-desc {
     font-size: 14px;
     line-height: 1.6;
     color: color-mix(in srgb, var(--default-color) 75%, transparent);
     margin: 0 0 16px;
   }
 
-  .dept-feature-list {
+  .area-feature-list {
     list-style: none;
     padding: 0;
     margin: 0 0 8px;
@@ -158,13 +158,13 @@
     }
   }
 
-  .dept-card-foot {
+  .area-card-foot {
     padding: 16px 24px;
     border-top: 1px solid color-mix(in srgb, var(--default-color) 10%, transparent);
     background: color-mix(in srgb, var(--default-color) 3%, transparent);
   }
 
-  .dept-link-btn {
+  .area-link-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -191,19 +191,19 @@
   }
 
   @media (max-width: 768px) {
-    .dept-card-media {
+    .area-card-media {
       height: 200px;
     }
 
-    .dept-card-body {
+    .area-card-body {
       padding: 20px;
     }
 
-    .dept-card-foot {
+    .area-card-foot {
       padding: 14px 20px;
     }
 
-    .dept-card-title {
+    .area-card-title {
       font-size: 18px;
     }
   }

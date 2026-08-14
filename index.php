@@ -28,9 +28,9 @@ require __DIR__ . '/includes/header.php';
         </script>
         <div class="swiper-wrapper" id="swiper-wrapper-371649d4e863269f" aria-live="off" style="transition-duration: 0ms; transition-delay: 0ms;">
 
-          <div class="swiper-slide swiper-slide-prev" style="background-image: url(&quot;assets/img/health/showcase-7.webp&quot;); width: 1748px; opacity: 0; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;" role="group" aria-label="2 / 3" data-swiper-slide-index="1"></div>
-          <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" style="background-image: url(&quot;assets/img/health/showcase-11.webp&quot;); width: 1748px; opacity: 1; transform: translate3d(-1748px, 0px, 0px); transition-duration: 0ms;" role="group" aria-label="3 / 3" data-swiper-slide-index="2"></div>
-          <div class="swiper-slide swiper-slide-next" style="background-image: url(&quot;assets/img/health/showcase-1.webp&quot;); width: 1748px; opacity: 0; transform: translate3d(-3496px, 0px, 0px); transition-duration: 0ms;" role="group" aria-label="1 / 3" data-swiper-slide-index="0"></div>
+          <div class="swiper-slide swiper-slide-prev" style="background-image: url(&quot;assets/img/brand/sun-city-home-exterior.webp&quot;); width: 1748px; opacity: 0; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;" role="group" aria-label="2 / 3" data-swiper-slide-index="1"></div>
+          <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" style="background-image: url(&quot;assets/img/services/visit.webp&quot;); width: 1748px; opacity: 1; transform: translate3d(-1748px, 0px, 0px); transition-duration: 0ms;" role="group" aria-label="3 / 3" data-swiper-slide-index="2"></div>
+          <div class="swiper-slide swiper-slide-next" style="background-image: url(&quot;assets/img/services/lighting.webp&quot;); width: 1748px; opacity: 0; transform: translate3d(-3496px, 0px, 0px); transition-duration: 0ms;" role="group" aria-label="1 / 3" data-swiper-slide-index="0"></div>
         </div>
         <div class="slide-overlay"></div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
@@ -50,29 +50,29 @@ require __DIR__ . '/includes/header.php';
               <p class="hero-subtext">Mark's Remodeling and Facility Services provides practical Sun City Home Repair &amp; Handyman Services, including fixture repairs, water-system help, safety updates, and punch-list work for homeowners in Sun City and Berry Creek.<br></p>
 
               <div class="action-row">
-                <a href="appointment.php" class="btn btn-solid">Schedule a Visit</a>
-                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-outline glightbox">
-                  <i class="bi bi-play-circle"></i>
+                <a href="request-a-visit.php" class="btn btn-solid">Schedule a Visit</a>
+                <a href="services.php" class="btn btn-outline">
+                  <i class="bi bi-grid"></i>
                   <span>View Our Services</span>
                 </a>
               </div>
 
               <ul class="meta-row">
                 <li>
-                  <a href="#" class="meta-link">
+                <a href="request-a-visit.php" class="meta-link">
                     <i class="bi bi-calendar-check"></i>
                     <span>Request a Visit</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="meta-link">
+                <a href="tel:+15125490322" class="meta-link">
                     <i class="bi bi-chat-dots"></i>
                     <span>Call Mark's Services</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="meta-link">
-                    <i class="bi bi-file-medical"></i>
+                <a href="services.php" class="meta-link">
+                    <i class="bi bi-tools"></i>
                     <span>Home Repair Help</span>
                   </a>
                 </li>
@@ -83,7 +83,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
             <div class="info-stack">
 
-              <div class="info-card emergency-card">
+              <div class="info-card contact-card">
                 <div class="card-icon">
                   <i class="bi bi-telephone-fill"></i>
                 </div>
@@ -94,11 +94,11 @@ require __DIR__ . '/includes/header.php';
                 <a href="tel:+15125490322" class="card-action" aria-label="Call now">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
-              </div><!-- End Emergency Card -->
+              </div><!-- End Contact Card -->
 
               <div class="info-card stats-card">
                 <div class="stat-cell">
-                  <span class="stat-number">Sun City, Texas</span>
+                  <span class="stat-number">Sun City Texas</span>
                   <span class="stat-label">Primary Service Area 78633</span>
                 </div>
                 <div class="stat-divider"></div>
@@ -108,28 +108,20 @@ require __DIR__ . '/includes/header.php';
                 </div>
               </div><!-- End Stats Card -->
 
-              <div class="info-card review-card">
-                <div class="review-header">
-                  <div class="review-rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <span class="review-score">Local Service</span>
+              <div class="info-card service-promise-card">
+                <div class="promise-header">
+                  <div class="promise-icon"><i class="bi bi-shield-check"></i></div>
+                  <span class="promise-label">Local Service</span>
                 </div>
-                <p class="review-quote">Clear communication, practical solutions, and work planned around your home.</p>
-                <div class="review-author">
-                  <span class="author-avatar">
-                    <img src="assets/img/person/person-f-3.webp" alt="Home service consultation" loading="lazy">
-                  </span>
-                  <div class="author-info">
-                    <span class="author-name">Mark's Services</span>
-                    <span class="author-role">Sun City &amp; Berry Creek</span>
+                <p class="promise-text">Clear communication, practical solutions, and work planned around your home.</p>
+                <div class="promise-identity">
+                  <span class="identity-icon"><i class="bi bi-house-gear"></i></span>
+                  <div class="identity-info">
+                    <span class="identity-name">Mark's Services</span>
+                    <span class="identity-role">Client-location home repair</span>
                   </div>
                 </div>
-              </div><!-- End Review Card -->
+              </div><!-- End Service Promise Card -->
 
             </div>
           </div><!-- End Info Stack -->
@@ -228,7 +220,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
             <div class="media-stack">
               <figure class="media-card primary">
-                <img src="assets/img/health/facilities-6.webp" alt="Home repair service in Sun City" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/visit.webp" alt="Home repair service in Sun City" class="img-fluid" loading="lazy">
                 <figcaption class="media-tag">
                   <i class="bi bi-award"></i>
                   <span>Service-Area Business</span>
@@ -236,10 +228,10 @@ require __DIR__ . '/includes/header.php';
               </figure>
               <div class="media-row">
                 <figure class="media-card">
-                  <img src="assets/img/health/consultation-3.webp" alt="Homeowner project consultation" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/inspection.webp" alt="Homeowner project consultation" class="img-fluid" loading="lazy">
                 </figure>
                 <figure class="media-card">
-                  <img src="assets/img/health/surgery-2.webp" alt="Organized home repair work" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/toolkit.webp" alt="Organized home repair work" class="img-fluid" loading="lazy">
                 </figure>
               </div>
             </div>
@@ -315,12 +307,12 @@ require __DIR__ . '/includes/header.php';
 
     </section><!-- /Home About Section -->
 
-    <!-- Featured Departments Section -->
-    <section id="featured-departments" class="featured-departments section light-background">
+    <!-- Featured Service Groups Section -->
+    <section id="featured-service-groups" class="featured-service-groups section light-background">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="departments-wrapper">
+        <div class="service-groups-wrapper">
 
           <div class="spotlight-panel" data-aos="fade-up" data-aos-delay="150">
             <div class="row g-0 align-items-stretch">
@@ -359,14 +351,14 @@ require __DIR__ . '/includes/header.php';
                     </li>
                   </ul>
                   <div class="spotlight-actions">
-                    <a href="#" class="btn-shadcn primary">View Services</a>
-                    <a href="#" class="btn-shadcn ghost">Service Details <i class="bi bi-arrow-right"></i></a>
+                    <a href="services.php" class="btn-shadcn primary">View Services</a>
+                    <a href="service-planning.php" class="btn-shadcn ghost">Service Planning <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
               <div class="col-lg-5">
                 <div class="spotlight-visual">
-                  <img src="assets/img/health/emergency-3.webp" alt="Home repair and maintenance service" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/exterior.webp" alt="Home repair and maintenance service" class="img-fluid" loading="lazy">
                   <div class="visual-overlay">
                     <div class="overlay-card">
                       <div class="overlay-stat">
@@ -390,7 +382,7 @@ require __DIR__ . '/includes/header.php';
               <span class="meta-label">Core Home Services</span>
               <h3 class="heading-title">Browse Home Repair Categories</h3>
             </div>
-            <a href="#" class="btn-shadcn secondary">All Services <i class="bi bi-grid"></i></a>
+            <a href="services.php" class="btn-shadcn secondary">All Services <i class="bi bi-grid"></i></a>
           </div><!-- End Section Heading -->
 
           <div class="row g-3">
@@ -398,7 +390,7 @@ require __DIR__ . '/includes/header.php';
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
               <article class="shadcn-card">
                 <header class="card-head">
-                  <span class="card-icon"><i class="bi bi-heart-pulse"></i></span>
+                  <span class="card-icon"><i class="bi bi-droplet"></i></span>
                   <span class="badge-pill subtle">Service</span>
                 </header>
                 <div class="card-body">
@@ -414,7 +406,7 @@ require __DIR__ . '/includes/header.php';
                     <span class="value">Drains</span>
                     <span class="caption">Disposals &amp; Lines</span>
                   </div>
-                  <a href="#" class="foot-link" aria-label="Open Plumbing Fixtures &amp; Minor Leaks"><i class="bi bi-arrow-up-right"></i></a>
+                  <a href="services.php#plumbing-fixtures" class="foot-link" aria-label="Open Plumbing Fixtures &amp; Minor Leaks"><i class="bi bi-arrow-up-right"></i></a>
                 </footer>
               </article>
             </div>
@@ -422,7 +414,7 @@ require __DIR__ . '/includes/header.php';
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <article class="shadcn-card">
                 <header class="card-head">
-                  <span class="card-icon"><i class="bi bi-activity"></i></span>
+                  <span class="card-icon"><i class="bi bi-water"></i></span>
                   <span class="badge-pill subtle">Service</span>
                 </header>
                 <div class="card-body">
@@ -438,7 +430,7 @@ require __DIR__ . '/includes/header.php';
                     <span class="value">Filters</span>
                     <span class="caption">Heaters &amp; Softeners</span>
                   </div>
-                  <a href="#" class="foot-link" aria-label="Open Water Heaters &amp; Water Quality"><i class="bi bi-arrow-up-right"></i></a>
+                  <a href="services.php#water-systems" class="foot-link" aria-label="Open Water Heaters &amp; Water Quality"><i class="bi bi-arrow-up-right"></i></a>
                 </footer>
               </article>
             </div>
@@ -446,7 +438,7 @@ require __DIR__ . '/includes/header.php';
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
               <article class="shadcn-card">
                 <header class="card-head">
-                  <span class="card-icon"><i class="bi bi-scissors"></i></span>
+                  <span class="card-icon"><i class="bi bi-lightning-charge"></i></span>
                   <span class="badge-pill subtle">Service</span>
                 </header>
                 <div class="card-body">
@@ -462,7 +454,7 @@ require __DIR__ . '/includes/header.php';
                     <span class="value">GFCI</span>
                     <span class="caption">Outlets &amp; Switches</span>
                   </div>
-                  <a href="#" class="foot-link" aria-label="Open Electrical Fixtures &amp; Devices"><i class="bi bi-arrow-up-right"></i></a>
+                  <a href="services.php#electrical-lighting" class="foot-link" aria-label="Open Electrical Fixtures &amp; Devices"><i class="bi bi-arrow-up-right"></i></a>
                 </footer>
               </article>
             </div>
@@ -470,7 +462,7 @@ require __DIR__ . '/includes/header.php';
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
               <article class="shadcn-card">
                 <header class="card-head">
-                  <span class="card-icon"><i class="bi bi-balloon-heart"></i></span>
+                  <span class="card-icon"><i class="bi bi-lightbulb"></i></span>
                   <span class="badge-pill subtle">Service</span>
                 </header>
                 <div class="card-body">
@@ -486,7 +478,7 @@ require __DIR__ . '/includes/header.php';
                     <span class="value">Outdoor</span>
                     <span class="caption">Lighting</span>
                   </div>
-                  <a href="#" class="foot-link" aria-label="Open Lighting &amp; Ceiling Fans"><i class="bi bi-arrow-up-right"></i></a>
+                  <a href="services.php#electrical-lighting" class="foot-link" aria-label="Open Lighting &amp; Ceiling Fans"><i class="bi bi-arrow-up-right"></i></a>
                 </footer>
               </article>
             </div>
@@ -510,7 +502,7 @@ require __DIR__ . '/includes/header.php';
                     <span class="value">Video</span>
                     <span class="caption">Doorbells</span>
                   </div>
-                  <a href="#" class="foot-link" aria-label="Open Security &amp; Smart Home"><i class="bi bi-arrow-up-right"></i></a>
+                  <a href="services.php#security-smart-home" class="foot-link" aria-label="Open Security &amp; Smart Home"><i class="bi bi-arrow-up-right"></i></a>
                 </footer>
               </article>
             </div>
@@ -518,7 +510,7 @@ require __DIR__ . '/includes/header.php';
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
               <article class="shadcn-card">
                 <header class="card-head">
-                  <span class="card-icon"><i class="bi bi-bandaid"></i></span>
+                  <span class="card-icon"><i class="bi bi-hammer"></i></span>
                   <span class="badge-pill subtle">Service</span>
                 </header>
                 <div class="card-body">
@@ -534,24 +526,24 @@ require __DIR__ . '/includes/header.php';
                     <span class="value">Walls</span>
                     <span class="caption">Drywall &amp; Hardware</span>
                   </div>
-                  <a href="#" class="foot-link" aria-label="Open Carpentry, Walls &amp; Hardware"><i class="bi bi-arrow-up-right"></i></a>
+                  <a href="services.php#doors-carpentry" class="foot-link" aria-label="Open Carpentry, Walls &amp; Hardware"><i class="bi bi-arrow-up-right"></i></a>
                 </footer>
               </article>
             </div>
 
-          </div><!-- End Departments Grid -->
+          </div><!-- End Service Groups Grid -->
 
           <div class="banner-cta" data-aos="fade-up" data-aos-delay="250">
             <div class="banner-icon">
-              <i class="bi bi-hospital"></i>
+              <i class="bi bi-house-gear"></i>
             </div>
             <div class="banner-text">
               <h4 class="banner-title">Explore the Full Range of Home Services</h4>
               <p class="banner-sub">From a single fixture repair to a coordinated punch list, choose the service group that best matches your home project.</p>
             </div>
             <div class="banner-actions">
-              <a href="#" class="btn-shadcn primary">Browse Services</a>
-              <a href="#" class="btn-shadcn ghost">Request a Visit</a>
+              <a href="services.php" class="btn-shadcn primary">Browse Services</a>
+              <a href="request-a-visit.php" class="btn-shadcn ghost">Request a Visit</a>
             </div>
           </div><!-- End Banner CTA -->
 
@@ -559,7 +551,7 @@ require __DIR__ . '/includes/header.php';
 
       </div>
 
-    </section><!-- /Featured Departments Section -->
+    </section><!-- /Featured Service Groups Section -->
 
     <!-- Featured Services Section -->
     <section id="featured-services" class="featured-services section">
@@ -571,7 +563,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <article class="service-card">
               <div class="card-media">
-                <img src="assets/img/health/cardiology-2.webp" alt="Plumbing fixture repair" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/plumbing.webp" alt="Plumbing fixture repair" class="img-fluid" loading="lazy">
                 <span class="badge-label"><i class="bi bi-heart-pulse"></i> Home Service</span>
               </div>
               <div class="card-body">
@@ -581,7 +573,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <p>Repair and replace faucets, sinks, toilets, disposals, supply lines, drains, hose bibs, and other common household fixtures.</p>
                 <div class="card-foot">
-                  <a href="#" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
+                  <a href="services.php" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
                   <span class="status-dot" aria-label="By Appointment"></span>
                 </div>
               </div>
@@ -591,7 +583,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
             <article class="service-card">
               <div class="card-media">
-                <img src="assets/img/health/neurology-3.webp" alt="Water system service" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/water.webp" alt="Water system service" class="img-fluid" loading="lazy">
                 <span class="badge-label"><i class="bi bi-activity"></i> Home Service</span>
               </div>
               <div class="card-body">
@@ -601,7 +593,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <p>Support for water heaters, point-of-use units, softeners, whole-house filters, reverse osmosis systems, and water-flow concerns.</p>
                 <div class="card-foot">
-                  <a href="#" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
+                  <a href="services.php" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
                   <span class="status-dot" aria-label="By Appointment"></span>
                 </div>
               </div>
@@ -611,7 +603,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <article class="service-card">
               <div class="card-media">
-                <img src="assets/img/health/orthopedics-1.webp" alt="Electrical and lighting service" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/lighting.webp" alt="Electrical and lighting service" class="img-fluid" loading="lazy">
                 <span class="badge-label"><i class="bi bi-bandaid"></i> Home Service</span>
               </div>
               <div class="card-body">
@@ -621,7 +613,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <p>Install or repair lights, fans, switches, outlets, GFCIs, doorbells, smoke detectors, media outlets, and garage lighting.</p>
                 <div class="card-foot">
-                  <a href="#" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
+                  <a href="services.php" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
                   <span class="status-dot" aria-label="By Appointment"></span>
                 </div>
               </div>
@@ -631,7 +623,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
             <article class="service-card">
               <div class="card-media">
-                <img src="assets/img/health/pediatrics-4.webp" alt="Home security installation" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/security.webp" alt="Home security installation" class="img-fluid" loading="lazy">
                 <span class="badge-label"><i class="bi bi-emoji-smile"></i> Home Service</span>
               </div>
               <div class="card-body">
@@ -641,7 +633,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <p>Install video doorbells, security cameras, smart locks, and compatible panels with exterior requirements confirmed when applicable.</p>
                 <div class="card-foot">
-                  <a href="#" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
+                  <a href="services.php" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
                   <span class="status-dot" aria-label="By Appointment"></span>
                 </div>
               </div>
@@ -651,7 +643,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <article class="service-card">
               <div class="card-media">
-                <img src="assets/img/health/oncology-2.webp" alt="Small carpentry repair" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/doors.webp" alt="Small carpentry repair" class="img-fluid" loading="lazy">
                 <span class="badge-label"><i class="bi bi-shield-plus"></i> Home Service</span>
               </div>
               <div class="card-body">
@@ -661,7 +653,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <p>Repair doors, locks, storm doors, cabinet hardware, trim, shelves, closets, vanities, drywall, and other focused home items.</p>
                 <div class="card-foot">
-                  <a href="#" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
+                  <a href="services.php" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
                   <span class="status-dot" aria-label="By Appointment"></span>
                 </div>
               </div>
@@ -671,7 +663,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="350">
             <article class="service-card">
               <div class="card-media">
-                <img src="assets/img/health/laboratory-3.webp" alt="Home maintenance service" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/drywall.webp" alt="Home maintenance service" class="img-fluid" loading="lazy">
                 <span class="badge-label"><i class="bi bi-eyedropper"></i> Home Care</span>
               </div>
               <div class="card-body">
@@ -681,7 +673,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <p>Group home-inspection repairs, home-sale punch lists, mounting tasks, grab bars, minor exterior maintenance, and small installations.</p>
                 <div class="card-foot">
-                  <a href="#" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
+                  <a href="services.php" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
                   <span class="status-dot" aria-label="By Appointment"></span>
                 </div>
               </div>
@@ -694,8 +686,8 @@ require __DIR__ . '/includes/header.php';
 
     </section><!-- /Featured Services Section -->
 
-    <!-- Find A Doctor Section -->
-    <section id="find-a-doctor" class="find-a-doctor section">
+    <!-- Service Directory Section -->
+    <section id="service-directory" class="service-directory section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -712,27 +704,27 @@ require __DIR__ . '/includes/header.php';
             <p>Review common project categories, then request a visit for a practical scope discussion.</p>
           </div>
 
-          <form class="filter-form php-email-form" action="forms/doctor-search.php" method="get">
+          <form class="filter-form" action="services.php" method="get">
             <div class="row g-3">
               <div class="col-12 col-md-6 col-lg-4">
                 <label class="field-label">Project Type</label>
                 <div class="field-wrap">
                   <i class="bi bi-search"></i>
-                  <input type="text" class="form-control" name="doctor_name" placeholder="Describe a repair">
+                  <input type="text" class="form-control" name="project" placeholder="Describe a repair">
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
                 <label class="field-label">Service</label>
                 <div class="field-wrap">
-                  <i class="bi bi-clipboard2-pulse"></i>
-                  <select class="form-select" name="specialty">
+                  <i class="bi bi-tools"></i>
+                  <select class="form-select" name="service">
                     <option value="">Any service</option>
-                    <option value="cardiology">Plumbing Fixtures</option>
-                    <option value="neurology">Water Systems</option>
-                    <option value="orthopedics">Electrical &amp; Lighting</option>
-                    <option value="pediatrics">Home Security</option>
-                    <option value="dermatology">Carpentry &amp; Walls</option>
-                    <option value="oncology">Maintenance &amp; Punch Lists</option>
+                    <option value="plumbing-fixtures">Plumbing Fixtures</option>
+                    <option value="water-systems">Water Systems</option>
+                    <option value="electrical-lighting">Electrical &amp; Lighting</option>
+                    <option value="security-smart-home">Home Security</option>
+                    <option value="doors-carpentry">Carpentry &amp; Walls</option>
+                    <option value="wall-repairs-maintenance">Maintenance &amp; Punch Lists</option>
                   </select>
                 </div>
               </div>
@@ -742,9 +734,10 @@ require __DIR__ . '/includes/header.php';
                   <i class="bi bi-geo-alt"></i>
                   <select class="form-select" name="location">
                     <option value="">All service areas</option>
-                    <option value="downtown">Sun City 78633</option>
-                    <option value="northside">Berry Creek 78628</option>
-                    <option value="westend">Georgetown 78626 / 78627</option>
+                    <option value="sun-city-texas-78633">Sun City Texas 78633</option>
+                    <option value="berry-creek-texas-78628">Berry Creek, Texas 78628</option>
+                    <option value="georgetown-texas-78626">Georgetown, Texas 78626</option>
+                    <option value="williamson-county-78627">Williamson County 78627</option>
                   </select>
                 </div>
               </div>
@@ -774,9 +767,9 @@ require __DIR__ . '/includes/header.php';
         <div class="row g-3 directory-grid" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-12 col-lg-6">
-            <article class="clinician-row featured">
+            <article class="service-row featured">
               <div class="row-media">
-                <img src="assets/img/health/staff-1.webp" alt="Plumbing Fixtures &amp; Minor Leaks" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/plumbing.webp" alt="Plumbing Fixtures &amp; Minor Leaks" class="img-fluid" loading="lazy">
                 <span class="presence active" aria-label="By Appointment"></span>
               </div>
               <div class="row-body">
@@ -804,17 +797,17 @@ require __DIR__ . '/includes/header.php';
                   <li><i class="bi bi-geo"></i> Client-location service</li>
                 </ul>
                 <div class="row-actions">
-                  <a href="#" class="btn-ghost">View Service</a>
-                  <a href="#" class="btn-solid">Request Visit</a>
+                  <a href="services.php" class="btn-ghost">View Service</a>
+                  <a href="request-a-visit.php" class="btn-solid">Request Visit</a>
                 </div>
               </div>
             </article>
-          </div><!-- End Clinician Row -->
+          </div><!-- End Service Row -->
 
           <div class="col-12 col-lg-6">
-            <article class="clinician-row">
+            <article class="service-row">
               <div class="row-media">
-                <img src="assets/img/health/staff-3.webp" alt="Water Heaters &amp; Water Quality" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/water.webp" alt="Water Heaters &amp; Water Quality" class="img-fluid" loading="lazy">
                 <span class="presence busy" aria-label="Project Review"></span>
               </div>
               <div class="row-body">
@@ -841,17 +834,17 @@ require __DIR__ . '/includes/header.php';
                   <li><i class="bi bi-geo"></i> Georgetown 78626 / 78627</li>
                 </ul>
                 <div class="row-actions">
-                  <a href="#" class="btn-ghost">View Service</a>
-                  <a href="#" class="btn-solid">Request Visit</a>
+                  <a href="services.php" class="btn-ghost">View Service</a>
+                  <a href="request-a-visit.php" class="btn-solid">Request Visit</a>
                 </div>
               </div>
             </article>
-          </div><!-- End Clinician Row -->
+          </div><!-- End Service Row -->
 
           <div class="col-12 col-lg-6">
-            <article class="clinician-row">
+            <article class="service-row">
               <div class="row-media">
-                <img src="assets/img/health/staff-5.webp" alt="Electrical Fixtures &amp; Lighting" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/lighting.webp" alt="Electrical Fixtures &amp; Lighting" class="img-fluid" loading="lazy">
                 <span class="presence active" aria-label="By Appointment"></span>
               </div>
               <div class="row-body">
@@ -878,17 +871,17 @@ require __DIR__ . '/includes/header.php';
                   <li><i class="bi bi-geo"></i> Berry Creek 78628</li>
                 </ul>
                 <div class="row-actions">
-                  <a href="#" class="btn-ghost">View Service</a>
-                  <a href="#" class="btn-solid">Request Visit</a>
+                  <a href="services.php" class="btn-ghost">View Service</a>
+                  <a href="request-a-visit.php" class="btn-solid">Request Visit</a>
                 </div>
               </div>
             </article>
-          </div><!-- End Clinician Row -->
+          </div><!-- End Service Row -->
 
           <div class="col-12 col-lg-6">
-            <article class="clinician-row">
+            <article class="service-row">
               <div class="row-media">
-                <img src="assets/img/health/staff-7.webp" alt="Security, Smart Locks &amp; Cameras" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/security.webp" alt="Security, Smart Locks &amp; Cameras" class="img-fluid" loading="lazy">
                 <span class="presence offline" aria-label="Requirement Check"></span>
               </div>
               <div class="row-body">
@@ -915,17 +908,17 @@ require __DIR__ . '/includes/header.php';
                   <li><i class="bi bi-geo"></i> Client-location service</li>
                 </ul>
                 <div class="row-actions">
-                  <a href="#" class="btn-ghost">View Service</a>
-                  <a href="#" class="btn-solid">Request Visit</a>
+                  <a href="services.php" class="btn-ghost">View Service</a>
+                  <a href="request-a-visit.php" class="btn-solid">Request Visit</a>
                 </div>
               </div>
             </article>
-          </div><!-- End Clinician Row -->
+          </div><!-- End Service Row -->
 
           <div class="col-12 col-lg-6">
-            <article class="clinician-row">
+            <article class="service-row">
               <div class="row-media">
-                <img src="assets/img/health/staff-9.webp" alt="Carpentry, Doors &amp; Wall Repairs" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/doors.webp" alt="Carpentry, Doors &amp; Wall Repairs" class="img-fluid" loading="lazy">
                 <span class="presence active" aria-label="By Appointment"></span>
               </div>
               <div class="row-body">
@@ -952,17 +945,17 @@ require __DIR__ . '/includes/header.php';
                   <li><i class="bi bi-geo"></i> Berry Creek 78628</li>
                 </ul>
                 <div class="row-actions">
-                  <a href="#" class="btn-ghost">View Service</a>
-                  <a href="#" class="btn-solid">Request Visit</a>
+                  <a href="services.php" class="btn-ghost">View Service</a>
+                  <a href="request-a-visit.php" class="btn-solid">Request Visit</a>
                 </div>
               </div>
             </article>
-          </div><!-- End Clinician Row -->
+          </div><!-- End Service Row -->
 
           <div class="col-12 col-lg-6">
-            <article class="clinician-row">
+            <article class="service-row">
               <div class="row-media">
-                <img src="assets/img/health/staff-12.webp" alt="Maintenance &amp; Punch Lists" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/toolkit.webp" alt="Maintenance &amp; Punch Lists" class="img-fluid" loading="lazy">
                 <span class="presence active" aria-label="By Appointment"></span>
               </div>
               <div class="row-body">
@@ -989,18 +982,18 @@ require __DIR__ . '/includes/header.php';
                   <li><i class="bi bi-geo"></i> Georgetown 78626 / 78627</li>
                 </ul>
                 <div class="row-actions">
-                  <a href="#" class="btn-ghost">View Service</a>
-                  <a href="#" class="btn-solid">Request Visit</a>
+                  <a href="services.php" class="btn-ghost">View Service</a>
+                  <a href="request-a-visit.php" class="btn-solid">Request Visit</a>
                 </div>
               </div>
             </article>
-          </div><!-- End Clinician Row -->
+          </div><!-- End Service Row -->
 
         </div><!-- End Directory Grid -->
 
         <div class="directory-footer" data-aos="fade-up" data-aos-delay="250">
           <span class="footer-note">Six core service groups for Sun City and Berry Creek homeowners</span>
-          <a href="specialists.php" class="btn-link">
+          <a href="services.php" class="btn-link">
             View All Services
             <i class="bi bi-arrow-up-right"></i>
           </a>
@@ -1008,7 +1001,7 @@ require __DIR__ . '/includes/header.php';
 
       </div>
 
-    </section><!-- /Find A Doctor Section -->
+    </section><!-- /Service Directory Section -->
 
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section light-background">
@@ -1027,7 +1020,7 @@ require __DIR__ . '/includes/header.php';
                 <p class="lead-text">Mark's Remodeling and Facility Services helps homeowners plan practical repairs, fixture work, water-system service, electrical updates, small carpentry, security installations, and maintenance.</p>
 
                 <div class="button-row">
-                  <a href="appointment.php" class="btn-primary-shad">Request a Visit</a>
+                  <a href="request-a-visit.php" class="btn-primary-shad">Request a Visit</a>
                   <a href="services.php" class="btn-ghost-shad">
                     <span>Browse Services</span>
                     <i class="bi bi-arrow-right"></i>
@@ -1052,7 +1045,7 @@ require __DIR__ . '/includes/header.php';
             </div>
             <div class="col-lg-5">
               <div class="panel-visual">
-                <img src="assets/img/health/showcase-5.webp" alt="Home repair service for Sun City homeowners" class="img-fluid" loading="lazy">
+                <img src="assets/img/services/exterior.webp" alt="Home repair service for Sun City homeowners" class="img-fluid" loading="lazy">
               </div>
             </div>
           </div>
@@ -1062,30 +1055,30 @@ require __DIR__ . '/includes/header.php';
           <div class="row g-0">
             <div class="col-lg-3 col-md-6">
               <div class="metric-cell">
-                <div class="metric-label">Service Approach</div>
+                <div class="metric-label">Service Area</div>
                 <div class="metric-value">01<span></span></div>
-                <div class="metric-meta">Repair-focused work</div>
+                <div class="metric-meta">Sun City Texas 78633</div>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="metric-cell">
-                <div class="metric-label">Primary Area</div>
+                <div class="metric-label">Service Area</div>
                 <div class="metric-value">02<span></span></div>
-                <div class="metric-meta">Georgetown, Texas 78633</div>
+                <div class="metric-meta">Berry Creek, Texas 78628</div>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="metric-cell">
-                <div class="metric-label">Secondary Area</div>
+                <div class="metric-label">Service Area</div>
                 <div class="metric-value">03<span></span></div>
-                <div class="metric-meta">Georgetown, Texas 78628</div>
+                <div class="metric-meta">Georgetown, Texas 78626</div>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="metric-cell">
-                <div class="metric-label">Project Scope</div>
+                <div class="metric-label">Service Area</div>
                 <div class="metric-value">04<span></span></div>
-                <div class="metric-meta">Small repairs and installations</div>
+                <div class="metric-meta">Williamson County 78627</div>
               </div>
             </div>
           </div>
@@ -1112,7 +1105,7 @@ require __DIR__ . '/includes/header.php';
                   <p>Fixture repairs, minor leaks, water heaters, softeners, filtration, reverse osmosis, and water-flow troubleshooting.</p>
                 </div>
                 <div class="card-foot">
-                  <a href="#" class="card-link">
+                  <a href="services.php" class="card-link">
                     <span>View service</span>
                     <i class="bi bi-arrow-up-right"></i>
                   </a>
@@ -1133,7 +1126,7 @@ require __DIR__ . '/includes/header.php';
                   <p>Lights, fans, switches, outlets, GFCIs, doorbells, smoke detectors, smart locks, cameras, and EV charger coordination.</p>
                 </div>
                 <div class="card-foot">
-                  <a href="#" class="card-link">
+                  <a href="services.php" class="card-link">
                     <span>View service</span>
                     <i class="bi bi-arrow-up-right"></i>
                   </a>
@@ -1154,7 +1147,7 @@ require __DIR__ . '/includes/header.php';
                   <p>Door and hardware repairs, trim, shelving, cabinets, drywall, mounting, inspection repairs, and punch-list work.</p>
                 </div>
                 <div class="card-foot">
-                  <a href="#" class="card-link">
+                  <a href="services.php" class="card-link">
                     <span>View service</span>
                     <i class="bi bi-arrow-up-right"></i>
                   </a>

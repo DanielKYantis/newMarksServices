@@ -1,8 +1,8 @@
 // main: ../main.scss
 /*--------------------------------------------------------------
-# Department Details Section
+# Service Area Details Section
 --------------------------------------------------------------*/
-.department-details {
+.service-area-details {
 
   // Shared building blocks (ShadCN UI inspired)
   .badge {
@@ -33,7 +33,7 @@
     margin-bottom: 12px;
   }
 
-  .department-card {
+  .service-area-card {
     background: var(--surface-color);
     border: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
     border-radius: 12px;
@@ -41,7 +41,7 @@
     padding: 48px;
     margin-bottom: 24px;
 
-    .department-card-header {
+    .service-area-card-header {
       max-width: 760px;
     }
 
@@ -72,7 +72,7 @@
       }
     }
 
-    .department-title {
+    .service-area-title {
       font-size: 48px;
       font-weight: 700;
       line-height: 1.2;
@@ -81,7 +81,7 @@
       margin-bottom: 16px;
     }
 
-    .department-lead {
+    .service-area-lead {
       font-size: 18px;
       line-height: 1.6;
       color: color-mix(in srgb, var(--default-color) 75%, transparent);
@@ -142,11 +142,11 @@
     @media (max-width: 768px) {
       padding: 32px 24px;
 
-      .department-title {
+      .service-area-title {
         font-size: 32px;
       }
 
-      .department-lead {
+      .service-area-lead {
         font-size: 16px;
       }
 

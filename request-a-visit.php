@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-$pageKey = 'appointment.php';
+$pageKey = 'request-a-visit.php';
 require __DIR__ . '/includes/header.php';
 ?>
 
@@ -21,13 +21,13 @@ require __DIR__ . '/includes/header.php';
   </div> -->
 
       <div class="title-wrapper">
-        <h1>Request a Service Visit</h1>
+        <h1>Request a Home Repair Visit</h1>
         <p>Describe the repair, service area, and preferred timing so Mark's Services can review the request.</p>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Appointmnet Section -->
-    <section id="appointmnet" class="appointmnet section">
+    <!-- Request a Visit Section -->
+    <section id="request-a-visit" class="request-a-visit section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -84,7 +84,7 @@ require __DIR__ . '/includes/header.php';
 
         <div class="row gy-4">
 
-          <!-- Appointment Form -->
+          <!-- Service Request Form -->
           <div class="col-lg-7">
             <div class="form-card" data-aos="fade-up" data-aos-delay="150">
 
@@ -94,7 +94,7 @@ require __DIR__ . '/includes/header.php';
                 <p class="form-card-desc">Provide the details below and Mark's Services will follow up after reviewing the project and service area.</p>
               </div>
 
-              <form action="forms/appointment.php" method="post" class="appointment-form php-email-form">
+              <form action="forms/request-a-visit.php" method="post" class="service-request-form php-email-form">
                 <div class="row gy-3">
 
                   <div class="col-md-6">
@@ -128,30 +128,28 @@ require __DIR__ . '/includes/header.php';
 
                   <div class="col-md-6">
                     <div class="input-group">
-                      <label for="app-department">Service Category</label>
-                      <select name="department" id="app-department" class="form-select" required="">
+                      <label for="app-service">Service Category</label>
+                      <select name="service" id="app-service" class="form-select" required="">
                         <option value="">Choose a service</option>
-                        <option value="cardiology">Plumbing Fixtures</option>
-                        <option value="neurology">Water Systems</option>
-                        <option value="orthopedics">Electrical &amp; Lighting</option>
-                        <option value="pediatrics">Security &amp; Smart Home</option>
-                        <option value="dermatology">Carpentry &amp; Wall Repairs</option>
-                        <option value="general">Maintenance &amp; Punch Lists</option>
+                        <option value="plumbing-fixtures">Plumbing Fixtures</option>
+                        <option value="water-systems">Water Systems</option>
+                        <option value="electrical-lighting">Electrical &amp; Lighting</option>
+                        <option value="security-smart-home">Security &amp; Smart Home</option>
+                        <option value="doors-carpentry">Carpentry &amp; Wall Repairs</option>
+                        <option value="wall-repairs-maintenance">Maintenance &amp; Punch Lists</option>
                       </select>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="input-group">
-                      <label for="app-doctor">Service Area</label>
-                      <select name="doctor" id="app-doctor" class="form-select" required="">
+                      <label for="app-area">Service Area</label>
+                      <select name="service_area" id="app-area" class="form-select" required="">
                         <option value="">Choose an area</option>
-                        <option value="dr-johnson">Sun City 78633</option>
-                        <option value="dr-martinez">Berry Creek 78628</option>
-                        <option value="dr-chen">Georgetown 78626</option>
-                        <option value="dr-patel">Georgetown 78627</option>
-                        <option value="dr-williams">Williamson County context</option>
-                        <option value="dr-thompson">Not sure / discuss</option>
+                        <option value="sun-city-texas-78633">Sun City Texas 78633</option>
+                        <option value="berry-creek-texas-78628">Berry Creek, Texas 78628</option>
+                        <option value="georgetown-texas-78626">Georgetown, Texas 78626</option>
+                        <option value="williamson-county-78627">Williamson County 78627</option>
                       </select>
                     </div>
                   </div>
@@ -159,14 +157,14 @@ require __DIR__ . '/includes/header.php';
                   <div class="col-12">
                     <div class="input-group">
                       <label for="app-message">Project Details <span class="label-meta">Describe what needs attention</span></label>
-                      <textarea class="form-control" name="message" id="app-message" rows="4" placeholder="Briefly describe your symptoms or concern..."></textarea>
+                      <textarea class="form-control" name="message" id="app-message" rows="4" placeholder="Briefly describe the repair, installation, or maintenance project..."></textarea>
                     </div>
                   </div>
 
                   <div class="col-12">
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
-                    <div class="sent-message">Your appointment request has been sent successfully. We will contact you shortly!</div>
+                    <div class="sent-message">Your service request has been sent. Mark's Services will follow up after reviewing it.</div>
 
                     <div class="form-actions">
                       <button type="submit" class="btn btn-primary-action">
@@ -180,9 +178,9 @@ require __DIR__ . '/includes/header.php';
                 </div>
               </form>
             </div>
-          </div><!-- End Appointment Form -->
+          </div><!-- End Service Request Form -->
 
-          <!-- Appointment Info -->
+          <!-- Service Request Info -->
           <div class="col-lg-5">
             <aside class="info-stack">
 
@@ -220,24 +218,24 @@ require __DIR__ . '/includes/header.php';
 
               </ul>
 
-              <div class="emergency-panel" data-aos="fade-up" data-aos-delay="300">
-                <div class="emergency-head">
-                  <span class="emergency-icon"><i class="bi bi-telephone-fill"></i></span>
-                  <span class="emergency-tag">Call Mark's Services</span>
+              <div class="contact-panel" data-aos="fade-up" data-aos-delay="300">
+                <div class="contact-head">
+                  <span class="contact-icon"><i class="bi bi-telephone-fill"></i></span>
+                  <span class="contact-tag">Call Mark's Services</span>
                 </div>
                 <h6>Prefer to Discuss the Project?</h6>
                 <p>Call during normal contact hours to describe the repair. This is not a 24/7 emergency service.</p>
-                <a href="tel:+15125490322" class="emergency-phone">+1 (512) 549-0322</a>
+                <a href="tel:+15125490322" class="contact-phone">+1 (512) 549-0322</a>
               </div>
 
             </aside>
-          </div><!-- End Appointment Info -->
+          </div><!-- End Service Request Info -->
 
         </div>
 
       </div>
 
-    </section><!-- /Appointmnet Section -->
+    </section><!-- /Request a Visit Section -->
 
   </main>
 

@@ -129,7 +129,7 @@ require __DIR__ . '/includes/header.php';
                   </div>
                   <div class="warning-text">
                     <h5>Important</h5>
-                    <p>A submitted form is a request for review, not a confirmed appointment. Scheduling and scope are confirmed separately.</p>
+                    <p>A submitted form is a request for review, not a confirmed service visit. Scheduling and scope are confirmed separately.</p>
                   </div>
                 </div>
               </div><!-- End Term Card -->
@@ -182,7 +182,7 @@ require __DIR__ . '/includes/header.php';
                     <li>Every requested project will fit the approved scope</li>
                     <li>Scheduling or website access will always be uninterrupted</li>
                     <li>Online descriptions replace an on-site assessment</li>
-                    <li>Every issue can be diagnosed or resolved remotely</li>
+                    <li>Every issue can be assessed or resolved remotely</li>
                   </ul>
                 </div>
               </div><!-- End Term Card -->
@@ -255,7 +255,7 @@ require __DIR__ . '/includes/header.php';
                   </div>
                 </div>
                 <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                  <a href="#" class="support-btn">Contact Mark's Services <i class="bi bi-arrow-right"></i></a>
+                  <a href="contact.php" class="support-btn">Contact Mark's Services <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Support Banner -->

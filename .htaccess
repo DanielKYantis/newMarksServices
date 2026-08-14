@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Permanent route migrations from the original template filenames.
+RewriteRule ^appointment\.php$ request-a-visit.php [R=301,L]
+RewriteRule ^doctors\.php$ service-planning.php [R=301,L]
+RewriteRule ^testimonials\.php$ how-we-work.php [R=301,L]
+RewriteRule ^gallery\.php$ service-gallery.php [R=301,L]
+RewriteRule ^faq\.php$ home-repair-faq.php [R=301,L]
+RewriteRule ^service-area-details\.php$ sun-city-texas-home-repair.php [R=301,L]
+RewriteRule ^service-details\.php$ plumbing-fixture-repair.php [R=301,L]
+RewriteRule ^departments\.php$ service-areas.php [R=301,L]
+RewriteRule ^department-details\.php$ sun-city-texas-home-repair.php [R=301,L]
+RewriteRule ^starter-page\.php$ index.php [R=301,L]

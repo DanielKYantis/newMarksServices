@@ -328,18 +328,135 @@
   .map-card {
     position: relative;
     width: 100%;
-    height: 280px;
+    background: var(--surface-color);
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     transition: all 0.2s ease;
 
-    iframe {
+    .map-card-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 24px 18px;
+
+      .badge-label {
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        color: var(--heading-color);
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color) 68%, transparent);
+        font-size: 13px;
+        margin: 0;
+        text-align: right;
+      }
+    }
+
+    .service-area-map {
       width: 100%;
-      height: 100%;
+      height: 360px;
+      border-block: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
+      background: #e8edf1;
+      z-index: 1;
+    }
+
+    .service-area-map-label {
+      background: rgba(255, 255, 255, 0.92);
       border: 0;
-      display: block;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(11, 35, 64, 0.18);
+      color: #0b2340;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .service-area-legend {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      padding: 18px 24px 10px;
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        padding: 10px;
+        border: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
+        border-radius: 7px;
+        color: var(--heading-color);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+        &:hover,
+        &:focus-visible {
+          border-color: color-mix(in srgb, var(--accent-color) 45%, transparent);
+          box-shadow: 0 4px 12px rgba(11, 35, 64, 0.1);
+          transform: translateY(-1px);
+        }
+
+        &:focus-visible {
+          outline: 2px solid var(--accent-color);
+          outline-offset: 2px;
+        }
+
+        .legend-swatch {
+          flex: 0 0 auto;
+          width: 14px;
+          height: 32px;
+          border-radius: 4px;
+          background: var(--area-color);
+        }
+
+        strong,
+        small {
+          display: block;
+        }
+
+        strong {
+          font-size: 13px;
+          line-height: 1.3;
+        }
+
+        small {
+          color: color-mix(in srgb, var(--default-color) 65%, transparent);
+          font-size: 11px;
+          margin-top: 2px;
+        }
+      }
+
+      .legend-sun-city {
+        --area-color: #087fbe;
+      }
+
+      .legend-berry-creek {
+        --area-color: #7b2cbf;
+      }
+
+      .legend-georgetown {
+        --area-color: #c45d00;
+      }
+    }
+
+    .map-note {
+      color: color-mix(in srgb, var(--default-color) 65%, transparent);
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0 24px 18px;
     }
 
     &:hover {
@@ -355,8 +472,8 @@
       padding: 24px;
     }
 
-    .map-card {
-      height: 240px;
+    .map-card .service-area-map {
+      height: 320px;
     }
   }
 
@@ -370,6 +487,32 @@
     .contact-panel .panel-title,
     .form-card .card-title {
       font-size: 20px;
+    }
+
+    .map-card {
+      .map-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+        padding: 20px 18px 16px;
+
+        p {
+          text-align: left;
+        }
+      }
+
+      .service-area-map {
+        height: 300px;
+      }
+
+      .service-area-legend {
+        grid-template-columns: 1fr;
+        padding: 16px 18px 10px;
+      }
+
+      .map-note {
+        padding: 0 18px 16px;
+      }
     }
   }
 }

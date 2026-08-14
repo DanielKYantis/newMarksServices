@@ -2,7 +2,7 @@
 /*--------------------------------------------------------------
 # Appointmnet Section
 --------------------------------------------------------------*/
-.appointmnet {
+.request-a-visit {
 
   // Process Stepper
   .process-stepper {
@@ -146,7 +146,7 @@
   }
 
   // Form Inputs
-  .appointment-form {
+  .service-request-form {
     .input-group {
       display: block;
 
@@ -358,20 +358,20 @@
     }
   }
 
-  .emergency-panel {
+  .contact-panel {
     background-color: color-mix(in srgb, var(--accent-color) 6%, transparent);
     border: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent);
     border-radius: 8px;
     padding: 24px;
 
-    .emergency-head {
+    .contact-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 16px;
     }
 
-    .emergency-icon {
+    .contact-icon {
       width: 36px;
       height: 36px;
       display: inline-flex;
@@ -386,7 +386,7 @@
       }
     }
 
-    .emergency-tag {
+    .contact-tag {
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.05em;
@@ -412,7 +412,7 @@
       margin-bottom: 16px;
     }
 
-    .emergency-phone {
+    .contact-phone {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -444,7 +444,7 @@
       font-size: 24px;
     }
 
-    .appointment-form .form-actions {
+    .service-request-form .form-actions {
       flex-direction: column;
 
       .btn-primary-action,

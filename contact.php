@@ -115,7 +115,7 @@ require __DIR__ . '/includes/header.php';
                     <div class="input-group">
                       <label for="contact-message">Project Details</label>
                       <textarea id="contact-message" name="message" class="form-control" rows="6" placeholder="Type your message here..." required=""></textarea>
-                      <span class="input-description">Include the item, symptoms, location, and any HOA or access considerations.</span>
+                      <span class="input-description">Include the item, condition, location, and any HOA or access considerations.</span>
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -129,7 +129,32 @@ require __DIR__ . '/includes/header.php';
             </div><!-- End Form Card -->
 
             <div class="map-card" data-aos="fade-up" data-aos-delay="250">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.4770376449556!2d-117.39905292424607!3d33.978802323820714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcb1f5d8fb6c75%3A0xd9d73340c90a71c6!2s4582%20Magnolia%20Ave%2C%20Riverside%2C%20CA%2092506!5e0!3m2!1sen!2sus!4v1692395638095!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="map-card-header">
+                <div>
+                  <span class="badge-label">Service Area Map</span>
+                  <h3>Home repair service around Georgetown</h3>
+                </div>
+                <p>Three primary areas are shown in separate colors.</p>
+              </div>
+
+              <div id="service-area-map" class="service-area-map" role="region" aria-label="Interactive map of approximate service areas for Sun City Texas, Berry Creek, and Georgetown"></div>
+
+              <nav class="service-area-legend" aria-label="Service area map legend">
+                <a class="legend-item legend-sun-city" href="sun-city-texas-home-repair.php">
+                  <span class="legend-swatch" aria-hidden="true"></span>
+                  <span><strong>Sun City Texas</strong><small>78633</small></span>
+                </a>
+                <a class="legend-item legend-berry-creek" href="berry-creek-texas-home-repair.php">
+                  <span class="legend-swatch" aria-hidden="true"></span>
+                  <span><strong>Berry Creek</strong><small>78628</small></span>
+                </a>
+                <a class="legend-item legend-georgetown" href="georgetown-texas-home-repair.php">
+                  <span class="legend-swatch" aria-hidden="true"></span>
+                  <span><strong>Georgetown</strong><small>78626 &amp; 78627</small></span>
+                </a>
+              </nav>
+              <p class="map-note">Highlighted areas are approximate. Contact Mark's Services to confirm availability for your address.</p>
+              <noscript><p class="map-note">Enable JavaScript to view the interactive map. The service-area links above remain available.</p></noscript>
             </div><!-- End Map Card -->
           </div>
         </div>
@@ -139,5 +164,83 @@ require __DIR__ . '/includes/header.php';
     </section><!-- /Contact Section -->
 
   </main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const mapElement = document.getElementById('service-area-map');
+
+    if (!mapElement || typeof L === 'undefined') {
+      return;
+    }
+
+    const map = L.map(mapElement, {
+      scrollWheelZoom: false,
+      zoomControl: true
+    }).setView([30.67500, -97.69000], 11);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    const serviceAreas = [
+      {
+        name: 'Sun City Texas',
+        zip: '78633',
+        center: [30.71513, -97.71642],
+        radius: 2600,
+        color: '#087fbe',
+        tooltipDirection: 'left',
+        route: 'sun-city-texas-home-repair.php'
+      },
+      {
+        name: 'Berry Creek',
+        zip: '78628',
+        center: [30.71042, -97.66550],
+        radius: 1750,
+        color: '#7b2cbf',
+        tooltipDirection: 'right',
+        route: 'berry-creek-texas-home-repair.php'
+      },
+      {
+        name: 'Georgetown',
+        zip: '78626 & 78627',
+        center: [30.63326, -97.67798],
+        radius: 4200,
+        color: '#c45d00',
+        tooltipDirection: 'center',
+        route: 'georgetown-texas-home-repair.php'
+      }
+    ];
+
+    const bounds = L.latLngBounds();
+
+    serviceAreas.forEach(function (area) {
+      const circle = L.circle(area.center, {
+        radius: area.radius,
+        color: area.color,
+        weight: 3,
+        fillColor: area.color,
+        fillOpacity: 0.24
+      }).addTo(map);
+
+      circle.bindTooltip(area.name, {
+        permanent: true,
+        direction: area.tooltipDirection,
+        className: 'service-area-map-label'
+      });
+
+      circle.bindPopup(
+        '<strong>' + area.name + '</strong><br>' + area.zip +
+        '<br><a href="' + area.route + '">View service-area details</a>'
+      );
+
+      bounds.extend(circle.getBounds());
+    });
+
+    map.fitBounds(bounds, { padding: [24, 24] });
+  });
+</script>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 const SITE_NAME = "Mark's Services";
+const SITE_URL = "https://suncityhome.repair";
 const BUSINESS_NAME = "Mark's Services";
 const BUSINESS_EMAIL = "office@marksservices.com";
 const BUSINESS_PHONE_DISPLAY = "(512) 549-0322";
@@ -9,13 +10,13 @@ const BUSINESS_PHONE_TEL = "+15125490322";
 const BUSINESS_CITY = "Georgetown";
 const BUSINESS_STATE = "TX";
 const BUSINESS_ZIP = "78633";
-const BUSINESS_AREA = "Sun City & Berry Creek, Georgetown, Texas";
+const BUSINESS_AREA = "Sun City Texas, Berry Creek, Georgetown, and Williamson County";
 const BUSINESS_AREA_DETAIL =
-    "Sun City, Georgetown, Williamson County 78633; Berry Creek, Georgetown, Williamson County 78628; and Georgetown 78626 and 78627";
+    "Sun City Texas 78633; Berry Creek, Texas 78628; Georgetown, Texas 78626; and Williamson County 78627";
 const BUSINESS_ADDRESS_DISPLAY =
     "Client-location service in " . BUSINESS_AREA_DETAIL;
 const BUSINESS_SERVICE_NOTE =
-    "Client-location service in Sun City, Georgetown 78633 and Berry Creek, Georgetown 78628, Williamson County.";
+    "Client-location service in Sun City Texas 78633, Berry Creek, Texas 78628, Georgetown, Texas 78626, and Williamson County 78627.";
 const ELECTRICAL_LICENSE = "TECL 20547";
 const ELECTRICAL_LICENSE_HOLDER = "Larry Kizer";
 const PLUMBING_LICENSE = "M-38601";
@@ -43,17 +44,7 @@ function is_active(string $current, array|string $targets): string
 
 function site_base_url(): string
 {
-    $host = $_SERVER["HTTP_HOST"] ?? "www.marksservices.com";
-    $https = $_SERVER["HTTPS"] ?? "";
-    $scheme = $https !== "" && $https !== "off" ? "https" : "http";
-    $script = $_SERVER["SCRIPT_NAME"] ?? "/index.php";
-    $basePath = rtrim(str_replace("\\", "/", dirname($script)), "/");
-
-    if ($basePath === "" || $basePath === ".") {
-        $basePath = "";
-    }
-
-    return $scheme . "://" . $host . $basePath;
+    return SITE_URL;
 }
 
 function absolute_url(string $path = ""): string
@@ -67,14 +58,14 @@ function page_url(string $pageKey): string
     return absolute_url($pageKey === "index.php" ? "" : $pageKey);
 }
 
-function service_area_place_schema(string $name, string $postalCode): array
+function service_area_place_schema(string $name, string $postalCode, string $locality = "Georgetown"): array
 {
     return [
         "@type" => "Place",
         "name" => $name,
         "address" => [
             "@type" => "PostalAddress",
-            "addressLocality" => "Georgetown",
+            "addressLocality" => $locality,
             "addressRegion" => BUSINESS_STATE,
             "postalCode" => $postalCode,
             "addressCountry" => "US",
@@ -86,15 +77,15 @@ function business_area_schema(): array
 {
     return [
         service_area_place_schema(
-            "Sun City, Georgetown, Williamson County, TX 78633",
+            "Sun City Texas 78633",
             BUSINESS_ZIP
         ),
         service_area_place_schema(
-            "Berry Creek, Georgetown, Williamson County, TX 78628",
+            "Berry Creek, Texas 78628",
             "78628"
         ),
-        service_area_place_schema("Georgetown, TX 78626", "78626"),
-        service_area_place_schema("Georgetown, TX 78627", "78627"),
+        service_area_place_schema("Georgetown, Texas 78626", "78626"),
+        service_area_place_schema("Williamson County 78627", "78627"),
     ];
 }
 
@@ -122,7 +113,7 @@ function structured_data_for_page(string $pageKey, array $page): array
     $webpageId = page_url($pageKey) . "#webpage";
 
     $webPage = [
-        "@type" => "WebPage",
+        "@type" => $page["schema_type"] ?? "WebPage",
         "@id" => $webpageId,
         "url" => page_url($pageKey),
         "name" => $page["title"] ?? SITE_NAME,
@@ -137,7 +128,8 @@ function structured_data_for_page(string $pageKey, array $page): array
     ];
 
     if (isset($page["service_area"]) && is_array($page["service_area"])) {
-        $webPage["contentLocation"] = $page["service_area"];
+        $area = $page["service_area"];
+        $webPage["contentLocation"] = service_area_place_schema($area["label"], $area["postal_code"], $area["locality"]);
     }
 
     $serviceNode = null;
@@ -181,7 +173,7 @@ function structured_data_for_page(string $pageKey, array $page): array
                 "telephone" => BUSINESS_PHONE_TEL,
                 "priceRange" => '$$',
                 "description" =>
-                    "Licensed electrical and plumbing, handyman repairs, home repair, water softener installation, maintenance, and punch-list service at client locations in " .
+                    "Handyman repairs, home repair, fixture and device work, maintenance, punch-list service, and properly licensed or coordinated electrical and plumbing work at client locations in " .
                     BUSINESS_AREA_DETAIL .
                     ".",
                 "areaServed" => business_area_schema(),
@@ -196,8 +188,8 @@ function structured_data_for_page(string $pageKey, array $page): array
                     ],
                 ],
                 "knowsAbout" => [
-                    "Electrical service",
-                    "Plumbing service",
+                    "Properly licensed or coordinated electrical service",
+                    "Properly licensed or coordinated plumbing service",
                     "Handyman service",
                     "Home repair",
                     "Water softener installation",
@@ -249,6 +241,21 @@ function structured_data_for_page(string $pageKey, array $page): array
 
     if ($serviceNode !== null) {
         $structuredData["@graph"][] = $serviceNode;
+    }
+
+    if (!empty($page["faq_items"]) && is_array($page["faq_items"])) {
+        $faqId = page_url($pageKey) . "#faq";
+        $structuredData["@graph"][] = [
+            "@type" => "FAQPage",
+            "@id" => $faqId,
+            "url" => page_url($pageKey),
+            "mainEntity" => array_map(static fn(array $item): array => [
+                "@type" => "Question",
+                "name" => $item["question"],
+                "acceptedAnswer" => ["@type" => "Answer", "text" => $item["answer"]],
+            ], $page["faq_items"]),
+        ];
+        $structuredData["@graph"][2]["mainEntity"] = ["@id" => $faqId];
     }
 
     return $structuredData;

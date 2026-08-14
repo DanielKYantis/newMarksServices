@@ -129,7 +129,7 @@
       box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-color) 20%, transparent), var(--shadow-md);
     }
 
-    &.emergency {
+    &.licensed-coordination {
       border-left: 3px solid #dc2626;
     }
   }
@@ -376,7 +376,7 @@
     }
   }
 
-  .appointment-banner {
+  .service-request-banner {
     background: var(--accent-color);
     border-radius: 8px;
     padding: 48px;

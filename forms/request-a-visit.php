@@ -6,8 +6,8 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  require_once __DIR__ . '/../includes/config.php';
+  $receiving_email_address = BUSINESS_EMAIL;
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -21,7 +21,7 @@
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
-  $contact->subject = 'Online Appointment Form';
+  $contact->subject = "Mark's Services Website Request";
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*
@@ -36,10 +36,9 @@
   $contact->add_message( $_POST['name'], 'Name');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['phone'], 'Phone');
-  isset($_POST['date']) && $contact->add_message($_POST['date'], 'Appointment Date');
-  isset($_POST['time']) && $contact->add_message($_POST['time'], 'Appointment Time');
-  isset($_POST['department']) && $contact->add_message($_POST['department'], 'Department');
-  isset($_POST['doctor']) && $contact->add_message($_POST['doctor'], 'Doctor');
+  isset($_POST['date']) && $contact->add_message($_POST['date'], 'Preferred Visit Date');
+  isset($_POST['service']) && $contact->add_message($_POST['service'], 'Service Category');
+  isset($_POST['service_area']) && $contact->add_message($_POST['service_area'], 'Service Area');
   $contact->add_message( $_POST['message'], 'Message');
 
   echo $contact->send();

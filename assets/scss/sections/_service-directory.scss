@@ -1,8 +1,8 @@
 // main: ../main.scss
 /*--------------------------------------------------------------
-# Find A Doctor Section
+# Service Directory Section
 --------------------------------------------------------------*/
-.find-a-doctor {
+.service-directory {
   .directory-toolbar {
     background: var(--surface-color);
     border: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent);
@@ -99,7 +99,7 @@
         justify-content: center;
         gap: 8px;
         background: var(--accent-color);
-        color: var(--contrast-color);
+        color: var(--default-color);
         border: none;
         border-radius: 6px;
         font-size: 14px;
@@ -184,7 +184,7 @@
     margin-bottom: 32px;
   }
 
-  .clinician-row {
+  .service-row {
     display: flex;
     gap: 16px;
     height: 100%;
@@ -382,13 +382,13 @@
       }
 
       .btn-solid {
-        color: var(--contrast-color);
+        color: var(--default-color);
         background: var(--accent-color);
         border: 1px solid var(--accent-color);
 
         &:hover {
           background: color-mix(in srgb, var(--accent-color) 88%, black);
-          color: var(--contrast-color);
+          color: var(--default-color);
         }
       }
     }
@@ -468,7 +468,7 @@
       align-items: flex-start;
     }
 
-    .clinician-row {
+    .service-row {
       flex-direction: column;
 
       .row-media img {
@@ -497,7 +497,7 @@
   }
 
   @media (max-width: 576px) {
-    .clinician-row .row-actions {
+    .service-row .row-actions {
       flex-direction: column;
     }
   }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-$pageKey = 'service-details.php';
+$pageKey = 'plumbing-fixture-repair.php';
 require __DIR__ . '/includes/header.php';
 ?>
 
@@ -27,7 +27,7 @@ require __DIR__ . '/includes/header.php';
     </div><!-- End Page Title -->
 
     <!-- Service Details 2 Section -->
-    <section id="service-details-2" class="service-details-2 section">
+    <section id="plumbing-service" class="plumbing-service section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -90,15 +90,15 @@ require __DIR__ . '/includes/header.php';
                 </div>
 
                 <div class="overview-footer">
-                  <a href="#" class="btn-primary-action">Request a Visit</a>
-                  <a href="#" class="btn-ghost-action">View All Services</a>
+                  <a href="request-a-visit.php" class="btn-primary-action">Request a Visit</a>
+                  <a href="services.php" class="btn-ghost-action">View All Services</a>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
               <div class="media-card">
-                <img src="assets/img/health/cardiology-3.webp" alt="Kitchen faucet repair and replacement" class="img-fluid">
+                <img src="assets/img/services/plumbing.webp" alt="Kitchen faucet repair and replacement" class="img-fluid">
                 <div class="media-overlay">
                   <span class="overlay-label">Service Group</span>
                   <span class="overlay-title">Plumbing Fixtures</span>
@@ -125,14 +125,14 @@ require __DIR__ . '/includes/header.php';
               <div class="module-card">
                 <div class="module-header">
                   <div class="module-icon">
-                    <i class="bi bi-heart-pulse"></i>
+                    <i class="bi bi-droplet"></i>
                   </div>
                   <span class="status-badge">By Appointment</span>
                 </div>
                 <h4>Water Systems</h4>
                 <p>Water heaters, point-of-use units, softeners, filtration, reverse osmosis, and water-flow troubleshooting.</p>
                 <div class="module-footer">
-                  <a href="#" class="module-link">
+                  <a href="services.php" class="module-link">
                     <span>Learn More</span>
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -144,14 +144,14 @@ require __DIR__ . '/includes/header.php';
               <div class="module-card">
                 <div class="module-header">
                   <div class="module-icon">
-                    <i class="bi bi-hospital"></i>
+                    <i class="bi bi-lightning-charge"></i>
                   </div>
                   <span class="status-badge">By Appointment</span>
                 </div>
                 <h4>Electrical &amp; Lighting</h4>
                 <p>Lights, fans, switches, outlets, GFCIs, doorbells, smoke detectors, media outlets, and garage lights.</p>
                 <div class="module-footer">
-                  <a href="#" class="module-link">
+                  <a href="services.php" class="module-link">
                     <span>View Service</span>
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -170,7 +170,7 @@ require __DIR__ . '/includes/header.php';
                 <h4>Maintenance &amp; Punch Lists</h4>
                 <p>Inspection repairs, sale punch lists, mounting, grab bars, drywall, doors, hardware, and small exterior maintenance.</p>
                 <div class="module-footer">
-                  <a href="#" class="module-link">
+                  <a href="services.php" class="module-link">
                     <span>Plan a Visit</span>
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -225,7 +225,7 @@ require __DIR__ . '/includes/header.php';
                 <span class="action-label">Request Online</span>
                 <h4>Plan Your Service Visit</h4>
                 <p>Send project details for review and scheduling</p>
-                <a href="appointment.php" class="btn-primary-action btn-block">Request a Visit</a>
+                <a href="request-a-visit.php" class="btn-primary-action btn-block">Request a Visit</a>
                 <div class="action-divider">
                   <span>or</span>
                 </div>

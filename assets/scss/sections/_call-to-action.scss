@@ -127,7 +127,7 @@
     height: 40px;
     padding: 0 20px;
     background: var(--accent-color);
-    color: var(--contrast-color);
+    color: var(--default-color);
     border-radius: 6px;
     font-size: 14px;
     font-weight: 500;
@@ -137,7 +137,7 @@
 
     &:hover {
       background: color-mix(in srgb, var(--accent-color) 88%, black);
-      color: var(--contrast-color);
+      color: var(--default-color);
     }
 
     &:focus {
@@ -185,18 +185,18 @@
     height: 40px;
     padding: 0 20px;
     background: transparent;
-    color: var(--contrast-color);
+    color: var(--default-color);
     border-radius: 6px;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    border: 1px solid color-mix(in srgb, var(--contrast-color) 50%, transparent);
+    border: 1px solid color-mix(in srgb, var(--default-color) 50%, transparent);
     transition: all 0.2s ease;
 
     &:hover {
-      background: color-mix(in srgb, var(--contrast-color) 12%, transparent);
-      color: var(--contrast-color);
-      border-color: var(--contrast-color);
+      background: color-mix(in srgb, var(--default-color) 12%, transparent);
+      color: var(--default-color);
+      border-color: var(--default-color);
     }
   }
 
@@ -390,7 +390,7 @@
     background: var(--accent-color);
     border-radius: 12px;
     padding: 40px;
-    color: var(--contrast-color);
+    color: var(--default-color);
 
     @media (max-width: 768px) {
       padding: 28px;
@@ -421,14 +421,14 @@
       width: 48px;
       height: 48px;
       border-radius: 8px;
-      background: color-mix(in srgb, var(--contrast-color) 18%, transparent);
+      background: color-mix(in srgb, var(--default-color) 18%, transparent);
       display: inline-flex;
       align-items: center;
       justify-content: center;
 
       i {
         font-size: 22px;
-        color: var(--contrast-color);
+        color: var(--default-color);
       }
     }
 
@@ -438,7 +438,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: color-mix(in srgb, var(--contrast-color) 80%, transparent);
+      color: color-mix(in srgb, var(--default-color) 80%, transparent);
       margin-bottom: 6px;
     }
 
@@ -447,14 +447,14 @@
         font-size: 20px;
         font-weight: 600;
         letter-spacing: -0.01em;
-        color: var(--contrast-color);
+        color: var(--default-color);
         margin: 0 0 6px 0;
       }
 
       p {
         font-size: 14px;
         line-height: 1.6;
-        color: color-mix(in srgb, var(--contrast-color) 85%, transparent);
+        color: color-mix(in srgb, var(--default-color) 85%, transparent);
         margin: 0;
         max-width: 480px;
       }
@@ -474,12 +474,12 @@
 
       .btn-primary-shad {
         background: var(--contrast-color);
-        color: var(--accent-color);
+        color: var(--default-color);
         border-color: var(--contrast-color);
 
         &:hover {
           background: color-mix(in srgb, var(--contrast-color) 90%, black);
-          color: var(--accent-color);
+          color: var(--default-color);
         }
 
         &:focus {

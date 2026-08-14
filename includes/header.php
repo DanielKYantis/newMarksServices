@@ -21,14 +21,22 @@ $page = $pages[$pageKey] ?? $pages['index.php'] ?? [
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title><?= e($page['title']) ?></title>
   <meta name="description" content="<?= e($page['description']) ?>">
-  <meta name="keywords" content="<?= e($page['keywords']) ?>">
+  <meta name="robots" content="<?= e($page['robots'] ?? 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1') ?>">
+  <meta name="author" content="Mark's Services">
   <link rel="canonical" href="<?= e(page_url($pageKey)) ?>">
+  <link rel="alternate" hreflang="en-US" href="<?= e(page_url($pageKey)) ?>">
   <meta property="og:site_name" content="<?= e(SITE_NAME) ?>">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="<?= e($page['title']) ?>">
   <meta property="og:description" content="<?= e($page['description']) ?>">
   <meta property="og:type" content="website">
   <meta property="og:url" content="<?= e(page_url($pageKey)) ?>">
+  <meta property="og:image" content="<?= e(absolute_url($page['image'] ?? 'assets/img/uploads/hero-home.png')) ?>">
+  <meta property="og:image:alt" content="<?= e($page['label'] ?? SITE_NAME) ?>">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?= e($page['title']) ?>">
+  <meta name="twitter:description" content="<?= e($page['description']) ?>">
+  <meta name="twitter:image" content="<?= e(absolute_url($page['image'] ?? 'assets/img/uploads/hero-home.png')) ?>">
   <?php if (function_exists('structured_data_for_page')): ?>
   <script type="application/ld+json">
 <?= json_encode(structured_data_for_page($pageKey, $page), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>
@@ -50,6 +58,9 @@ $page = $pages[$pageKey] ?? $pages['index.php'] ?? [
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <?php if ($pageKey === 'contact.php'): ?>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <?php endif; ?>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">

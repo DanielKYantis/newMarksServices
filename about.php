@@ -29,7 +29,7 @@ require __DIR__ . '/includes/header.php';
           <div class="row g-4">
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <div class="media-card">
-                <img src="assets/img/health/facilities-3.webp" class="img-fluid" alt="Sun City Georgetown home served at the client location" loading="lazy">
+                <img src="assets/img/brand/sun-city-home-exterior.webp" class="img-fluid" alt="Sun City Georgetown home served at the client location" loading="lazy">
                 <div class="media-overlay">
                   <span class="badge-pill">Client-Location Service</span>
                   <h4>Serving Sun City and Berry Creek homes</h4>
@@ -38,7 +38,7 @@ require __DIR__ . '/includes/header.php';
               <div class="row g-3 mt-1">
                 <div class="col-6">
                   <div class="thumb-card">
-                    <img src="assets/img/health/staff-12.webp" class="img-fluid" alt="Organized home repair tools for maintenance visits" loading="lazy">
+                    <img src="assets/img/services/toolkit.webp" class="img-fluid" alt="Organized home repair tools for maintenance visits" loading="lazy">
                   </div>
                 </div>
                 <div class="col-6">
@@ -168,7 +168,7 @@ require __DIR__ . '/includes/header.php';
             </div>
             <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
               <div class="specialty-card">
-                <i class="bi bi-file-medical"></i>
+                <i class="bi bi-clipboard-check"></i>
                 <span>Carpentry</span>
               </div>
             </div>

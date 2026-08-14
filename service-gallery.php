@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-$pageKey = 'gallery.php';
+$pageKey = 'service-gallery.php';
 require __DIR__ . '/includes/header.php';
 ?>
 
@@ -21,7 +21,7 @@ require __DIR__ . '/includes/header.php';
   </div> -->
 
       <div class="title-wrapper">
-        <h1>Home Service Gallery</h1>
+        <h1>Home Repair Service Gallery</h1>
         <p>Browse representative categories for approved home repair, installation, and maintenance services.</p>
       </div>
     </div><!-- End Page Title -->
@@ -72,7 +72,7 @@ require __DIR__ . '/includes/header.php';
                     <a href="assets/img/gallery/gallery-1.webp" class="glightbox btn-ghost" title="Plumbing Fixtures &amp; Water Systems">
                       <i class="bi bi-arrows-fullscreen"></i> View
                     </a>
-                    <a href="gallery-details.php" class="btn-link">
+                    <a href="services.php" class="btn-link">
                       Service Details <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </footer>
@@ -95,7 +95,7 @@ require __DIR__ . '/includes/header.php';
                     <a href="assets/img/gallery/gallery-2.webp" class="glightbox btn-ghost" title="Electrical Fixtures &amp; Lighting">
                       <i class="bi bi-arrows-fullscreen"></i> View
                     </a>
-                    <a href="gallery-details.php" class="btn-link">
+                    <a href="services.php" class="btn-link">
                       Service Details <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </footer>
@@ -118,7 +118,7 @@ require __DIR__ . '/includes/header.php';
                     <a href="assets/img/gallery/gallery-3.webp" class="glightbox btn-ghost" title="Home Security &amp; Smart Devices">
                       <i class="bi bi-arrows-fullscreen"></i> View
                     </a>
-                    <a href="gallery-details.php" class="btn-link">
+                    <a href="services.php" class="btn-link">
                       Service Details <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </footer>
@@ -141,7 +141,7 @@ require __DIR__ . '/includes/header.php';
                     <a href="assets/img/gallery/gallery-4.webp" class="glightbox btn-ghost" title="Doors, Trim &amp; Small Carpentry">
                       <i class="bi bi-arrows-fullscreen"></i> View
                     </a>
-                    <a href="gallery-details.php" class="btn-link">
+                    <a href="services.php" class="btn-link">
                       Service Details <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </footer>
@@ -164,7 +164,7 @@ require __DIR__ . '/includes/header.php';
                     <a href="assets/img/gallery/gallery-5.webp" class="glightbox btn-ghost" title="Drywall, Texture &amp; Mounting">
                       <i class="bi bi-arrows-fullscreen"></i> View
                     </a>
-                    <a href="gallery-details.php" class="btn-link">
+                    <a href="services.php" class="btn-link">
                       Service Details <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </footer>
@@ -187,7 +187,7 @@ require __DIR__ . '/includes/header.php';
                     <a href="assets/img/gallery/gallery-6.webp" class="glightbox btn-ghost" title="Maintenance &amp; Punch Lists">
                       <i class="bi bi-arrows-fullscreen"></i> View
                     </a>
-                    <a href="gallery-details.php" class="btn-link">
+                    <a href="services.php" class="btn-link">
                       Service Details <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </footer>
@@ -210,7 +210,7 @@ require __DIR__ . '/includes/header.php';
                     <a href="assets/img/gallery/gallery-7.webp" class="glightbox btn-ghost" title="Small Exterior Maintenance">
                       <i class="bi bi-arrows-fullscreen"></i> View
                     </a>
-                    <a href="gallery-details.php" class="btn-link">
+                    <a href="services.php" class="btn-link">
                       Service Details <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </footer>
@@ -233,7 +233,7 @@ require __DIR__ . '/includes/header.php';
                     <a href="assets/img/gallery/gallery-8.webp" class="glightbox btn-ghost" title="Mature-Home Repair Planning">
                       <i class="bi bi-arrows-fullscreen"></i> View
                     </a>
-                    <a href="gallery-details.php" class="btn-link">
+                    <a href="services.php" class="btn-link">
                       Service Details <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </footer>
