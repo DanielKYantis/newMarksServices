@@ -188,7 +188,7 @@ require __DIR__ . '/includes/header.php';
             <aside class="sidebar-stack" data-aos="fade-up" data-aos-delay="250">
 
               <div class="side-card visual-card">
-                <img src="assets/img/health/cardiology-3.webp" alt="Sun City Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/cardiology-3.webp" alt="Plumbing fixture service at a Sun City Georgetown home" class="img-fluid" loading="lazy">
                 <div class="visual-meta">
                   <span class="badge">Service-Area Details</span>
                   <p>Mark's Services travels to the client's home; there is no public showroom or walk-in office.</p>

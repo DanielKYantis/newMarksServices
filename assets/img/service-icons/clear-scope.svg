@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Clear project scope</title>
+  <rect x="22" y="15" width="52" height="68" rx="6" fill="none" stroke="#173b57" stroke-width="6"/>
+  <path d="M37 15v-4h22v14H37V15Zm-3 29 7 7 14-15M34 66h29" fill="none" stroke="#c89b3c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

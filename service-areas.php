@@ -37,7 +37,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/cardiology-2.webp" alt="Sun City Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/cardiology-2.webp" alt="Plumbing fixture service in Sun City Georgetown" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Primary Service Area</span>
               </div>
               <div class="dept-card-body">
@@ -69,7 +69,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/neurology-3.webp" alt="Berry Creek Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/neurology-3.webp" alt="Residential water-system service in Berry Creek Georgetown" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Secondary Service Area</span>
               </div>
               <div class="dept-card-body">
@@ -101,7 +101,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/orthopedics-4.webp" alt="Georgetown Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/orthopedics-4.webp" alt="Lighting service for Georgetown homes in ZIP code 78626" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Nearby SEO Context</span>
               </div>
               <div class="dept-card-body">
@@ -133,7 +133,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/pediatrics-2.webp" alt="Georgetown Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/pediatrics-2.webp" alt="Smart lock and video doorbell service for Georgetown homes in ZIP code 78627" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Nearby SEO Context</span>
               </div>
               <div class="dept-card-body">
@@ -165,7 +165,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/laboratory-3.webp" alt="Exterior Requirements Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/laboratory-3.webp" alt="Small wall repair planned around project requirements" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Project Guidance</span>
               </div>
               <div class="dept-card-body">
@@ -197,7 +197,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/emergency-4.webp" alt="Small Projects Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/emergency-4.webp" alt="Tools for right-sized home maintenance projects" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Service Boundaries</span>
               </div>
               <div class="dept-card-body">

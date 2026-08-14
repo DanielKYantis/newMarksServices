@@ -218,11 +218,70 @@ function withoutCustomBlock(string $html, string $kind): string
 
 function replaceHtmlLinks(string $html): string
 {
-    return preg_replace_callback(
+    $html = preg_replace_callback(
         "~(href\\s*=\\s*[\"'])([^\"'?#]+)\\.html((?:[?#][^\"']*)?)([\"'])~i",
         static fn(array $m): string => $m[1] . $m[2] . '.php' . $m[3] . $m[4],
         $html
     ) ?? $html;
+
+    return replaceStockImagePaths($html);
+}
+
+function replaceStockImagePaths(string $html): string
+{
+    return strtr($html, [
+        'assets/img/health/cardiology-2.webp' => 'assets/img/services/plumbing.webp',
+        'assets/img/health/cardiology-3.webp' => 'assets/img/services/plumbing.webp',
+        'assets/img/health/neurology-3.webp' => 'assets/img/services/water.webp',
+        'assets/img/health/orthopedics-1.webp' => 'assets/img/services/lighting.webp',
+        'assets/img/health/orthopedics-4.webp' => 'assets/img/services/lighting.webp',
+        'assets/img/health/pediatrics-2.webp' => 'assets/img/services/security.webp',
+        'assets/img/health/pediatrics-4.webp' => 'assets/img/services/security.webp',
+        'assets/img/health/oncology-2.webp' => 'assets/img/services/doors.webp',
+        'assets/img/health/laboratory-3.webp' => 'assets/img/services/drywall.webp',
+        'assets/img/health/emergency-3.webp' => 'assets/img/services/exterior.webp',
+        'assets/img/health/emergency-4.webp' => 'assets/img/services/toolkit.webp',
+        'assets/img/health/facilities-3.webp' => 'assets/img/brand/sun-city-home-exterior.webp',
+        'assets/img/health/facilities-6.webp' => 'assets/img/services/visit.webp',
+        'assets/img/health/consultation-3.webp' => 'assets/img/services/inspection.webp',
+        'assets/img/health/surgery-2.webp' => 'assets/img/services/toolkit.webp',
+        'assets/img/health/showcase-7.webp' => 'assets/img/brand/sun-city-home-exterior.webp',
+        'assets/img/health/showcase-11.webp' => 'assets/img/services/visit.webp',
+        'assets/img/health/showcase-1.webp' => 'assets/img/services/lighting.webp',
+        'assets/img/health/showcase-5.webp' => 'assets/img/services/exterior.webp',
+        'assets/img/health/staff-1.webp' => 'assets/img/services/plumbing.webp',
+        'assets/img/health/staff-2.webp' => 'assets/img/services/grab-bars.webp',
+        'assets/img/health/staff-3.webp' => 'assets/img/services/water.webp',
+        'assets/img/health/staff-4.webp' => 'assets/img/services/drywall.webp',
+        'assets/img/health/staff-5.webp' => 'assets/img/services/lighting.webp',
+        'assets/img/health/staff-6.webp' => 'assets/img/services/inspection.webp',
+        'assets/img/health/staff-7.webp' => 'assets/img/services/security.webp',
+        'assets/img/health/staff-9.webp' => 'assets/img/services/doors.webp',
+        'assets/img/health/staff-10.webp' => 'assets/img/services/exterior.webp',
+        'assets/img/health/staff-11.webp' => 'assets/img/services/mounting.webp',
+        'assets/img/health/staff-12.webp' => 'assets/img/services/toolkit.webp',
+        'assets/img/person/person-f-3.webp' => 'assets/img/services/inspection.webp',
+        'assets/img/person/person-m-9.webp' => 'assets/img/services/toolkit.webp',
+        'assets/img/person/person-f-5.webp' => 'assets/img/services/doors.webp',
+        'assets/img/person/person-f-12.webp' => 'assets/img/services/mounting.webp',
+        'assets/img/person/person-m-12.webp' => 'assets/img/services/exterior.webp',
+        'assets/img/person/person-m-13.webp' => 'assets/img/services/lighting.webp',
+        'assets/img/person/person-f-13.webp' => 'assets/img/services/inspection.webp',
+        'assets/img/gallery/gallery-1.webp' => 'assets/img/services/plumbing.webp',
+        'assets/img/gallery/gallery-2.webp' => 'assets/img/services/lighting.webp',
+        'assets/img/gallery/gallery-3.webp' => 'assets/img/services/security.webp',
+        'assets/img/gallery/gallery-4.webp' => 'assets/img/services/doors.webp',
+        'assets/img/gallery/gallery-5.webp' => 'assets/img/services/drywall.webp',
+        'assets/img/gallery/gallery-6.webp' => 'assets/img/services/toolkit.webp',
+        'assets/img/gallery/gallery-7.webp' => 'assets/img/services/exterior.webp',
+        'assets/img/gallery/gallery-8.webp' => 'assets/img/services/visit.webp',
+        'assets/img/clients/clients-6.webp' => 'assets/img/service-icons/client-location.svg',
+        'assets/img/clients/clients-7.webp' => 'assets/img/service-icons/clear-scope.svg',
+        'assets/img/clients/clients-8.webp' => 'assets/img/service-icons/practical-repairs.svg',
+        'assets/img/clients/clients-9.webp' => 'assets/img/service-icons/project-details.svg',
+        'assets/img/clients/clients-10.webp' => 'assets/img/service-icons/requirements-check.svg',
+        'assets/img/clients/clients-11.webp' => 'assets/img/service-icons/right-sized-visits.svg',
+    ]);
 }
 
 function normalSharedMarkup(string $html): string

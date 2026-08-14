@@ -98,7 +98,7 @@ require __DIR__ . '/includes/header.php';
 
             <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
               <div class="media-card">
-                <img src="assets/img/health/cardiology-3.webp" alt="Cardiology Service Group" class="img-fluid">
+                <img src="assets/img/health/cardiology-3.webp" alt="Kitchen faucet repair and replacement" class="img-fluid">
                 <div class="media-overlay">
                   <span class="overlay-label">Service Group</span>
                   <span class="overlay-title">Plumbing Fixtures</span>

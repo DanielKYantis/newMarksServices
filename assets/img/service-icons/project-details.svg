@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Project details reviewed</title>
+  <rect x="24" y="10" width="48" height="76" rx="8" fill="none" stroke="#173b57" stroke-width="6"/>
+  <path d="M35 31h26M35 46h26M35 61h15" stroke="#c89b3c" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="48" cy="75" r="3" fill="#173b57"/>
+</svg>

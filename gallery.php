@@ -60,7 +60,7 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-1.webp" class="img-fluid" loading="lazy" alt="">
+                  <img src="assets/img/gallery/gallery-1.webp" class="img-fluid" loading="lazy" alt="Kitchen faucet repair and replacement">
                   <span class="card-badge">Plumbing</span>
                 </div>
                 <div class="card-body">
@@ -83,7 +83,7 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-2.webp" class="img-fluid" loading="lazy" alt="">
+                  <img src="assets/img/gallery/gallery-2.webp" class="img-fluid" loading="lazy" alt="Residential ceiling-light installation">
                   <span class="card-badge">Electrical</span>
                 </div>
                 <div class="card-body">
@@ -106,7 +106,7 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-people">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-3.webp" class="img-fluid" loading="lazy" alt="">
+                  <img src="assets/img/gallery/gallery-3.webp" class="img-fluid" loading="lazy" alt="Video doorbell and smart lock installation">
                   <span class="card-badge">Maintenance</span>
                 </div>
                 <div class="card-body">
@@ -129,7 +129,7 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-4.webp" class="img-fluid" loading="lazy" alt="">
+                  <img src="assets/img/gallery/gallery-4.webp" class="img-fluid" loading="lazy" alt="Interior door hinge adjustment">
                   <span class="card-badge">Plumbing</span>
                 </div>
                 <div class="card-body">
@@ -152,7 +152,7 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-5.webp" class="img-fluid" loading="lazy" alt="">
+                  <img src="assets/img/gallery/gallery-5.webp" class="img-fluid" loading="lazy" alt="Small drywall patch and texture repair">
                   <span class="card-badge">Electrical</span>
                 </div>
                 <div class="card-body">
@@ -175,7 +175,7 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-people">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-6.webp" class="img-fluid" loading="lazy" alt="">
+                  <img src="assets/img/gallery/gallery-6.webp" class="img-fluid" loading="lazy" alt="Organized tools for home maintenance and punch-list work">
                   <span class="card-badge">Maintenance</span>
                 </div>
                 <div class="card-body">
@@ -198,7 +198,7 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-7.webp" class="img-fluid" loading="lazy" alt="">
+                  <img src="assets/img/gallery/gallery-7.webp" class="img-fluid" loading="lazy" alt="Exterior window sealing and downspout check">
                   <span class="card-badge">Plumbing</span>
                 </div>
                 <div class="card-body">
@@ -221,7 +221,7 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-8.webp" class="img-fluid" loading="lazy" alt="">
+                  <img src="assets/img/gallery/gallery-8.webp" class="img-fluid" loading="lazy" alt="Homeowner and home repair professional reviewing a client-location project">
                   <span class="card-badge">Electrical</span>
                 </div>
                 <div class="card-body">

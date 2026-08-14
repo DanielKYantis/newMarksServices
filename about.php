@@ -29,7 +29,7 @@ require __DIR__ . '/includes/header.php';
           <div class="row g-4">
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <div class="media-card">
-                <img src="assets/img/health/facilities-3.webp" class="img-fluid" alt="Medical facility" loading="lazy">
+                <img src="assets/img/health/facilities-3.webp" class="img-fluid" alt="Sun City Georgetown home served at the client location" loading="lazy">
                 <div class="media-overlay">
                   <span class="badge-pill">Client-Location Service</span>
                   <h4>Serving Sun City and Berry Creek homes</h4>
@@ -38,12 +38,12 @@ require __DIR__ . '/includes/header.php';
               <div class="row g-3 mt-1">
                 <div class="col-6">
                   <div class="thumb-card">
-                    <img src="assets/img/health/staff-12.webp" class="img-fluid" alt="Medical team" loading="lazy">
+                    <img src="assets/img/health/staff-12.webp" class="img-fluid" alt="Organized home repair tools for maintenance visits" loading="lazy">
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="thumb-card">
-                    <img src="assets/img/uploads/hero-home.png" class="img-fluid" alt="Patient consultation" loading="lazy">
+                    <img src="assets/img/brand/sun-city-home-exterior.webp" class="img-fluid" alt="Sun City Georgetown single-story home under live oak trees" loading="lazy">
                   </div>
                 </div>
               </div>
@@ -190,22 +190,22 @@ require __DIR__ . '/includes/header.php';
             <div class="col-lg-9">
               <div class="logo-grid">
                 <div class="logo-tile">
-                  <img src="assets/img/clients/clients-6.webp" class="img-fluid" alt="Healthcare accreditation" loading="lazy">
+                  <img src="assets/img/service-icons/client-location.svg" class="img-fluid" alt="Client-location service" loading="lazy">
                 </div>
                 <div class="logo-tile">
-                  <img src="assets/img/clients/clients-7.webp" class="img-fluid" alt="Medical certification" loading="lazy">
+                  <img src="assets/img/service-icons/clear-scope.svg" class="img-fluid" alt="Clear project scope" loading="lazy">
                 </div>
                 <div class="logo-tile">
-                  <img src="assets/img/clients/clients-8.webp" class="img-fluid" alt="Quality assurance" loading="lazy">
+                  <img src="assets/img/service-icons/practical-repairs.svg" class="img-fluid" alt="Practical home repairs" loading="lazy">
                 </div>
                 <div class="logo-tile">
-                  <img src="assets/img/clients/clients-9.webp" class="img-fluid" alt="Healthcare excellence" loading="lazy">
+                  <img src="assets/img/service-icons/project-details.svg" class="img-fluid" alt="Project details reviewed before scheduling" loading="lazy">
                 </div>
                 <div class="logo-tile">
-                  <img src="assets/img/clients/clients-10.webp" class="img-fluid" alt="Medical standards" loading="lazy">
+                  <img src="assets/img/service-icons/requirements-check.svg" class="img-fluid" alt="Requirements checked before exterior work" loading="lazy">
                 </div>
                 <div class="logo-tile">
-                  <img src="assets/img/clients/clients-11.webp" class="img-fluid" alt="Healthcare certification" loading="lazy">
+                  <img src="assets/img/service-icons/right-sized-visits.svg" class="img-fluid" alt="Right-sized maintenance visits" loading="lazy">
                 </div>
               </div>
             </div>

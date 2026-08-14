@@ -37,7 +37,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/cardiology-2.webp" alt="Cardiology Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/cardiology-2.webp" alt="Plumbing fixture repair" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Heart &amp; Vascular</span>
               </div>
               <div class="dept-card-body">
@@ -69,7 +69,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/neurology-3.webp" alt="Neurology Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/neurology-3.webp" alt="Residential water softener and filtration system" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Brain &amp; Nervous System</span>
               </div>
               <div class="dept-card-body">
@@ -101,7 +101,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/orthopedics-4.webp" alt="Orthopedics Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/orthopedics-4.webp" alt="Residential lighting installation" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Bones &amp; Joints</span>
               </div>
               <div class="dept-card-body">
@@ -133,7 +133,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/pediatrics-2.webp" alt="Pediatrics Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/pediatrics-2.webp" alt="Video doorbell and smart lock installation" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Children's Health</span>
               </div>
               <div class="dept-card-body">
@@ -165,7 +165,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/laboratory-3.webp" alt="Laboratory Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/laboratory-3.webp" alt="Small drywall repair" class="img-fluid" loading="lazy">
                 <span class="dept-tag">Diagnostic Services</span>
               </div>
               <div class="dept-card-body">
@@ -197,7 +197,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
             <article class="dept-card">
               <div class="dept-card-media">
-                <img src="assets/img/health/emergency-4.webp" alt="Emergency Department" class="img-fluid" loading="lazy">
+                <img src="assets/img/health/emergency-4.webp" alt="Organized tools for home maintenance and punch-list work" class="img-fluid" loading="lazy">
                 <span class="dept-tag">24/7 Critical Care</span>
               </div>
               <div class="dept-card-body">
