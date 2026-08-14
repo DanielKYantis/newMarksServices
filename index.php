@@ -577,7 +577,7 @@ require __DIR__ . '/includes/header.php';
               <div class="card-body">
                 <div class="card-head">
                   <h3>Plumbing Fixture Repairs</h3>
-                  <span class="meta-tag">01 / Service</span>
+                  <span class="meta-tag">Service</span>
                 </div>
                 <p>Repair and replace faucets, sinks, toilets, disposals, supply lines, drains, hose bibs, and other common household fixtures.</p>
                 <div class="card-foot">
@@ -597,7 +597,7 @@ require __DIR__ . '/includes/header.php';
               <div class="card-body">
                 <div class="card-head">
                   <h3>Water Heaters &amp; Filtration</h3>
-                  <span class="meta-tag">02 / Service</span>
+                  <span class="meta-tag">Service</span>
                 </div>
                 <p>Support for water heaters, point-of-use units, softeners, whole-house filters, reverse osmosis systems, and water-flow concerns.</p>
                 <div class="card-foot">
@@ -617,7 +617,7 @@ require __DIR__ . '/includes/header.php';
               <div class="card-body">
                 <div class="card-head">
                   <h3>Electrical &amp; Lighting</h3>
-                  <span class="meta-tag">03 / Service</span>
+                  <span class="meta-tag">Service</span>
                 </div>
                 <p>Install or repair lights, fans, switches, outlets, GFCIs, doorbells, smoke detectors, media outlets, and garage lighting.</p>
                 <div class="card-foot">
@@ -637,7 +637,7 @@ require __DIR__ . '/includes/header.php';
               <div class="card-body">
                 <div class="card-head">
                   <h3>Home Security &amp; Smart Devices</h3>
-                  <span class="meta-tag">04 / Service</span>
+                  <span class="meta-tag">Service</span>
                 </div>
                 <p>Install video doorbells, security cameras, smart locks, and compatible panels with exterior requirements confirmed when applicable.</p>
                 <div class="card-foot">
@@ -657,7 +657,7 @@ require __DIR__ . '/includes/header.php';
               <div class="card-body">
                 <div class="card-head">
                   <h3>Carpentry &amp; Small Repairs</h3>
-                  <span class="meta-tag">05 / Service</span>
+                  <span class="meta-tag">Service</span>
                 </div>
                 <p>Repair doors, locks, storm doors, cabinet hardware, trim, shelves, closets, vanities, drywall, and other focused home items.</p>
                 <div class="card-foot">
@@ -677,7 +677,7 @@ require __DIR__ . '/includes/header.php';
               <div class="card-body">
                 <div class="card-head">
                   <h3>Maintenance &amp; Punch Lists</h3>
-                  <span class="meta-tag">06 / Service</span>
+                  <span class="meta-tag">Service</span>
                 </div>
                 <p>Group home-inspection repairs, home-sale punch lists, mounting tasks, grab bars, minor exterior maintenance, and small installations.</p>
                 <div class="card-foot">

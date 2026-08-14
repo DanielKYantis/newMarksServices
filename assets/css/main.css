@@ -503,15 +503,15 @@ h6 {
   font-weight: 600;
   position: relative;
   text-align: center;
-  padding-bottom: 12px;
-  margin-bottom: 15px;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .footer h4::after {
   content: "";
   position: absolute;
   display: block;
-  width: 20px;
+  width: 20%;
   height: 2px;
   background: var(--accent-color);
   bottom: 0;
@@ -538,7 +538,7 @@ h6 {
 }
 
 .footer .footer-links ul li {
-  padding: 10px 0;
+  padding: 6px 0;
   display: flex;
   align-items: center;
   justify-content: center;
