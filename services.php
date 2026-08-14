@@ -44,11 +44,11 @@ require __DIR__ . '/includes/header.php';
         <div class="services-grid">
           <div class="row g-3">
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div id="plumbing-fixtures" class="col-lg-4 col-md-6 service-group-anchor" data-aos="fade-up" data-aos-delay="100">
               <article class="service-card">
                 <header class="card-head">
                   <div class="icon-wrap">
-                    <i class="bi bi-activity"></i>
+                    <i class="bi bi-droplet"></i>
                   </div>
                   <span class="badge">Plumbing</span>
                 </header>
@@ -70,11 +70,11 @@ require __DIR__ . '/includes/header.php';
               </article>
             </div><!-- End Service Card -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div id="water-systems" class="col-lg-4 col-md-6 service-group-anchor" data-aos="fade-up" data-aos-delay="150">
               <article class="service-card featured">
                 <header class="card-head">
                   <div class="icon-wrap">
-                    <i class="bi bi-heart-pulse"></i>
+                    <i class="bi bi-water"></i>
                   </div>
                   <span class="badge badge-accent">Water Systems</span>
                   <span class="pin">Common Request</span>
@@ -97,16 +97,16 @@ require __DIR__ . '/includes/header.php';
               </article>
             </div><!-- End Service Card -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div id="electrical-lighting" class="col-lg-4 col-md-6 service-group-anchor" data-aos="fade-up" data-aos-delay="200">
               <article class="service-card">
                 <header class="card-head">
                   <div class="icon-wrap">
-                    <i class="bi bi-clipboard2-pulse"></i>
+                    <i class="bi bi-lightning-charge"></i>
                   </div>
                   <span class="badge">Electrical</span>
                 </header>
                 <div class="card-content">
-                  <h4 class="card-title">Laboratory Electrical</h4>
+                  <h4 class="card-title">Electrical Fixtures &amp; Lighting</h4>
                   <p class="card-description">Lights, fans, switches, outlets, GFCIs, doorbells, smoke detectors, media outlets, garage lights, and practical upgrades.</p>
                   <ul class="feature-list">
                     <li><i class="bi bi-check2"></i> Lights &amp; Fans</li>
@@ -123,7 +123,7 @@ require __DIR__ . '/includes/header.php';
               </article>
             </div><!-- End Service Card -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div id="security-smart-home" class="col-lg-4 col-md-6 service-group-anchor" data-aos="fade-up" data-aos-delay="100">
               <article class="service-card emergency">
                 <header class="card-head">
                   <div class="icon-wrap">
@@ -133,7 +133,7 @@ require __DIR__ . '/includes/header.php';
                   <span class="pin pin-live"><span class="dot"></span> Requirement Check</span>
                 </header>
                 <div class="card-content">
-                  <h4 class="card-title">Security Response Unit</h4>
+                  <h4 class="card-title">Security &amp; Smart Home</h4>
                   <p class="card-description">Video doorbells, security cameras, compatible panels, smart locks, and EV charger coordination when properly licensed or coordinated.</p>
                   <ul class="feature-list">
                     <li><i class="bi bi-check2"></i> Video Doorbells</li>
@@ -142,24 +142,24 @@ require __DIR__ . '/includes/header.php';
                   </ul>
                 </div>
                 <footer class="card-foot">
-                  <a href="tel:911" class="btn-danger">
-                    <i class="bi bi-telephone-fill"></i>
-                    Dial Security
+                  <a href="appointment.php" class="btn-danger">
+                    <i class="bi bi-calendar-check"></i>
+                    Discuss Your Project
                   </a>
                 </footer>
               </article>
             </div><!-- End Service Card -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div id="doors-carpentry" class="col-lg-4 col-md-6 service-group-anchor" data-aos="fade-up" data-aos-delay="150">
               <article class="service-card">
                 <header class="card-head">
                   <div class="icon-wrap">
-                    <i class="bi bi-gender-female"></i>
+                    <i class="bi bi-hammer"></i>
                   </div>
                   <span class="badge">Carpentry</span>
                 </header>
                 <div class="card-content">
-                  <h4 class="card-title">Women &amp; Carpentry Health</h4>
+                  <h4 class="card-title">Doors, Trim &amp; Small Carpentry</h4>
                   <p class="card-description">Door, lock, storm door, sliding door, cabinet hardware, trim, shelves, closets, vanities, and focused carpentry repairs.</p>
                   <ul class="feature-list">
                     <li><i class="bi bi-check2"></i> Doors &amp; Locks</li>
@@ -176,7 +176,7 @@ require __DIR__ . '/includes/header.php';
               </article>
             </div><!-- End Service Card -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div id="wall-repairs-maintenance" class="col-lg-4 col-md-6 service-group-anchor" data-aos="fade-up" data-aos-delay="200">
               <article class="service-card">
                 <header class="card-head">
                   <div class="icon-wrap">

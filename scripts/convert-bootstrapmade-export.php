@@ -465,7 +465,7 @@ $layoutHeader = preg_replace(
     1
 ) ?? $layoutHeader;
 $layoutNav = outerTag($layoutHeader, 'nav', 'id="navmenu"');
-$layoutFooter = outerTag($layoutHtml, 'footer');
+$layoutFooter = outerTag($layoutHtml, 'footer', 'id="footer"');
 
 $navOffset = strpos($layoutHeader, $layoutNav);
 if ($navOffset === false) {

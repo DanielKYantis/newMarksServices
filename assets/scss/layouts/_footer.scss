@@ -11,10 +11,17 @@
   .footer-top {
     background-color: color-mix(in srgb, var(--background-color), white 5%);
     padding-top: 50px;
+
+    .row > [class*='col-'] {
+      text-align: center;
+    }
   }
 
   .footer-about {
+    text-align: center;
+
     .logo {
+      justify-content: center;
       line-height: 1;
       margin-bottom: 25px;
 
@@ -42,6 +49,7 @@
     font-size: 16px;
     font-weight: 600;
     position: relative;
+    text-align: center;
     padding-bottom: 12px;
     margin-bottom: 15px;
 
@@ -53,17 +61,20 @@
       height: 2px;
       background: var(--accent-color);
       bottom: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
   .footer-links {
     margin-bottom: 30px;
+    text-align: center;
 
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
+      text-align: center;
 
       i {
         padding-right: 2px;
@@ -80,6 +91,7 @@
 
         display: flex;
         align-items: center;
+        justify-content: center;
       }
 
       a {
@@ -95,6 +107,8 @@
   }
 
   .footer-contact {
+    text-align: center;
+
     p {
       margin-bottom: 5px;
     }

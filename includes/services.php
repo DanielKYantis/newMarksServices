@@ -10,6 +10,14 @@ declare(strict_types=1);
  * OfferCatalog entries, and Service schema after the site is converted to PHP.
  */
 return [
+    "major_groups" => [
+        ["label" => "Plumbing Fixture Repairs", "href" => "services.php#plumbing-fixtures"],
+        ["label" => "Water Heaters & Filtration", "href" => "services.php#water-systems"],
+        ["label" => "Electrical & Lighting", "href" => "services.php#electrical-lighting"],
+        ["label" => "Security & Smart Home", "href" => "services.php#security-smart-home"],
+        ["label" => "Doors & Small Carpentry", "href" => "services.php#doors-carpentry"],
+        ["label" => "Wall Repairs & Punch Lists", "href" => "services.php#wall-repairs-maintenance"],
+    ],
     "service_areas" => [
         "Sun City, Georgetown, TX 78633",
         "Berry Creek, Georgetown, TX 78628",

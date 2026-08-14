@@ -64,7 +64,7 @@
         transition: 0.3s;
         border-radius: 4px;
         z-index: 99;
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 14px 34px rgba(18, 46, 78, 0.18), 0 3px 8px rgba(18, 46, 78, 0.10);
 
         li {
           min-width: 180px;
@@ -139,7 +139,7 @@
       overflow-y: auto;
       transition: 0.3s;
       z-index: 9998;
-      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 18px 42px rgba(18, 46, 78, 0.24), 0 4px 10px rgba(18, 46, 78, 0.12);
     }
 
     a,
@@ -197,7 +197,7 @@
         margin: 10px 20px;
         background-color: var(--nav-dropdown-background-color);
         border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-        box-shadow: none;
+        box-shadow: 0 8px 22px rgba(18, 46, 78, 0.14), 0 2px 5px rgba(18, 46, 78, 0.08);
         transition: all .5s ease-in-out;
 
         ul {

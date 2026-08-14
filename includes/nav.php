@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+
+$navServiceRegistry = require __DIR__ . '/services.php';
+$navMajorServiceGroups = $navServiceRegistry['major_groups'] ?? [];
 ?>
 <nav id="navmenu" class="navmenu">
         <ul>
@@ -17,9 +20,18 @@ declare(strict_types=1);
               <li><a href="#">Williamson County 78627</a></li>
             </ul>
           </li>
-          <li><a href="services.php" class="<?= is_active($pageKey, 'services.php') ?>">Services</a></li>
+          <li class="dropdown">
+            <a href="services.php" class="<?= is_active($pageKey, 'services.php') ?>">
+              <span>Services</span> <i class="bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i>
+            </a>
+            <ul aria-label="Major service groups">
+              <?php foreach ($navMajorServiceGroups as $serviceGroup): ?>
+                <li><a href="<?= e($serviceGroup['href']) ?>"><?= e($serviceGroup['label']) ?></a></li>
+              <?php endforeach; ?>
+            </ul>
+          </li>
           <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul class="dropdown-active">
+            <ul>
               <!-- <li><a href="department-details.php" class="<?= is_active($pageKey, 'department-details.php') ?>">Service Area Details</a></li> -->
               <!-- <li><a href="service-details.php" class="<?= is_active($pageKey, 'service-details.php') ?>">Service Details</a></li> -->
               <li><a href="appointment.php" class="<?= is_active($pageKey, 'appointment.php') ?>">Appointments</a></li>

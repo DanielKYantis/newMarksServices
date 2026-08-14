@@ -147,7 +147,7 @@ h6 {
   background: var(--surface-color);
   border-radius: 6px;
   padding: 0px 10px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(18, 46, 78, 0.16), 0 1px 4px rgba(18, 46, 78, 0.1);
 }
 
 .header .logo {
@@ -280,7 +280,7 @@ h6 {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 34px rgba(18, 46, 78, 0.18), 0 3px 8px rgba(18, 46, 78, 0.1);
   }
 
   .navmenu .dropdown ul li {
@@ -352,7 +352,7 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 18px 42px rgba(18, 46, 78, 0.24), 0 4px 10px rgba(18, 46, 78, 0.12);
   }
 
   .navmenu a,
@@ -411,7 +411,7 @@ h6 {
     margin: 10px 20px;
     background-color: var(--nav-dropdown-background-color);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
+    box-shadow: 0 8px 22px rgba(18, 46, 78, 0.14), 0 2px 5px rgba(18, 46, 78, 0.08);
     transition: all 0.5s ease-in-out;
   }
 
@@ -466,7 +466,16 @@ h6 {
   padding-top: 50px;
 }
 
+.footer .footer-top .row > [class*=col-] {
+  text-align: center;
+}
+
+.footer .footer-about {
+  text-align: center;
+}
+
 .footer .footer-about .logo {
+  justify-content: center;
   line-height: 1;
   margin-bottom: 25px;
 }
@@ -493,6 +502,7 @@ h6 {
   font-size: 16px;
   font-weight: 600;
   position: relative;
+  text-align: center;
   padding-bottom: 12px;
   margin-bottom: 15px;
 }
@@ -505,17 +515,20 @@ h6 {
   height: 2px;
   background: var(--accent-color);
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer .footer-links {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .footer .footer-links ul i {
@@ -528,6 +541,7 @@ h6 {
   padding: 10px 0;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .footer .footer-links ul li:first-child {
@@ -542,6 +556,10 @@ h6 {
 
 .footer .footer-links ul a:hover {
   color: var(--accent-color);
+}
+
+.footer .footer-contact {
+  text-align: center;
 }
 
 .footer .footer-contact p {
@@ -4501,6 +4519,10 @@ section,
 
 .services .services-grid {
   margin-bottom: 64px;
+}
+
+.services .service-group-anchor {
+  scroll-margin-top: 120px;
 }
 
 .services .service-card {
