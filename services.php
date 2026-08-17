@@ -22,7 +22,7 @@ require __DIR__ . '/includes/header.php';
 
       <div class="title-wrapper">
         <h1>Home Repair &amp; Handyman Services</h1>
-        <p>Explore approved plumbing, water system, electrical, lighting, security, carpentry, wall repair, maintenance, and punch-list services.</p>
+        <p>See the plumbing, water system, electrical, lighting, security, carpentry, wall repair, maintenance, and punch-list work we provide.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -34,7 +34,7 @@ require __DIR__ . '/includes/header.php';
         <div class="services-toolbar" data-aos="fade-up" data-aos-delay="100">
           <div class="toolbar-left">
             <span class="label">Home Services</span>
-            <h3 class="toolbar-title">Practical Repair &amp; Maintenance Services</h3>
+            <h3 class="toolbar-title">Home Repair &amp; Maintenance Services</h3>
           </div>
           <div class="toolbar-right">
             <span class="badge badge-success"><span class="dot"></span> Serving Sun City &amp; Berry Creek</span>
@@ -81,11 +81,11 @@ require __DIR__ . '/includes/header.php';
                 </header>
                 <div class="card-content">
                   <h4 class="card-title">Water Heaters &amp; Water Quality</h4>
-                  <p class="card-description">Water heaters, point-of-use units, softeners, whole-house filters, reverse osmosis systems, water-flow troubleshooting, and water-test assistance.</p>
+                  <p class="card-description">Water heaters, small point-of-use heaters, water softeners, whole-house filters, reverse-osmosis systems, low-water-flow problems, and water-test help.</p>
                   <ul class="feature-list">
                     <li><i class="bi bi-check2"></i> Water Heaters</li>
                     <li><i class="bi bi-check2"></i> Filters &amp; Softeners</li>
-                    <li><i class="bi bi-check2"></i> Flow Troubleshooting</li>
+                    <li><i class="bi bi-check2"></i> Low-Water-Flow Help</li>
                   </ul>
                 </div>
                 <footer class="card-foot">
@@ -130,11 +130,11 @@ require __DIR__ . '/includes/header.php';
                     <i class="bi bi-shield-plus"></i>
                   </div>
                   <span class="badge">Security</span>
-                  <span class="pin pin-live"><span class="dot"></span> Requirement Check</span>
+                  <span class="pin pin-live"><span class="dot"></span> Rules May Apply</span>
                 </header>
                 <div class="card-content">
                   <h4 class="card-title">Security &amp; Smart Home</h4>
-                  <p class="card-description">Video doorbells, security cameras, compatible panels, smart locks, and EV charger coordination when properly licensed or coordinated.</p>
+                  <p class="card-description">Video doorbells, security cameras, compatible panels, and smart locks. EV charger work is handled with the right licensed professional when required.</p>
                   <ul class="feature-list">
                     <li><i class="bi bi-check2"></i> Video Doorbells</li>
                     <li><i class="bi bi-check2"></i> Cameras &amp; Smart Locks</li>
@@ -211,8 +211,7 @@ require __DIR__ . '/includes/header.php';
               <div class="stat-cell">
                 <span class="stat-key">Service Area</span>
                 <div class="stat-value">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="28450" data-purecounter-duration="2"></span>
-                  <span class="stat-suffix">+</span>
+                  <span>78633</span>
                 </div>
                 <span class="stat-meta">Sun City 78633</span>
               </div>
@@ -221,26 +220,25 @@ require __DIR__ . '/includes/header.php';
               <div class="stat-cell">
                 <span class="stat-key">Secondary Area</span>
                 <div class="stat-value">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="172" data-purecounter-duration="2"></span>
+                  <span>78628</span>
                 </div>
                 <span class="stat-meta">Berry Creek 78628</span>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="stat-cell">
-                <span class="stat-key">Project Types</span>
+                <span class="stat-key">Main Services</span>
                 <div class="stat-value">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="21" data-purecounter-duration="2"></span>
+                  <span>6</span>
                 </div>
-                <span class="stat-meta">Approved service scope</span>
+                <span class="stat-meta">Easy-to-scan groups</span>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="stat-cell">
-                <span class="stat-key">Scheduling</span>
+                <span class="stat-key">Visit Requests</span>
                 <div class="stat-value">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="2"></span>
-                  <span class="stat-suffix">/7</span>
+                  <span>Call</span>
                 </div>
                 <span class="stat-meta">By request</span>
               </div>
@@ -251,9 +249,9 @@ require __DIR__ . '/includes/header.php';
         <div class="service-request-banner" data-aos="fade-up" data-aos-delay="100">
           <div class="banner-grid">
             <div class="banner-meta">
-              <span class="badge badge-outline"><i class="bi bi-calendar2-check"></i> Plan a Practical Visit</span>
-              <h3>Have a Home Repair Project?</h3>
-              <p>Tell Mark's Services what needs attention and where the home is located so the project can be reviewed and scheduled appropriately.</p>
+              <span class="badge badge-outline"><i class="bi bi-calendar2-check"></i> Plan a Visit</span>
+              <h3>Not Sure Which Service You Need?</h3>
+              <p>Call us or send a request. Tell us what's going on and where your home is located.</p>
             </div>
             <div class="banner-actions">
               <a href="request-a-visit.php" class="btn-primary">Request a Visit</a>

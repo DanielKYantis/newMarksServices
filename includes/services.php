@@ -110,7 +110,7 @@ return [
                 ["name" => "Home maintenance", "description" => "Address wear, sticking parts, loose trim, minor leaks, and other items that affect daily use."],
                 ["name" => "High-reach tasks", "description" => "Replace accessible lights and smoke detectors without asking homeowners to climb ladders."],
                 ["name" => "Move-in and move-out help", "description" => "Complete practical repairs from inspection notes or a homeowner-prepared list."],
-                ["name" => "Licensed-trade coordination", "description" => "Identify when plumbing or electrical scope needs an appropriately licensed professional."],
+                ["name" => "Licensed help when required", "description" => "Identify when plumbing or electrical work needs the right licensed professional."],
             ],
             "good_fit" => [
                 "Several small repairs in different rooms",
@@ -121,7 +121,7 @@ return [
             "faqs" => [
                 ["question" => "Can I combine several small jobs in one request?", "answer" => "Yes. A clear list with photos helps group compatible tasks and identify materials before the visit."],
                 ["question" => "What work is outside the handyman scope?", "answer" => "Large remodeling, roofing, HVAC equipment service, gas work, and major construction are not marketed. Licensed plumbing or electrical work is coordinated when required."],
-                ["question" => "Do you work at the customer's home?", "answer" => "Yes. Sun City Home Repair is a client-location service serving homes in Sun City, Berry Creek, and the Georgetown area."],
+                ["question" => "Do you work at the customer's home?", "answer" => "Yes. We come to homes in Sun City, Berry Creek, and the Georgetown area."],
             ],
             "service_types" => ["Handyman Services", "Home Maintenance", "Small Home Installations"],
             "related" => ["home-inspection-repairs-georgetown-tx", "home-sale-punch-list-georgetown-tx", "grab-bar-installation-sun-city-georgetown"],
@@ -518,7 +518,7 @@ return [
             "short_title" => "Home inspection repairs",
             "title" => "Home Inspection Repairs in Georgetown, TX",
             "eyebrow" => "Turn the report into a workable repair plan",
-            "meta_description" => "Home inspection repair lists for Sun City, Berry Creek, and Georgetown homes, with clear scope and licensed-trade coordination.",
+            "meta_description" => "Home inspection repair lists for Sun City, Berry Creek, and Georgetown homes, with clear work plans and licensed help when required.",
             "intro" => "Inspection reports can make a collection of small items feel like one large project. We help sort repair notes into practical handyman tasks, licensed-trade items, specialist work, and questions for the inspector or seller.",
             "summary" => "The result is a clearer scope for common fixture, hardware, trim, wall, safety, and maintenance repairs—without pretending every report note has the same priority.",
             "icon" => "bi-clipboard-check",

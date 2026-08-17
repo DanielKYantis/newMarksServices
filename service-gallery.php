@@ -22,7 +22,7 @@ require __DIR__ . '/includes/header.php';
 
       <div class="title-wrapper">
         <h1>Home Repair Service Gallery</h1>
-        <p>Browse representative categories for approved home repair, installation, and maintenance services.</p>
+        <p>See examples of the home repairs, small installations, and maintenance work Mark's Services can help with.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -66,7 +66,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="card-body">
                   <header class="card-head">
                     <h3 class="card-title">Plumbing Fixtures &amp; Water Systems</h3>
-                    <p class="card-desc">Representative category for faucets, sinks, toilets, drains, water heaters, softeners, and filtration.</p>
+                    <p class="card-desc">Faucets, sinks, toilets, drains, water heaters, water softeners, and filters.</p>
                   </header>
                   <footer class="card-foot">
                     <a href="assets/img/gallery/gallery-1.webp" class="glightbox btn-ghost" title="Plumbing Fixtures &amp; Water Systems">
@@ -89,7 +89,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="card-body">
                   <header class="card-head">
                     <h3 class="card-title">Electrical Fixtures &amp; Lighting</h3>
-                    <p class="card-desc">Representative category for lights, fans, switches, outlets, GFCIs, doorbells, detectors, and garage lighting.</p>
+                    <p class="card-desc">Lights, ceiling fans, switches, outlets, GFCIs, doorbells, smoke detectors, and garage lights.</p>
                   </header>
                   <footer class="card-foot">
                     <a href="assets/img/gallery/gallery-2.webp" class="glightbox btn-ghost" title="Electrical Fixtures &amp; Lighting">
@@ -107,12 +107,12 @@ require __DIR__ . '/includes/header.php';
               <div class="shadcn-card">
                 <div class="card-media">
                   <img src="assets/img/gallery/gallery-3.webp" class="img-fluid" loading="lazy" alt="Video doorbell and smart lock installation">
-                  <span class="card-badge">Maintenance</span>
+                  <span class="card-badge">Home Security</span>
                 </div>
                 <div class="card-body">
                   <header class="card-head">
                     <h3 class="card-title">Home Security &amp; Smart Devices</h3>
-                    <p class="card-desc">Representative category for video doorbells, cameras, compatible panels, smart locks, and exterior requirement checks.</p>
+                    <p class="card-desc">Video doorbells, cameras, compatible panels, and smart locks. Outdoor installations may need HOA or permit review.</p>
                   </header>
                   <footer class="card-foot">
                     <a href="assets/img/gallery/gallery-3.webp" class="glightbox btn-ghost" title="Home Security &amp; Smart Devices">
@@ -130,12 +130,12 @@ require __DIR__ . '/includes/header.php';
               <div class="shadcn-card">
                 <div class="card-media">
                   <img src="assets/img/gallery/gallery-4.webp" class="img-fluid" loading="lazy" alt="Interior door hinge adjustment">
-                  <span class="card-badge">Plumbing</span>
+                  <span class="card-badge">Carpentry</span>
                 </div>
                 <div class="card-body">
                   <header class="card-head">
                     <h3 class="card-title">Doors, Trim &amp; Small Carpentry</h3>
-                    <p class="card-desc">Representative category for doors, locks, cabinet hardware, trim, shelves, closets, and vanities.</p>
+                    <p class="card-desc">Doors, locks, cabinet hardware, trim, shelves, closets, and vanities.</p>
                   </header>
                   <footer class="card-foot">
                     <a href="assets/img/gallery/gallery-4.webp" class="glightbox btn-ghost" title="Doors, Trim &amp; Small Carpentry">
@@ -153,12 +153,12 @@ require __DIR__ . '/includes/header.php';
               <div class="shadcn-card">
                 <div class="card-media">
                   <img src="assets/img/gallery/gallery-5.webp" class="img-fluid" loading="lazy" alt="Small drywall patch and texture repair">
-                  <span class="card-badge">Electrical</span>
+                  <span class="card-badge">Wall Repair</span>
                 </div>
                 <div class="card-body">
                   <header class="card-head">
                     <h3 class="card-title">Drywall, Texture &amp; Mounting</h3>
-                    <p class="card-desc">Representative category for wall repairs, wallpaper preparation, repair-related touch-ups, mirrors, blinds, TVs, and grab bars.</p>
+                    <p class="card-desc">Drywall and texture repair, wallpaper preparation, paint touch-ups tied to repairs, mirrors, blinds, TVs, and grab bars.</p>
                   </header>
                   <footer class="card-foot">
                     <a href="assets/img/gallery/gallery-5.webp" class="glightbox btn-ghost" title="Drywall, Texture &amp; Mounting">
@@ -181,7 +181,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="card-body">
                   <header class="card-head">
                     <h3 class="card-title">Maintenance &amp; Punch Lists</h3>
-                    <p class="card-desc">Representative category for inspection repairs, sale punch lists, high-reach replacements, and small installations.</p>
+                    <p class="card-desc">Home inspection repairs, home-sale punch lists, high-reach replacements, and small installations.</p>
                   </header>
                   <footer class="card-foot">
                     <a href="assets/img/gallery/gallery-6.webp" class="glightbox btn-ghost" title="Maintenance &amp; Punch Lists">
@@ -199,12 +199,12 @@ require __DIR__ . '/includes/header.php';
               <div class="shadcn-card">
                 <div class="card-media">
                   <img src="assets/img/gallery/gallery-7.webp" class="img-fluid" loading="lazy" alt="Exterior window sealing and downspout check">
-                  <span class="card-badge">Plumbing</span>
+                  <span class="card-badge">Exterior</span>
                 </div>
                 <div class="card-body">
                   <header class="card-head">
                     <h3 class="card-title">Small Exterior Maintenance</h3>
-                    <p class="card-desc">Representative category for gutters, downspouts, fascia, caulking, mailboxes, washing, and dryer vent assistance.</p>
+                    <p class="card-desc">Gutters, downspouts, fascia, exterior caulking, mailboxes, house washing, and dryer vent help.</p>
                   </header>
                   <footer class="card-foot">
                     <a href="assets/img/gallery/gallery-7.webp" class="glightbox btn-ghost" title="Small Exterior Maintenance">
@@ -221,13 +221,13 @@ require __DIR__ . '/includes/header.php';
             <article class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture">
               <div class="shadcn-card">
                 <div class="card-media">
-                  <img src="assets/img/gallery/gallery-8.webp" class="img-fluid" loading="lazy" alt="Homeowner and home repair professional reviewing a client-location project">
-                  <span class="card-badge">Electrical</span>
+                  <img src="assets/img/gallery/gallery-8.webp" class="img-fluid" loading="lazy" alt="Homeowner and home repair professional discussing a repair">
+                  <span class="card-badge">Planning</span>
                 </div>
                 <div class="card-body">
                   <header class="card-head">
-                    <h3 class="card-title">Mature-Home Repair Planning</h3>
-                    <p class="card-desc">Practical repair planning for Sun City and Berry Creek homes, with exterior requirements confirmed when applicable.</p>
+                    <h3 class="card-title">Plan a Home Repair</h3>
+                    <p class="card-desc">Tell us what needs fixing. We'll explain the options and any rules that may apply to outdoor work.</p>
                   </header>
                   <footer class="card-foot">
                     <a href="assets/img/gallery/gallery-8.webp" class="glightbox btn-ghost" title="Mature-Home Repair Planning">

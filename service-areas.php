@@ -13,7 +13,7 @@ $serviceAreaRoutes = [
   <div class="page-title light-background">
     <div class="title-wrapper">
       <h1>Home Repair Service Areas</h1>
-      <p>Four distinct client-location service areas with practical repair, maintenance, fixture, and small-installation support.</p>
+      <p>We provide in-home repair and handyman services in Sun City, Berry Creek, Georgetown, and nearby Williamson County ZIP codes.</p>
     </div>
   </div>
 
@@ -34,8 +34,8 @@ $serviceAreaRoutes = [
                 </header>
                 <p class="area-card-desc"><?= e($areaPage['description']) ?></p>
                 <ul class="area-feature-list">
-                  <li><i class="fas fa-check"></i> Client-location service</li>
-                  <li><i class="fas fa-check"></i> Repairs and maintenance</li>
+                  <li><i class="fas fa-check"></i> We come to your home</li>
+                  <li><i class="fas fa-check"></i> Small repairs and maintenance</li>
                 </ul>
               </div>
               <footer class="area-card-foot">

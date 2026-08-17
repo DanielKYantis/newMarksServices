@@ -17,10 +17,10 @@ require __DIR__ . '/includes/header.php';
           <div class="row align-items-end g-4">
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <span class="eyebrow-label">About Mark's Services</span>
-              <h2>Practical home repair built around the homeowner.</h2>
+              <h2>Friendly, dependable help with everyday home repairs.</h2>
             </div>
             <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
-              <p class="intro-paragraph">Mark's Remodeling and Facility Services provides Sun City Home Repair &amp; Handyman Services with practical scope, clear communication, and respect for mature homes.</p>
+              <p class="intro-paragraph">Mark's Remodeling and Facility Services provides Sun City Home Repair &amp; Handyman Services with clear communication and careful work in your home.</p>
             </div>
           </div>
         </div><!-- End Intro Block -->
@@ -29,9 +29,9 @@ require __DIR__ . '/includes/header.php';
           <div class="row g-4">
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <div class="media-card">
-                <img src="assets/img/brand/sun-city-home-exterior.webp" class="img-fluid" alt="Sun City Georgetown home served at the client location" loading="lazy">
+                <img src="assets/img/brand/sun-city-home-exterior.webp" class="img-fluid" alt="Sun City Georgetown home served by Mark's Services" loading="lazy">
                 <div class="media-overlay">
-                  <span class="badge-pill">Client-Location Service</span>
+                  <span class="badge-pill">In-Home Service</span>
                   <h4>Serving Sun City and Berry Creek homes</h4>
                 </div>
               </div>
@@ -54,7 +54,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="info-card-header">
                   <span class="eyebrow-label">Service Approach</span>
                   <h3>A dependable partner for everyday home repairs</h3>
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+                  <p>Tell us what needs attention. We'll listen, look at the problem, explain your options, and help you decide what to do next.</p>
                 </div>
 
                 <div class="metric-list">
@@ -74,7 +74,7 @@ require __DIR__ . '/includes/header.php';
                     </div>
                     <div class="metric-detail">
                       <h5>Project Communication</h5>
-                      <p>Scope, scheduling, and next steps explained plainly</p>
+                      <p>The work, timing, and next steps explained plainly</p>
                     </div>
                   </div>
 
@@ -84,7 +84,7 @@ require __DIR__ . '/includes/header.php';
                     </div>
                     <div class="metric-detail">
                       <h5>Home Service Categories</h5>
-                      <p>With licensed-trade coordination when required</p>
+                      <p>The right licensed professional involved when required</p>
                     </div>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ require __DIR__ . '/includes/header.php';
                   <span class="badge-pill">Mission</span>
                 </div>
                 <h4>Service that begins with listening</h4>
-                <p>We begin with the homeowner's priorities, the condition of the home, and the practical result they want.</p>
+                <p>We start by asking what you need fixed and what result you want.</p>
               </div>
             </div>
 
@@ -113,7 +113,7 @@ require __DIR__ . '/includes/header.php';
                   <span class="badge-pill">Vision</span>
                 </div>
                 <h4>Dependable service for mature homes</h4>
-                <p>Our goal is careful, technically credible work for Sun City and Berry Creek homeowners.</p>
+                <p>Our goal is careful, dependable work for Sun City and Berry Creek homeowners.</p>
               </div>
             </div>
 
@@ -123,8 +123,8 @@ require __DIR__ . '/includes/header.php';
                   <div class="pillar-icon"><i class="bi bi-star"></i></div>
                   <span class="badge-pill">Promise</span>
                 </div>
-                <h4>Respect, clarity, and practical options</h4>
-                <p>We communicate the scope and any HOA, permit, utility, manufacturer, or licensed-trade requirements that may apply.</p>
+                <h4>Respect, clear answers, and helpful options</h4>
+                <p>We explain the work before it starts. For some jobs, homeowners may also need to confirm HOA, permit, utility, or manufacturer rules.</p>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ require __DIR__ . '/includes/header.php';
               <h3>Home services that work together</h3>
             </div>
             <div class="col-lg-5">
-              <p class="block-description">Related repairs can be grouped into a practical visit or punch list so homeowners can address several small needs together.</p>
+              <p class="block-description">Have several small jobs? Tell us about the whole list so we can discuss handling related repairs during one visit.</p>
             </div>
           </div>
 
@@ -184,19 +184,19 @@ require __DIR__ . '/includes/header.php';
         <div class="trust-block" data-aos="fade-up" data-aos-delay="100">
           <div class="row align-items-center g-4">
             <div class="col-lg-3">
-              <span class="eyebrow-label">Service Boundaries</span>
-              <h4>Client-location work only; no public storefront or walk-in office.</h4>
+              <span class="eyebrow-label">In-Home Service</span>
+              <h4>We come to your home. Mark's Services does not have a public walk-in office.</h4>
             </div>
             <div class="col-lg-9">
               <div class="logo-grid">
                 <div class="logo-tile">
-                  <img src="assets/img/service-icons/client-location.svg" class="img-fluid" alt="Client-location service" loading="lazy">
+                  <img src="assets/img/service-icons/client-location.svg" class="img-fluid" alt="In-home repair service" loading="lazy">
                 </div>
                 <div class="logo-tile">
-                  <img src="assets/img/service-icons/clear-scope.svg" class="img-fluid" alt="Clear project scope" loading="lazy">
+                  <img src="assets/img/service-icons/clear-scope.svg" class="img-fluid" alt="Repair explained clearly" loading="lazy">
                 </div>
                 <div class="logo-tile">
-                  <img src="assets/img/service-icons/practical-repairs.svg" class="img-fluid" alt="Practical home repairs" loading="lazy">
+                  <img src="assets/img/service-icons/practical-repairs.svg" class="img-fluid" alt="Everyday home repairs" loading="lazy">
                 </div>
                 <div class="logo-tile">
                   <img src="assets/img/service-icons/project-details.svg" class="img-fluid" alt="Project details reviewed before scheduling" loading="lazy">
@@ -205,7 +205,7 @@ require __DIR__ . '/includes/header.php';
                   <img src="assets/img/service-icons/requirements-check.svg" class="img-fluid" alt="Requirements checked before exterior work" loading="lazy">
                 </div>
                 <div class="logo-tile">
-                  <img src="assets/img/service-icons/right-sized-visits.svg" class="img-fluid" alt="Right-sized maintenance visits" loading="lazy">
+                  <img src="assets/img/service-icons/right-sized-visits.svg" class="img-fluid" alt="Small repairs and maintenance visits" loading="lazy">
                 </div>
               </div>
             </div>

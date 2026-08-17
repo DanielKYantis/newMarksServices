@@ -3,16 +3,16 @@ declare(strict_types=1);
 $pageKey = 'how-we-work.php';
 require __DIR__ . '/includes/header.php';
 $principles = [
-    ['icon' => 'bi-chat-square-text', 'name' => 'Clear Communication', 'role' => 'What homeowners can expect', 'text' => 'Clear scope and straightforward communication help homeowners understand what is being repaired and what comes next.'],
-    ['icon' => 'bi-tools', 'name' => 'Right-Sized Repairs', 'role' => 'Approved service scope', 'text' => 'Repairs stay focused on practical household needs instead of expanding into unnecessary large-project work.'],
-    ['icon' => 'bi-list-check', 'name' => 'Coordinated Punch Lists', 'role' => 'Maintenance planning', 'text' => 'Related small tasks can be grouped into a maintenance or punch-list visit when that is the practical approach.'],
-    ['icon' => 'bi-signpost-split', 'name' => 'Practical Options', 'role' => 'Homeowner-friendly guidance', 'text' => 'Homeowners receive plain-language options for fixture repairs, water systems, electrical devices, carpentry, walls, and maintenance.'],
-    ['icon' => 'bi-shield-check', 'name' => 'Requirements First', 'role' => 'Exterior project guidance', 'text' => 'Exterior cameras, lighting, conduit, EV chargers, and visible modifications are planned with HOA, permit, utility, and manufacturer requirements in mind.'],
-    ['icon' => 'bi-geo-alt', 'name' => 'Service-Area Focus', 'role' => 'Client-location work', 'text' => "Mark's Services works at the client's home across four defined service areas; there is no public storefront or walk-in office."],
+    ['icon' => 'bi-chat-square-text', 'name' => 'Clear Communication', 'role' => 'What to expect', 'text' => "We'll explain what we find, what the repair involves, and what happens next."],
+    ['icon' => 'bi-tools', 'name' => 'Small Repairs Welcome', 'role' => 'Everyday home repair', 'text' => 'We focus on the repairs and small installations your home needs without turning them into a large remodeling project.'],
+    ['icon' => 'bi-list-check', 'name' => 'One List, One Conversation', 'role' => 'Maintenance and punch lists', 'text' => 'Have several small jobs? Tell us about the whole list so we can discuss the best way to handle them.'],
+    ['icon' => 'bi-signpost-split', 'name' => 'Options in Plain English', 'role' => 'Helpful guidance', 'text' => 'We explain your options for fixtures, water systems, electrical devices, carpentry, walls, and maintenance in everyday language.'],
+    ['icon' => 'bi-shield-check', 'name' => 'Check the Rules First', 'role' => 'Outdoor work', 'text' => 'For outdoor cameras, lighting, conduit, EV chargers, and other visible work, confirm HOA, permit, utility, and manufacturer rules.'],
+    ['icon' => 'bi-geo-alt', 'name' => 'We Come to Your Home', 'role' => 'Local in-home service', 'text' => "Mark's Services works at homes in four local service areas. We do not have a public storefront or walk-in office."],
 ];
 ?>
 <main class="main">
-  <div class="page-title light-background"><div class="title-wrapper"><h1>How We Work</h1><p>Service principles for clear communication, practical scope, project requirements, and client-location home repair.</p></div></div>
+  <div class="page-title light-background"><div class="title-wrapper"><h1>How We Work</h1><p>Tell us what needs fixing. We'll review the job, explain your options, and keep you informed about the next step.</p></div></div>
   <section id="service-principles" class="service-principles section">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row g-3">

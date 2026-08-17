@@ -47,7 +47,7 @@ require __DIR__ . '/includes/header.php';
               </span>
 
               <h1 class="hero-headline">Home Repair Services<br>Sun City &amp; Berry Creek<br>Georgetown, Texas</h1>
-              <p class="hero-subtext">Mark's Remodeling and Facility Services provides practical Sun City Home Repair &amp; Handyman Services, including fixture repairs, water-system help, safety updates, and punch-list work for homeowners in Sun City and Berry Creek.<br></p>
+              <p class="hero-subtext">Need something fixed around the house? Mark's Services provides Sun City home repair and handyman services in Sun City and Berry Creek. We help with faucets, toilets, water heaters, ceiling fans, doors, drywall, grab bars, and many other small jobs.<br></p>
 
               <div class="action-row">
                 <a href="request-a-visit.php" class="btn btn-solid">Schedule a Visit</a>
@@ -118,7 +118,7 @@ require __DIR__ . '/includes/header.php';
                   <span class="identity-icon"><i class="bi bi-house-gear"></i></span>
                   <div class="identity-info">
                     <span class="identity-name">Mark's Services</span>
-                    <span class="identity-role">Client-location home repair</span>
+                    <span class="identity-role">In-home repair service</span>
                   </div>
                 </div>
               </div><!-- End Service Promise Card -->
@@ -143,8 +143,8 @@ require __DIR__ . '/includes/header.php';
               <i class="bi bi-people"></i>
             </div>
             <div class="metric-text">
-              <span class="metric-number">Practical</span>
-              <span class="metric-label">Repair Solutions</span>
+              <span class="metric-number">Helpful</span>
+              <span class="metric-label">Repair Options</span>
             </div>
           </div>
           <div class="metric-item">
@@ -152,8 +152,8 @@ require __DIR__ . '/includes/header.php';
               <i class="bi bi-geo-alt"></i>
             </div>
             <div class="metric-text">
-              <span class="metric-number">Focused</span>
-              <span class="metric-label">Service Areas</span>
+              <span class="metric-number">Nearby</span>
+              <span class="metric-label">Local Service Areas</span>
             </div>
           </div>
           <div class="metric-item">
@@ -185,7 +185,7 @@ require __DIR__ . '/includes/header.php';
             <h2 class="display-heading">Dependable Home Repair for Sun City &amp; Berry Creek</h2>
           </div>
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
-            <p class="intro-copy">Mark's Services provides practical, technically informed repairs for mature homes, with clear service-area scheduling and straightforward project communication.</p>
+            <p class="intro-copy">Tell us what needs fixing. We'll look at the problem, explain what we find, and talk with you about the best next step for your home.</p>
           </div>
         </div><!-- End Heading Block -->
 
@@ -223,7 +223,7 @@ require __DIR__ . '/includes/header.php';
                 <img src="assets/img/services/visit.webp" alt="Home repair service in Sun City" class="img-fluid" loading="lazy">
                 <figcaption class="media-tag">
                   <i class="bi bi-award"></i>
-                  <span>Service-Area Business</span>
+                  <span>We Come to Your Home</span>
                 </figcaption>
               </figure>
               <div class="media-row">
@@ -248,7 +248,7 @@ require __DIR__ . '/includes/header.php';
                   <h3 class="card-title">Homeowner-Centered Service</h3>
                 </div>
               </div>
-              <p class="card-description">Every visit begins with the homeowner's priorities, the condition of the home, and a practical plan for the work that fits the approved service scope.</p>
+              <p class="card-description">First, tell us what you need fixed. We'll take a look, explain what we find, and talk with you about the best way to handle it.</p>
             </div><!-- End Primary Card -->
 
             <div class="row g-3 capabilities-grid">
@@ -256,8 +256,8 @@ require __DIR__ . '/includes/header.php';
                 <div class="feature-card compact">
                   <i class="bi bi-activity"></i>
                   <div class="compact-text">
-                    <h4>Practical Troubleshooting</h4>
-                    <p>Careful troubleshooting helps identify the likely source before repair work begins.</p>
+                    <h4>Find the Cause</h4>
+                    <p>We'll find out what's causing the problem before we start the repair.</p>
                   </div>
                 </div>
               </div>
@@ -265,8 +265,8 @@ require __DIR__ . '/includes/header.php';
                 <div class="feature-card compact">
                   <i class="bi bi-person-badge"></i>
                   <div class="compact-text">
-                    <h4>Right Scope for the Job</h4>
-                    <p>Home repair work stays within the right scope, with licensed-trade coordination when required.</p>
+                    <h4>The Right Help for the Job</h4>
+                    <p>If the work requires a licensed plumber or electrician, we'll make sure the right professional is involved.</p>
                   </div>
                 </div>
               </div>
@@ -274,8 +274,8 @@ require __DIR__ . '/includes/header.php';
                 <div class="feature-card compact">
                   <i class="bi bi-clipboard-pulse"></i>
                   <div class="compact-text">
-                    <h4>Clean, Focused Repairs</h4>
-                    <p>Small repairs and installations are planned to minimize disruption in the home.</p>
+                    <h4>Careful Work in Your Home</h4>
+                    <p>We plan small repairs and installations to keep disruption to a minimum.</p>
                   </div>
                 </div>
               </div>
@@ -284,7 +284,7 @@ require __DIR__ . '/includes/header.php';
                   <i class="bi bi-stopwatch"></i>
                   <div class="compact-text">
                     <h4>Clear Scheduling</h4>
-                    <p>Request a convenient visit and receive clear communication about the project.</p>
+                    <p>Tell us when you prefer to meet. We'll follow up to confirm the visit.</p>
                   </div>
                 </div>
               </div>
@@ -325,28 +325,28 @@ require __DIR__ . '/includes/header.php';
                     </span>
                     <span class="meta-label">Home Repair &amp; Maintenance</span>
                   </div>
-                  <h2 class="spotlight-title">Practical Repairs Without Big-Project Sales Pressure</h2>
-                  <p class="spotlight-text">Mark's Services helps Sun City and Berry Creek homeowners handle fixture repairs, safety updates, installations, and maintenance without presenting the work as a large remodeling project.</p>
+                  <h2 class="spotlight-title">Small Home Repairs Without a Big Sales Pitch</h2>
+                  <p class="spotlight-text">Small jobs are welcome. Mark's Services helps Sun City and Berry Creek homeowners with fixture repairs, safety updates, installations, and everyday maintenance.</p>
                   <ul class="checklist">
                     <li>
                       <i class="bi bi-check2"></i>
                       <div>
-                        <span class="check-title">Clear Scope Review</span>
-                        <span class="check-sub">Discuss the repair, location, and likely next step</span>
+                        <span class="check-title">Start With the Problem</span>
+                        <span class="check-sub">Tell us what needs fixing and where your home is located</span>
                       </div>
                     </li>
                     <li>
                       <i class="bi bi-check2"></i>
                       <div>
                         <span class="check-title">Homeowner-Friendly Options</span>
-                        <span class="check-sub">Practical choices explained in plain language</span>
+                        <span class="check-sub">Clear choices explained in plain English</span>
                       </div>
                     </li>
                     <li>
                       <i class="bi bi-check2"></i>
                       <div>
-                        <span class="check-title">Trade Coordination When Needed</span>
-                        <span class="check-sub">HOA, permit, utility, manufacturer, or licensed-trade requirements are confirmed when applicable</span>
+                        <span class="check-title">The Right Professional When Needed</span>
+                        <span class="check-sub">Some jobs need a licensed professional or approval from an HOA, permit office, utility, or manufacturer</span>
                       </div>
                     </li>
                   </ul>
@@ -419,7 +419,7 @@ require __DIR__ . '/includes/header.php';
                 </header>
                 <div class="card-body">
                   <h4 class="card-heading">Water Heaters &amp; Water Quality</h4>
-                  <p class="card-text">Water heaters, point-of-use units, softeners, whole-house filters, reverse osmosis systems, flow troubleshooting, and water-test assistance.</p>
+                  <p class="card-text">Water heaters, small point-of-use heaters, water softeners, whole-house filters, reverse-osmosis systems, low-water-flow problems, and water-test help.</p>
                 </div>
                 <footer class="card-foot">
                   <div class="foot-stat">
@@ -491,7 +491,7 @@ require __DIR__ . '/includes/header.php';
                 </header>
                 <div class="card-body">
                   <h4 class="card-heading">Security &amp; Smart Home</h4>
-                  <p class="card-text">Video doorbells, cameras, smart locks, and security panels, with exterior requirements confirmed before visible work.</p>
+                  <p class="card-text">Video doorbells, cameras, smart locks, and security panels. Before outdoor work, homeowners should confirm any HOA, permit, utility, or manufacturer rules.</p>
                 </div>
                 <footer class="card-foot">
                   <div class="foot-stat">
@@ -631,7 +631,7 @@ require __DIR__ . '/includes/header.php';
                   <h3>Home Security &amp; Smart Devices</h3>
                   <span class="meta-tag">Service</span>
                 </div>
-                <p>Install video doorbells, security cameras, smart locks, and compatible panels with exterior requirements confirmed when applicable.</p>
+                <p>Install video doorbells, security cameras, smart locks, and compatible panels. Homeowners should confirm HOA, permit, utility, and manufacturer rules before visible outdoor work.</p>
                 <div class="card-foot">
                   <a href="services.php" class="link-action">Learn More <i class="bi bi-arrow-right"></i></a>
                   <span class="status-dot" aria-label="By Appointment"></span>
@@ -701,7 +701,7 @@ require __DIR__ . '/includes/header.php';
           <div class="toolbar-intro">
             <span class="eyebrow">Service Finder</span>
             <h2>Find the Service Group That Matches Your Project</h2>
-            <p>Review common project categories, then request a visit for a practical scope discussion.</p>
+            <p>Choose the closest service category. Not sure which one fits? Call us and tell us what's going on.</p>
           </div>
 
           <form class="filter-form" action="services.php" method="get">
@@ -793,8 +793,8 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <ul class="meta-row">
                   <li><i class="bi bi-patch-check"></i> Fixtures &amp; drains</li>
-                  <li><i class="bi bi-briefcase"></i> Repair-focused</li>
-                  <li><i class="bi bi-geo"></i> Client-location service</li>
+                  <li><i class="bi bi-briefcase"></i> Small jobs welcome</li>
+                  <li><i class="bi bi-geo"></i> In-home service</li>
                 </ul>
                 <div class="row-actions">
                   <a href="services.php" class="btn-ghost">View Service</a>
@@ -830,7 +830,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <ul class="meta-row">
                   <li><i class="bi bi-patch-check"></i> Water systems</li>
-                  <li><i class="bi bi-briefcase"></i> Home-focused</li>
+                  <li><i class="bi bi-briefcase"></i> Help for your home</li>
                   <li><i class="bi bi-geo"></i> Georgetown 78626 / 78627</li>
                 </ul>
                 <div class="row-actions">
@@ -904,8 +904,8 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <ul class="meta-row">
                   <li><i class="bi bi-patch-check"></i> Smart home</li>
-                  <li><i class="bi bi-briefcase"></i> Requirement-aware</li>
-                  <li><i class="bi bi-geo"></i> Client-location service</li>
+                  <li><i class="bi bi-briefcase"></i> Rules checked first</li>
+                  <li><i class="bi bi-geo"></i> In-home service</li>
                 </ul>
                 <div class="row-actions">
                   <a href="services.php" class="btn-ghost">View Service</a>
@@ -941,7 +941,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <ul class="meta-row">
                   <li><i class="bi bi-patch-check"></i> Small repairs</li>
-                  <li><i class="bi bi-briefcase"></i> Practical scope</li>
+                  <li><i class="bi bi-briefcase"></i> Small repair work</li>
                   <li><i class="bi bi-geo"></i> Berry Creek 78628</li>
                 </ul>
                 <div class="row-actions">
@@ -1017,7 +1017,7 @@ require __DIR__ . '/includes/header.php';
                   <span>Mark's Services</span>
                 </span>
                 <h2>Sun City Home Repair &amp; Handyman Services</h2>
-                <p class="lead-text">Mark's Remodeling and Facility Services helps homeowners plan practical repairs, fixture work, water-system service, electrical updates, small carpentry, security installations, and maintenance.</p>
+                <p class="lead-text">Mark's Services helps homeowners with plumbing fixtures, water systems, electrical and lighting work, small carpentry repairs, home security devices, and everyday maintenance.</p>
 
                 <div class="button-row">
                   <a href="request-a-visit.php" class="btn-primary-shad">Request a Visit</a>
@@ -1030,7 +1030,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="trust-row">
                   <div class="trust-item">
                     <i class="bi bi-patch-check"></i>
-                    <span>Client-Location Service</span>
+                    <span>We Come to Your Home</span>
                   </div>
                   <div class="trust-item">
                     <i class="bi bi-clock-history"></i>
@@ -1038,7 +1038,7 @@ require __DIR__ . '/includes/header.php';
                   </div>
                   <div class="trust-item">
                     <i class="bi bi-people"></i>
-                    <span>Practical Repairs</span>
+                    <span>Small Jobs Welcome</span>
                   </div>
                 </div>
               </div>
@@ -1166,8 +1166,8 @@ require __DIR__ . '/includes/header.php';
               </div>
               <div class="alert-text">
                 <span class="alert-eyebrow">Need a Hand?</span>
-                <h5>Have a home repair project to discuss?</h5>
-                <p>Call Mark's Services or request a visit to discuss the repair, your service area, and the best next step.</p>
+                <h5>Not sure which service you need?</h5>
+                <p>Call Mark's Services and tell us what's going on, or request a visit online.</p>
               </div>
             </div>
             <div class="alert-actions">

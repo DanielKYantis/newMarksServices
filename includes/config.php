@@ -14,9 +14,9 @@ const BUSINESS_AREA = "Sun City Texas, Berry Creek, Georgetown, and Williamson C
 const BUSINESS_AREA_DETAIL =
     "Sun City Texas 78633; Berry Creek, Texas 78628; Georgetown, Texas 78626; and Williamson County 78627";
 const BUSINESS_ADDRESS_DISPLAY =
-    "Client-location service in " . BUSINESS_AREA_DETAIL;
+    "In-home service in " . BUSINESS_AREA_DETAIL;
 const BUSINESS_SERVICE_NOTE =
-    "Client-location service in Sun City Texas 78633, Berry Creek, Texas 78628, Georgetown, Texas 78626, and Williamson County 78627.";
+    "In-home service in Sun City Texas 78633, Berry Creek, Texas 78628, Georgetown, Texas 78626, and Williamson County 78627.";
 const ELECTRICAL_LICENSE = "TECL 20547";
 const ELECTRICAL_LICENSE_HOLDER = "Larry Kizer";
 const PLUMBING_LICENSE = "M-38601";
@@ -173,7 +173,7 @@ function structured_data_for_page(string $pageKey, array $page): array
                 "telephone" => BUSINESS_PHONE_TEL,
                 "priceRange" => '$$',
                 "description" =>
-                    "Handyman repairs, home repair, fixture and device work, maintenance, punch-list service, and properly licensed or coordinated electrical and plumbing work at client locations in " .
+                    "Handyman repairs, home repair, fixture and device work, maintenance, punch-list service, and properly licensed or coordinated electrical and plumbing work at homes in " .
                     BUSINESS_AREA_DETAIL .
                     ".",
                 "areaServed" => business_area_schema(),
@@ -220,7 +220,7 @@ function structured_data_for_page(string $pageKey, array $page): array
                         ),
                         service_offer(
                             "Maintenance and Punch Lists",
-                            "Client-location repair visits, make-ready work, and punch-list tasks."
+                            "In-home repair visits, make-ready work, and punch-list tasks."
                         ),
                     ],
                 ],

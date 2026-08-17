@@ -22,7 +22,7 @@ require __DIR__ . '/includes/header.php';
 
       <div class="title-wrapper">
         <h1>Contact Mark's Services</h1>
-        <p>Request client-location service for a Sun City or Berry Creek home. No public storefront or walk-in office.</p>
+        <p>Call or send a request for in-home service in Sun City or Berry Creek. We do not have a public walk-in office.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -36,16 +36,16 @@ require __DIR__ . '/includes/header.php';
             <div class="contact-panel" data-aos="fade-up" data-aos-delay="150">
               <div class="panel-header">
                 <span class="badge-label">Contact Mark's Services</span>
-                <h3 class="panel-title">Discuss a Home Repair Project</h3>
-                <p class="panel-description">Share the repair, service area, and preferred timing. Mark's Services will follow up after reviewing the project details.</p>
+                <h3 class="panel-title">Tell Us What Needs Fixing</h3>
+                <p class="panel-description">Share the problem, your service area, and when you prefer a visit. Mark's Services will review the details and follow up.</p>
               </div>
 
               <ul class="contact-list">
                 <li class="contact-list-item">
                   <div class="item-icon"><i class="bi bi-geo-alt"></i></div>
                   <div class="item-content">
-                    <span class="item-label">Service Area Business</span>
-                    <p class="item-value">Client-location work only<br>No public storefront or walk-in office</p>
+                    <span class="item-label">In-Home Service</span>
+                    <p class="item-value">We come to your home<br>No public storefront or walk-in office</p>
                   </div>
                 </li>
                 <li class="contact-list-item">
@@ -59,14 +59,14 @@ require __DIR__ . '/includes/header.php';
                   <div class="item-icon"><i class="bi bi-envelope"></i></div>
                   <div class="item-content">
                     <span class="item-label">Email</span>
-                    <p class="item-value">office@MarksServices.com<br>Project details welcome</p>
+                    <p class="item-value">office@MarksServices.com<br>Tell us what needs fixing</p>
                   </div>
                 </li>
                 <li class="contact-list-item">
                   <div class="item-icon"><i class="bi bi-clock"></i></div>
                   <div class="item-content">
                     <span class="item-label">Scheduling</span>
-                    <p class="item-value">Visits are scheduled by request<br>Availability confirmed after review</p>
+                    <p class="item-value">Visits are scheduled by request<br>We'll confirm availability</p>
                   </div>
                 </li>
               </ul>
@@ -87,7 +87,7 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-7">
             <div class="form-card" data-aos="fade-up" data-aos-delay="200">
               <div class="card-header">
-                <h3 class="card-title">Send a Service Request</h3>
+                <h3 class="card-title">Request a Home Repair Visit</h3>
                 <p class="card-description">Use the form below to describe the home repair project and preferred timing.</p>
               </div>
 

@@ -22,7 +22,7 @@ require __DIR__ . '/includes/header.php';
 
       <div class="title-wrapper">
         <h1>Request a Home Repair Visit</h1>
-        <p>Describe the repair, service area, and preferred timing so Mark's Services can review the request.</p>
+        <p>Tell us what needs fixing, where your home is located, and when you would like us to visit.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -41,8 +41,8 @@ require __DIR__ . '/includes/header.php';
                   <span class="step-badge">Step 01</span>
                   <span class="step-icon"><i class="bi bi-person"></i></span>
                 </div>
-                <h5>Describe the Project</h5>
-                <p>Share contact details, the service area, and the home repair category that best fits.</p>
+                <h5>Tell Us What You Need</h5>
+                <p>Share your contact details, service area, and the type of repair you need.</p>
               </div>
             </div><!-- End Step -->
 
@@ -53,7 +53,7 @@ require __DIR__ . '/includes/header.php';
                   <span class="step-icon"><i class="bi bi-calendar2-week"></i></span>
                 </div>
                 <h5>Share Timing</h5>
-                <p>Provide a preferred date so availability can be reviewed.</p>
+                <p>Choose the date you prefer. We'll let you know what is available.</p>
               </div>
             </div><!-- End Step -->
 
@@ -63,8 +63,8 @@ require __DIR__ . '/includes/header.php';
                   <span class="step-badge">Step 03</span>
                   <span class="step-icon"><i class="bi bi-envelope-check"></i></span>
                 </div>
-                <h5>Review Details</h5>
-                <p>The request is reviewed before scheduling details are confirmed.</p>
+                <h5>We Review the Request</h5>
+                <p>We'll review the details and follow up to confirm the next step.</p>
               </div>
             </div><!-- End Step -->
 
@@ -74,8 +74,8 @@ require __DIR__ . '/includes/header.php';
                   <span class="step-badge">Step 04</span>
                   <span class="step-icon"><i class="bi bi-activity"></i></span>
                 </div>
-                <h5>Home Service Visit</h5>
-                <p>Mark's Services travels to the client's home; there is no public walk-in office.</p>
+                <h5>We Come to Your Home</h5>
+                <p>Mark's Services provides in-home service and does not have a public walk-in office.</p>
               </div>
             </div><!-- End Step -->
 
@@ -91,7 +91,7 @@ require __DIR__ . '/includes/header.php';
               <div class="form-card-header">
                 <span class="badge-label">Service Request Form</span>
                 <h3>Request a Home Repair Visit</h3>
-                <p class="form-card-desc">Provide the details below and Mark's Services will follow up after reviewing the project and service area.</p>
+                <p class="form-card-desc">Fill out the form below. Mark's Services will review it and follow up with you.</p>
               </div>
 
               <form action="forms/request-a-visit.php" method="post" class="service-request-form php-email-form">
@@ -156,8 +156,8 @@ require __DIR__ . '/includes/header.php';
 
                   <div class="col-12">
                     <div class="input-group">
-                      <label for="app-message">Project Details <span class="label-meta">Describe what needs attention</span></label>
-                      <textarea class="form-control" name="message" id="app-message" rows="4" placeholder="Briefly describe the repair, installation, or maintenance project..."></textarea>
+                      <label for="app-message">What Needs Fixing? <span class="label-meta">Tell us what is happening</span></label>
+                      <textarea class="form-control" name="message" id="app-message" rows="4" placeholder="Briefly describe the repair, installation, or maintenance you need..."></textarea>
                     </div>
                   </div>
 
@@ -186,8 +186,8 @@ require __DIR__ . '/includes/header.php';
 
               <div class="info-panel" data-aos="fade-up" data-aos-delay="200">
                 <span class="badge-label">About Scheduling</span>
-                <h4>Straightforward Service Requests</h4>
-                <p>Share the project details in a few simple steps so the scope and service area can be reviewed.</p>
+                <h4>A Simple Way to Request Service</h4>
+                <p>Share a few details about the job and where your home is located.</p>
               </div>
 
               <ul class="feature-list" data-aos="fade-up" data-aos-delay="250">
@@ -196,7 +196,7 @@ require __DIR__ . '/includes/header.php';
                   <span class="feature-icon"><i class="bi bi-calendar-check"></i></span>
                   <div class="feature-body">
                     <h6>Preferred Timing</h6>
-                    <p>Suggest a date that works for you; final timing depends on availability and project scope.</p>
+                    <p>Suggest a date that works for you. We'll follow up to confirm availability.</p>
                   </div>
                 </li><!-- End Feature -->
 
@@ -204,15 +204,15 @@ require __DIR__ . '/includes/header.php';
                   <span class="feature-icon"><i class="bi bi-stopwatch"></i></span>
                   <div class="feature-body">
                     <h6>Clear Follow-Up</h6>
-                    <p>Mark's Services follows up after reviewing the request; no instant or same-day confirmation is promised.</p>
+                    <p>Mark's Services will review your request and contact you about the next step.</p>
                   </div>
                 </li><!-- End Feature -->
 
                 <li class="feature-row">
                   <span class="feature-icon"><i class="bi bi-shield-check"></i></span>
                   <div class="feature-body">
-                    <h6>Trusted Service Areas</h6>
-                    <p>Licensed-trade coordination is used when the project requires it.</p>
+                    <h6>The Right Help When Needed</h6>
+                    <p>If the job requires a licensed plumber or electrician, we'll make sure the right professional is involved.</p>
                   </div>
                 </li><!-- End Feature -->
 
@@ -223,8 +223,8 @@ require __DIR__ . '/includes/header.php';
                   <span class="contact-icon"><i class="bi bi-telephone-fill"></i></span>
                   <span class="contact-tag">Call Mark's Services</span>
                 </div>
-                <h6>Prefer to Discuss the Project?</h6>
-                <p>Call during normal contact hours to describe the repair. This is not a 24/7 emergency service.</p>
+                <h6>Prefer to Talk?</h6>
+                <p>Call us and tell us what needs fixing. We do not advertise 24/7 emergency service.</p>
                 <a href="tel:+15125490322" class="contact-phone">+1 (512) 549-0322</a>
               </div>
 

@@ -293,7 +293,7 @@ require __DIR__ . '/includes/header.php';
                     </div>
                     <div class="info-item">
                       <i class="bi bi-geo-alt"></i>
-                      <span>Client-location service; no public storefront</span>
+                      <span>In-home service; no public storefront</span>
                     </div>
                   </div>
                 </div>

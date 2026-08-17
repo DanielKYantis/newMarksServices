@@ -122,7 +122,7 @@ require __DIR__ . '/includes/header.php';
                   <span class="term-number">03</span>
                   <h3>Service Requests</h3>
                 </div>
-                <p>When requesting service, provide current contact information, the correct client-location service area, and an accurate description of the project.</p>
+                <p>When requesting service, provide current contact information, the correct service area, and an accurate description of the work you need.</p>
                 <div class="warning-banner">
                   <div class="warning-icon-wrap">
                     <i class="bi bi-shield-exclamation"></i>

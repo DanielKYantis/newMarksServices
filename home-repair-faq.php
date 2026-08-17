@@ -6,7 +6,7 @@ $faqItems = $page['faq_items'] ?? [];
 ?>
 <main class="main">
   <div class="page-title light-background">
-    <div class="title-wrapper"><h1>Home Repair Frequently Asked Questions</h1><p>Answers about service areas, project scope, scheduling, exterior requirements, and licensed-trade coordination.</p></div>
+    <div class="title-wrapper"><h1>Home Repair Frequently Asked Questions</h1><p>Simple answers about our services, service areas, scheduling, outdoor work, and licensed professionals.</p></div>
   </div>
   <section id="faq" class="faq section">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -15,11 +15,11 @@ $faqItems = $page['faq_items'] ?? [];
           <aside class="faq-sidebar">
             <span class="sidebar-badge">Home Repair FAQ</span>
             <h2 class="sidebar-title">Common Home Service Questions</h2>
-            <p class="sidebar-desc">Review common questions about service areas, project scope, scheduling, requirements, and licensed-trade coordination.</p>
+            <p class="sidebar-desc">Find quick answers about the work we do, where we work, and how to request a visit.</p>
             <div class="sidebar-divider"></div>
             <ul class="sidebar-meta">
               <li><i class="bi bi-clock"></i><span>Requests reviewed before scheduling</span></li>
-              <li><i class="bi bi-shield-check"></i><span>Scope confirmed for each project</span></li>
+              <li><i class="bi bi-shield-check"></i><span>Each job is reviewed before work begins</span></li>
               <li><i class="bi bi-chat-dots"></i><span>Phone and contact form available</span></li>
             </ul>
             <a href="contact.php" class="sidebar-cta"><span>Contact Mark's Services</span><i class="bi bi-arrow-up-right"></i></a>

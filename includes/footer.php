@@ -24,7 +24,7 @@ declare(strict_types=1);
             <h4 class="h4 d-block align-content-center"><a href="index.php">Home Page</a></h4>
             <ul>
               <li class="d-block align-content-center"><a href="about.php">About Us</a></li>
-              <li class="d-block align-content-center"><a href="service-areas.php">Services Areas</a></li>
+              <li class="d-block align-content-center"><a href="service-areas.php">Service Areas</a></li>
               <li class="d-block align-content-center"><a href="services.php">Our Services</a></li>
               <li class="d-block align-content-center"><a href="service-planning.php">Service Planning</a></li>
               <li class="d-block align-content-center"><a href="contact.php">Contact Mark's Services</a></li>
@@ -54,7 +54,7 @@ declare(strict_types=1);
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links text-center">
-            <h4 class="h4 d-block align-content-center"><a href="home-repair-faq.php">FAQs (Questions)</a></h4>
+            <h4 class="h4 d-block align-content-center"><a href="home-repair-faq.php">Common Questions</a></h4>
             <ul>
               <li class="d-block align-content-center"><a href="request-a-visit.php">Request a Visit</a></li>
               <li class="d-block align-content-center"><a href="how-we-work.php">How We Work</a></li>

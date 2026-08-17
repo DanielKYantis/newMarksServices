@@ -22,7 +22,7 @@ require __DIR__ . '/includes/header.php';
 
       <div class="title-wrapper">
         <h1>Plumbing Fixture Repair</h1>
-        <p>Common fixture repairs and minor leak troubleshooting for Sun City and Berry Creek homes.</p>
+        <p>Help with faucets, sinks, toilets, drains, disposals, supply lines, and minor leaks in Sun City and Berry Creek homes.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -40,7 +40,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="overview-header">
                   <span class="badge-tag">Home Service Detail</span>
                   <h2>Plumbing Fixture Repairs</h2>
-                  <p class="overview-tagline">Practical fixture repairs and replacements for Sun City and Berry Creek homes.</p>
+                  <p class="overview-tagline">Everyday plumbing fixture repairs and replacements for Sun City and Berry Creek homes.</p>
                 </div>
 
                 <div class="overview-body">
@@ -82,7 +82,7 @@ require __DIR__ . '/includes/header.php';
                       <div class="col-md-6">
                         <div class="feature-item">
                           <i class="bi bi-check-circle"></i>
-                          <span>Minor leak troubleshooting</span>
+                          <span>Finding the cause of minor leaks</span>
                         </div>
                       </div>
                     </div>
@@ -116,7 +116,7 @@ require __DIR__ . '/includes/header.php';
 
           <div class="section-intro" data-aos="fade-up" data-aos-delay="100">
             <span class="intro-label">Related Home Services</span>
-            <h3>Practical services built around your home</h3>
+            <h3>Other services for your home</h3>
           </div>
 
           <div class="row g-3">
@@ -130,7 +130,7 @@ require __DIR__ . '/includes/header.php';
                   <span class="status-badge">By Appointment</span>
                 </div>
                 <h4>Water Systems</h4>
-                <p>Water heaters, point-of-use units, softeners, filtration, reverse osmosis, and water-flow troubleshooting.</p>
+                <p>Water heaters, small point-of-use heaters, water softeners, filters, reverse osmosis, and low-water-flow problems.</p>
                 <div class="module-footer">
                   <a href="services.php" class="module-link">
                     <span>Learn More</span>
@@ -192,7 +192,7 @@ require __DIR__ . '/includes/header.php';
               <div class="panel-info">
                 <span class="panel-label">Request a Home Repair Visit</span>
                 <h3>Connect With Mark's Services</h3>
-                <p>Share the project details and service area. Scheduling is confirmed after the request is reviewed.</p>
+                <p>Tell us what needs fixing and where your home is located. We'll follow up to confirm scheduling.</p>
 
                 <div class="info-grid">
                   <div class="info-tile">
@@ -224,7 +224,7 @@ require __DIR__ . '/includes/header.php';
               <div class="panel-action">
                 <span class="action-label">Request Online</span>
                 <h4>Plan Your Service Visit</h4>
-                <p>Send project details for review and scheduling</p>
+                <p>Tell us what needs fixing and when you prefer a visit.</p>
                 <a href="request-a-visit.php" class="btn-primary-action btn-block">Request a Visit</a>
                 <div class="action-divider">
                   <span>or</span>
