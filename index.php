@@ -315,7 +315,7 @@ require __DIR__ . '/includes/header.php';
 
         <div class="service-groups-wrapper">
 
-          <div class="spotlight-panel" data-aos="fade-up" data-aos-delay="150">
+          <!-- <div class="spotlight-panel" data-aos="fade-up" data-aos-delay="150">
             <div class="row g-0 align-items-stretch">
               <div class="col-lg-7">
                 <div class="spotlight-body">
@@ -376,15 +376,17 @@ require __DIR__ . '/includes/header.php';
                 </div>
               </div>
             </div>
-          </div><!-- End Spotlight Panel -->
+          </div> -->
+          <!-- End Spotlight Panel -->
 
-          <div class="section-heading" data-aos="fade-up" data-aos-delay="200">
+          <!-- <div class="section-heading" data-aos="fade-up" data-aos-delay="200">
             <div>
               <span class="meta-label">Core Home Services</span>
-              <h3 class="heading-title">Browse Home Repair Categories</h3>
+              <h3 class="heading-title">Home Repair Categories</h3>
             </div>
             <a href="services.php" class="btn-shadcn secondary">All Services <i class="bi bi-grid"></i></a>
-          </div><!-- End Section Heading -->
+          </div> -->
+          <!-- End Section Heading -->
 
           <div class="row g-3">
 
