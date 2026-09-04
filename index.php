@@ -172,11 +172,11 @@ require __DIR__ . '/includes/header.php';
     </section><!-- /Hero Section -->
 
     <!-- Home About Section -->
-    <section id="home-about" class="home-about section">
+    <!-- <section id="home-about" class="home-about section"> -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
 
-        <div class="row align-items-center mb-5 gy-4">
+        <!-- <div class="row align-items-center mb-5 gy-4">
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
             <span class="eyebrow-badge">
               <i class="bi bi-shield-check"></i>
@@ -187,7 +187,8 @@ require __DIR__ . '/includes/header.php';
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
             <p class="intro-copy">Tell us what needs fixing. We'll look at the problem, explain what we find, and talk with you about the best next step for your home.</p>
           </div>
-        </div><!-- End Heading Block -->
+        </div> -->
+        <!-- End Heading Block -->
 
         <!-- <div class="stats-strip" data-aos="fade-up" data-aos-delay="200">
           <div class="stat-cell">
@@ -217,7 +218,7 @@ require __DIR__ . '/includes/header.php';
         </div> -->
         <!-- End Stats Strip -->
 
-        <div class="row gy-4 mt-2">
+        <!-- <div class="row gy-4 mt-2">
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
             <div class="media-stack">
               <figure class="media-card primary">
@@ -236,9 +237,10 @@ require __DIR__ . '/includes/header.php';
                 </figure>
               </div>
             </div>
-          </div><!-- End Media Stack -->
+          </div> -->
+          <!-- End Media Stack -->
 
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="150">
+          <!-- <div class="col-lg-7" data-aos="fade-up" data-aos-delay="150">
             <div class="feature-card primary-card">
               <div class="card-head">
                 <span class="icon-square">
@@ -250,9 +252,10 @@ require __DIR__ . '/includes/header.php';
                 </div>
               </div>
               <p class="card-description">First, tell us what you need fixed. We'll take a look, explain what we find, and talk with you about the best way to handle it.</p>
-            </div><!-- End Primary Card -->
+            </div> -->
+            <!-- End Primary Card -->
 
-            <div class="row g-3 capabilities-grid">
+            <!-- <div class="row g-3 capabilities-grid">
               <div class="col-sm-6">
                 <div class="feature-card compact">
                   <i class="bi bi-activity"></i>
@@ -289,9 +292,10 @@ require __DIR__ . '/includes/header.php';
                   </div>
                 </div>
               </div>
-            </div><!-- End Capabilities Grid -->
+            </div> -->
+            <!-- End Capabilities Grid -->
 
-            <div class="action-row">
+            <!-- <div class="action-row">
               <a href="about.php" class="btn-primary-shadcn">
                 Discover Our Services
                 <i class="bi bi-arrow-right"></i>
@@ -300,13 +304,15 @@ require __DIR__ . '/includes/header.php';
                 <i class="bi bi-telephone"></i>
                 Request a Visit
               </a>
-            </div><!-- End Action Row -->
-          </div>
-        </div>
+            </div> -->
+            <!-- End Action Row -->
+          <!-- </div> -->
+        <!-- </div> -->
 
-      </div>
+      <!-- </div> -->
 
-    </section><!-- /Home About Section -->
+    <!-- </section> -->
+    <!-- /Home About Section -->
 
     <!-- Featured Service Groups Section -->
     <section id="featured-service-groups" class="featured-service-groups section light-background">
