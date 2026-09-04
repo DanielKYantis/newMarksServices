@@ -10,11 +10,25 @@ $serviceAreaPages = [
 ?>
 <nav id="navmenu" class="navmenu" aria-label="Primary navigation">
   <ul>
-    <li><a href="index.php" class="<?= is_active($pageKey, 'index.php') ?>">Home Page</a></li>
-    <li><a href="about.php" class="<?= is_active($pageKey, 'about.php') ?>">About Us</a></li>
+    <li class="dropdown">
+      <a href="index.php" class="<?= is_active($pageKey, 'index.php') ?>">
+        <span>Home Page</span> <i class="d-none bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i>
+      </a>
+      <ul aria-label="Home page links">
+        <li><a href="index.php">Mark's Services</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="about.php" class="<?= is_active($pageKey, 'about.php') ?>">
+        <span>About Us</span> <i class="d-none bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i>
+      </a>
+      <ul aria-label="About links">
+        <li><a href="about.php">Sun City Home Repair Services</a></li>
+      </ul>
+    </li>
     <li class="dropdown">
       <a href="service-areas.php" class="<?= is_active($pageKey, $serviceAreaPages) ?>">
-        <span>Service Areas</span> <i class="bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i>
+        <span>Service Areas</span> <i class="d-none bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i>
       </a>
       <ul aria-label="Service areas">
         <li><a href="sun-city-texas-home-repair.php">Sun City Texas 78633</a></li>
@@ -25,7 +39,7 @@ $serviceAreaPages = [
     </li>
     <li class="dropdown">
       <a href="services.php" class="<?= is_active($pageKey, ['services.php', 'plumbing-fixture-repair.php']) ?>">
-        <span>Our Services</span> <i class="bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i>
+        <span>Our Services</span> <i class="d-none bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i>
       </a>
       <ul aria-label="Major service groups">
         <?php foreach ($navMajorServiceGroups as $serviceGroup): ?>
@@ -45,6 +59,17 @@ $serviceAreaPages = [
         <li><a href="privacy.php" class="<?= is_active($pageKey, 'privacy.php') ?>">Privacy Notice</a></li>
       </ul>
     </li>
+
+    <li class="dropdown contact-dropdown">
+      <a href="contact.php" class="btn-getstarted <?= is_active($pageKey, 'contact.php') ?>" aria-haspopup="true">
+        <span>Contact Us</span>
+      </a>
+      <ul aria-label="Contact options">
+        <li><a href="tel:+15125490322">Call Repair Hotline at <b>+1 (512) 549-0322</b></a></li>
+        <li><a href="mailto:office@MarksServices.com">Send email: <b>office@MarksServices.com</b></a></li>
+      </ul>
+    </li>
+
   </ul>
   <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Toggle navigation"></i>
 </nav>

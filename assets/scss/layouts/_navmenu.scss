@@ -109,6 +109,32 @@
         }
       }
     }
+
+    .contact-dropdown {
+      margin-left: 8px;
+
+      >.btn-getstarted,
+      >.btn-getstarted:focus {
+        color: var(--default-color);
+        background: var(--accent-color);
+        padding: 6px 10px;
+        border-radius: 6px;
+      }
+
+      >.btn-getstarted:hover {
+        color: var(--default-color);
+        background: color-mix(in srgb, var(--accent-color), transparent 15%);
+      }
+
+      >ul {
+        right: 0;
+        left: auto;
+
+        li {
+          min-width: 340px;
+        }
+      }
+    }
   }
 }
 
@@ -208,6 +234,21 @@
       >.dropdown-active {
         display: block;
         background-color: rgba(33, 37, 41, 0.03);
+      }
+    }
+
+    .contact-dropdown {
+      >.btn-getstarted,
+      >.btn-getstarted:focus {
+        margin: 8px 20px;
+        width: calc(100% - 40px);
+        color: var(--default-color);
+        background: var(--accent-color);
+        border-radius: 6px;
+      }
+
+      >ul a {
+        white-space: normal;
       }
     }
   }

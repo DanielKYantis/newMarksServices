@@ -77,7 +77,6 @@ $page = $pages[$pageKey] ?? $pages['index.php'] ?? [
         <h1 class="sitename">Mark's Services</h1>
       </a>
 <?php require __DIR__ . '/nav.php'; ?>
-<a class="btn-getstarted" href="contact.php">Contact</a>
 
     </div>
   </header>
