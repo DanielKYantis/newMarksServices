@@ -189,7 +189,7 @@ require __DIR__ . '/includes/header.php';
           </div>
         </div><!-- End Heading Block -->
 
-        <div class="stats-strip" data-aos="fade-up" data-aos-delay="200">
+        <!-- <div class="stats-strip" data-aos="fade-up" data-aos-delay="200">
           <div class="stat-cell">
             <div class="stat-value">
               <span class="purecounter" data-purecounter-start="1" data-purecounter-end="1" data-purecounter-duration="0">01</span>
@@ -214,7 +214,8 @@ require __DIR__ . '/includes/header.php';
             </div>
             <div class="stat-label">Home Service</div>
           </div>
-        </div><!-- End Stats Strip -->
+        </div> -->
+        <!-- End Stats Strip -->
 
         <div class="row gy-4 mt-2">
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
@@ -687,13 +688,12 @@ require __DIR__ . '/includes/header.php';
     </section><!-- /Featured Services Section -->
 
     <!-- Service Directory Section -->
-    <section id="service-directory" class="service-directory section">
+    <!-- <section id="service-directory" class="service-directory section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Plan a Home Repair Visit</h2>
         <p>Choose a service group and tell us what needs attention in your Sun City or Berry Creek home.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -750,9 +750,10 @@ require __DIR__ . '/includes/header.php';
               </div>
             </div>
           </form>
-        </div><!-- End Directory Toolbar -->
+        </div> -->
+        <!-- End Directory Toolbar -->
 
-        <div class="results-meta" data-aos="fade-up" data-aos-delay="150">
+        <!-- <div class="results-meta" data-aos="fade-up" data-aos-delay="150">
           <div class="results-count">
             <span class="count-number">Common</span>
             <span class="count-label">Projects supported</span>
@@ -762,9 +763,9 @@ require __DIR__ . '/includes/header.php';
             <span class="tag">Electrical</span>
             <span class="tag">Maintenance</span>
           </div>
-        </div><!-- End Results Meta -->
+        </div> -->
 
-        <div class="row g-3 directory-grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-none row g-3 directory-grid" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-12 col-lg-6">
             <article class="service-row featured">
