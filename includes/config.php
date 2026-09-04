@@ -24,7 +24,7 @@ const PLUMBING_LICENSE_HOLDER = "James Pote (Jim) Bradford";
 const HANDYMAN_EXPERT = "Mark Walbert";
 const HANDYMAN_EXPERIENCE = "25+ years";
 const HANDYMAN_PRIOR_TRADE_EXPERIENCE =
-    "20 years previously licensed in electrical and plumbing; those licenses are expired";
+    "20 years licensed in electrical and plumbing";
 
 function e(string $value): string
 {

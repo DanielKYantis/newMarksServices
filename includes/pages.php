@@ -42,7 +42,7 @@ $serviceAreas = [
 ];
 
 $pages = [
-    "404.php" => ["title" => "Page Not Found | Mark's Services", "description" => "The requested Mark's Services page could not be found.", "body_class" => "page-404", "label" => "404", "robots" => "noindex,follow"],
+    "404.php" => ["title" => "Page Not Found | Mark's Services", "description" => "The requested page could not be found.", "body_class" => "page-404", "label" => "404", "robots" => "noindex,follow"],
     "index.php" => ["title" => "Sun City Texas Handyman & Home Repair | Mark's Services", "description" => "Handyman repairs, plumbing fixtures, electrical devices, home maintenance, and punch-list service for Sun City Texas 78633 and nearby service areas.", "body_class" => "index-page", "label" => "Home", "image" => "assets/img/uploads/hero-home.png"],
     "about.php" => ["title" => "About Mark's Services | Georgetown-Area Home Repair", "description" => "Learn how Mark's Services provides clear, careful in-home repairs for Sun City, Berry Creek, Georgetown, and Williamson County homeowners.", "body_class" => "about-page", "label" => "About", "image" => "assets/img/brand/sun-city-home-exterior.webp"],
     "services.php" => ["title" => "Home Repair & Handyman Services | Mark's Services", "description" => "Explore plumbing fixture, water-system, electrical, lighting, security, carpentry, wall repair, maintenance, and punch-list services.", "body_class" => "services-page", "label" => "Services", "schema_type" => "CollectionPage", "image" => "assets/img/services/toolkit.webp"],

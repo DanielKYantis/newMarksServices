@@ -85,7 +85,7 @@ $page = $pages[$pageKey] ?? $pages['index.php'] ?? [
           <span>Contact Us</span>
         </button>
         <ul id="header-contact-options" class="header-contact-options" aria-label="Contact options">
-          <li><a href="tel:+15125490322">Call Repair Hotline at <b>+1 (512) 549-0322</b></a></li>
+          <li><a href="tel:+15125490322">Home Repair Hotline: <b>+1 (512) 549-0322</b></a></li>
           <li><a href="mailto:office@MarksServices.com">Send email: <b>office@MarksServices.com</b></a></li>
         </ul>
       </div>
