@@ -76,8 +76,8 @@ $page = $pages[$pageKey] ?? $pages['index.php'] ?? [
         <i class="bi bi-house-gear" aria-hidden="true"></i>
         <h1 class="sitename">
           <span class="sitename-small">Mark's Services</span>
-          <span class="sitename-medium">Home Repair Services</span>
-          <span class="sitename-large">Sun City Home Repair Services</span>
+          <span class="sitename-medium">Mark's Home Repair Services</span>
+          <span class="sitename-large">Mark's Services | Sun City Home Repair</span>
         </h1>
       </a>
       <div class="header-contact-dropdown">
