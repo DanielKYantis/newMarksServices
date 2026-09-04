@@ -65,7 +65,7 @@ $serviceAreaPages = [
         <span class="nav-label-full">Contact Us</span><span class="nav-label-medium">Contact</span> <i class="d-md-none bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i>
       </a>
       <ul aria-label="Contact options">
-        <li><a href="tel:+15125490322">Call Repair Hotline at <b>+1 (512) 549-0322</b></a></li>
+        <li><a href="tel:+15125490322">Home Repair Hotline: <b>+1 (512) 549-0322</b></a></li>
         <li><a href="mailto:office@MarksServices.com">Send email: <b>office@MarksServices.com</b></a></li>
       </ul>
     </li>
