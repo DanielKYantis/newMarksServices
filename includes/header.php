@@ -71,11 +71,24 @@ $page = $pages[$pageKey] ?? $pages['index.php'] ?? [
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.php" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="index.php" class="logo d-flex align-items-center me-auto me-xl-0" aria-label="Mark's Services home">
         <!-- <img src="assets/img/uploads/logo_enhanced.png" alt=""> -->
-        <i class="bi bi-house-gear"></i>
-        <h1 class="sitename">Mark's Services</h1>
+        <i class="bi bi-house-gear" aria-hidden="true"></i>
+        <h1 class="sitename">
+          <span class="sitename-small">Mark's Services</span>
+          <span class="sitename-medium">Home Repair Services</span>
+          <span class="sitename-large">Sun City Home Repair Services</span>
+        </h1>
       </a>
+      <div class="header-contact-dropdown">
+        <button type="button" class="btn-getstarted header-contact-cta" aria-expanded="false" aria-controls="header-contact-options">
+          <span>Contact Us</span>
+        </button>
+        <ul id="header-contact-options" class="header-contact-options" aria-label="Contact options">
+          <li><a href="tel:+15125490322">Call Repair Hotline at <b>+1 (512) 549-0322</b></a></li>
+          <li><a href="mailto:office@MarksServices.com">Send email: <b>office@MarksServices.com</b></a></li>
+        </ul>
+      </div>
 <?php require __DIR__ . '/nav.php'; ?>
 
     </div>

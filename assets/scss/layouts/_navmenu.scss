@@ -2,8 +2,12 @@
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+.navmenu .nav-label-medium {
+  display: none;
+}
+
 /* Navmenu - Desktop */
-@media (min-width: 1100px) {
+@media (min-width: 768px) {
   .navmenu {
     padding: 0;
 
@@ -138,8 +142,35 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .navmenu {
+    a,
+    a:focus {
+      padding: 12px 10px;
+      font-size: 15px;
+    }
+
+    .nav-label-full {
+      display: none;
+    }
+
+    .nav-label-medium {
+      display: inline;
+    }
+
+    .contact-dropdown {
+      margin-left: 4px;
+
+      >.btn-getstarted,
+      >.btn-getstarted:focus {
+        padding: 6px 8px;
+      }
+    }
+  }
+}
+
 /* Navmenu - Mobile */
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;

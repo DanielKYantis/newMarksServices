@@ -53,6 +53,40 @@
   });
 
   /**
+   * Small-screen header contact dropdown
+   */
+  const headerContactDropdown = document.querySelector('.header-contact-dropdown');
+  const headerContactToggle = document.querySelector('.header-contact-cta');
+
+  function closeHeaderContactDropdown() {
+    if (!headerContactDropdown || !headerContactToggle) return;
+    headerContactDropdown.classList.remove('is-open');
+    headerContactToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (headerContactDropdown && headerContactToggle) {
+    headerContactToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const willOpen = !headerContactDropdown.classList.contains('is-open');
+      headerContactDropdown.classList.toggle('is-open', willOpen);
+      headerContactToggle.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!headerContactDropdown.contains(e.target)) {
+        closeHeaderContactDropdown();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeHeaderContactDropdown();
+        headerContactToggle.focus();
+      }
+    });
+  }
+
+  /**
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
